@@ -31,7 +31,7 @@
                         <div>
                             <strong>Plate Number</strong>
                             <h3 class="fw-bolder text-break  m-0">@Html.DisplayFor(model => model.Vehicle.PlateNo)</h3>
-                            <span class="text-secondary"><small>Currently Viewed</small></span>
+                            <span><small>Currently Viewed</small></span>
                         </div>
 
                         <img src="/@ViewData["VehicleImage"]" height="" width="50%">
@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <h1 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.DateChecked)</h1>
-                        <span class="text-secondary">
+                        <span>
                             <small>Inspected By:</small> @Html.DisplayFor(model => model.InspectorName)
                         </span>
                     </div>
@@ -62,19 +62,19 @@
                     </div>
                     <div>
                         <h1 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.Mileage) Km</h1>
-                        <span class="text-secondary"><small>Distance Travelled</small></span>
+                        <span><small>Distance Travelled</small></span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
                 <div class="bg-lra-warning box-lra-shadow rounded p-3">
                     <div class="d-flex justify-content-between align-items-center">
-                        <strong>Remarks</strong>
+                        <strong>Maintenance Description</strong>
                         <span><i class="ri-draft-line dashboard-icon"></i></span>
                     </div>
                     <div>
-                        <h1 class="fw-bolder text-break m-0"><a href="#" class="btn border rounded text-capitalize" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Remarks</a></h1>
-                        <span class="text-secondary"><small>Read full details</small></span>
+                        <h1 class="fw-bolder text-break m-0"><a href="#" class="btn border rounded text-capitalize" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View All</a></h1>
+                        <span><small>Read full details</small></span>
                     </div>
                 </div>
             </div>
@@ -154,19 +154,20 @@
                             <label>Duration in Days</label>
                             <span class="badge text-status-color rounded-pill">@item.LifeSpan</span>
                         </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                        <li class="list-group-item">
                             <div class="input-group py-4" id="">
                                 <div id="" class="custom-input w-100">
                                     <input type="text"
-                                           asp-for="@item.Remarks"
-                                           id="dateInspect"
+                                           id=""
                                            class="form-control"
+                                           value="@item.Remarks"
                                            required
                                            readonly
                                            pattern="\S+.*" />
                                     <div class="input-text"><label>Remarks</label></div>
                                 </div>
                             </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
                         </li>
                     </ul>
                 </div>
@@ -263,6 +264,21 @@
                         <li class="list-group-item d-flex align-items-center justify-content-between">
                             <label>Hose and Connections</label>
                             <span class="badge text-status-color rounded-pill">@item.HosesandConnections</span>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
                         </li>
                     </ul>
                 </div>
@@ -383,6 +399,21 @@
                             <label>Differential</label>
                             <span class="badge text-status-color rounded-pill">@item.Differential</span>
                         </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </li>
                     </ul>
                 </div>
             }
@@ -497,6 +528,21 @@
                             <label>Battery Indicators</label>
                             <span class="badge text-status-color rounded-pill">@item.Indicators</span>
                         </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </li>
                     </ul>
                 </div>
             }
@@ -528,6 +574,21 @@
                         <li class="list-group-item d-flex align-items-center justify-content-between">
                             <label>Condition of Battery</label>
                             <span class="badge text-status-color rounded-pill">@item.ConditionOfBattery</span>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
                         </li>
                     </ul>
                 </div>
@@ -574,12 +635,116 @@
     <div class="modal-dialog modal-dialog-center">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Vehicle Remarks</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Vehice remarks</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="">
-                    @Html.DisplayFor(model => model.Remarks)
+                <div class="row">
+                <div class="col-12">
+                        <div class="input-group mb-4" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   id=""
+                                   class="form-control"
+                                       value="@Html.DisplayFor(model => model.Remarks)"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label>Maintenance remarks</label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Remarks" class="text-danger"></span>
+                </div>
+                @foreach (var item in DataA)
+                {
+                    <div class="col-12">
+                        <div class="input-group mb-4" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                        id=""
+                                        class="form-control"
+                                        value="@item.Remarks"
+                                        required
+                                        readonly
+                                        pattern="\S+.*" />
+                                <div class="input-text"><label>Battery Performance remarks</label></div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
+                }
+                 @foreach (var item in DataE)
+                {
+                    <div class="col-12">
+                        <div class="input-group mb-4" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                        id=""
+                                        class="form-control"
+                                        value="@item.Remarks"
+                                        required
+                                        readonly
+                                        pattern="\S+.*" />
+                                    <div class="input-text"><label>Undervehicle remarks</label></div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
+                }
+                @foreach (var item in DataD)
+                {
+                    <div class="col-12">
+                        <div class="input-group mb-3" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                        id=""
+                                        class="form-control"
+                                        value="@item.Remarks"
+                                        required
+                                        readonly
+                                        pattern="\S+.*" />
+                                    <div class="input-text"><label>Underhood remarks</label></div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
+                }
+                @foreach (var item in DataC)
+                {
+                    <div class="col-12">
+                        <div class="input-group mb-3" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                        id=""
+                                        class="form-control"
+                                        value="@item.Remarks"
+                                        required
+                                        readonly
+                                        pattern="\S+.*" />
+                                    <div class="input-text"><label>Interior / Exterior remarks</label></div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
+                }
+                @foreach (var item in DataB)
+                {
+                    <div class="col-12">
+                        <div class="input-group mb-3" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                        id=""
+                                        class="form-control"
+                                        value="@item.Remarks"
+                                        required
+                                        readonly
+                                        pattern="\S+.*" />
+                                    <div class="input-text"><label>@item.lu_Wheel.WheelPosition remarks</label></div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
+                }   
                 </div>
             </div>
         </div>
