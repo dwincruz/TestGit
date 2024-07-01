@@ -11,6 +11,7 @@ namespace VMNS.Models
 
         public string Description { get; set; }
         public string Remarks { get; set; }
+        [Display(Name = "Action Date")]
         public string ActionDate { get; set; }
         public Guid CreatorId { get; set; }
 

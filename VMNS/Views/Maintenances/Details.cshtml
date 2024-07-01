@@ -577,9 +577,7 @@
 
         const partsCondition = async (items) => {
             try {
-                console.log(await items)
                 await items.forEach(item => {
-                    console.log(item.innerText)
                     switch (item.innerText) {
                         case "Good for Service":
                             item.style.backgroundColor = "#93c54b"
