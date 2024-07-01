@@ -17,7 +17,7 @@ namespace VMNS.Models
         public int? LifeSpan { get; set; }
         [Display(Name = "Distance Limit")]
         public int? DistanceLimit { get; set; }
-        [Display(Name = "Distance Travelled")]
+        [Display(Name = "Current Kilometer")]
         public int? CurrentKM { get; set; }
 
 

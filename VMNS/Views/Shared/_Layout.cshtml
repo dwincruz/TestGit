@@ -192,15 +192,11 @@
                                 </div>
                             </div>
                             <div class="">
-                                <ul class="list-group" id="list">
+                                <ul class="list-group" id="list" style="width: 260px; max-height: 60dvh; overflow: auto;">
 
                                     @foreach (var vehicle in (IEnumerable<Vehicle>)ViewData["Vehicles"])
                                     {
                                         <li class="list-group-item p-0 rounded mt-2">
-                                            @*     <div class="d-flex justify-content-center">
-                                <button class="vehicle-item w-100 btn btn-lg p-3" id="@vehicle.Id">@vehicle.FullDetail</button>
-                                </div> *@
-
                                             <a class="btn stretched-link" href="/Vehicles/AdminView/@vehicle.Id">
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
 
