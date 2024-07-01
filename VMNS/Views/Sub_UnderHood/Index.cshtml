@@ -1,0 +1,144 @@
+﻿@model IEnumerable<VMNS.Models.Sub_UnderHood>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+   @*  <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ShockAbosrber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SteeringBox)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BallJoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linkage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DustCovers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Muffler)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CatalyticConverter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnginceOil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrakeLines)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hoses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParkingBrakeCable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriveShaftBoots)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConstantVelocityBoots)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UJoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransmissionLinkage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transmission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Differential)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransferCase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maintenance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShockAbosrber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SteeringBox)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BallJoints)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Linkage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DustCovers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Muffler)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatalyticConverter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnginceOil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrakeLines)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hoses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParkingBrakeCable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriveShaftBoots)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConstantVelocityBoots)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UJoints)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransmissionLinkage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transmission)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Differential)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransferCase)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Maintenance.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody> *@
+</table>

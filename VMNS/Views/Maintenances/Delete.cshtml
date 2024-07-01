@@ -1,0 +1,97 @@
+﻿@model VMNS.Models.Maintenance
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<form asp-action="Delete">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CreatorId" />
+        <input type="hidden" asp-for="ModifierId" />
+        <input type="hidden" asp-for="DateCreated" />
+        <input type="hidden" asp-for="DateModified" />
+
+        <div class="col-md-6 col-sm-4 col-6 my-auto">
+            <h2>Maintenance</h2>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+            <div class="float-end">
+                <a asp-area="" asp-controller="Maintenances" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+                <button type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-delete-bin-7-line"></i> Delete</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+        <div class="col-lg-7 col-sm-7 col-12">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group">
+                        <div class="custom-input w-100">
+                            <input type="text"
+                                   value="@Html.DisplayFor(model => model.Vehicle.AssignedOfficer)"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="VehicleId"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="VehicleId" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group">
+                        <div class="custom-input w-100">
+                            <input type="date"
+                                   asp-for="DateChecked"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="DateChecked"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="DateChecked" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group">
+                        <div class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Mileage"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Mileage"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Mileage" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group">
+                        <div class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Remarks"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Remarks"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Remarks" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

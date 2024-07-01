@@ -1,0 +1,428 @@
+﻿@model VMNS.Models.Sub_InteriorExterior
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<div class="row">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Interior / Exterior</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="Maintenances" asp-action="Details" asp-route-Id=@ViewData["MaintenanceId"] class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button type="button" class="btn btn-sm text-capitalize border rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-delete-bin-7-line"></i> Delete</button>
+            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-edit-box-line"></i> Edit</a>
+
+        </div>
+    </div>
+    <div class="col-12">
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+    <div class="col-lg-7 col-sm-7 col-12">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id="targetValue"
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.Maintenance.Id)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="MaintenanceId"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="MaintenanceId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.HeadLights)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label>Wheel Position</label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="HeadLights" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.TailLights)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="TailLights"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="TailLights" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.TurnSignals)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="TurnSignals"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="TurnSignals" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="BrakeLights"
+                               id=""
+                               class="form-control"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="BrakeLights"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="BrakeLights" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="HazardLights"
+                               id=""
+                               class="form-control"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="HazardLights"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="HazardLights" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.ExteriorLamps)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="ExteriorLamps"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="ExteriorLamps" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.LicensePlatesLights)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="LicensePlatesLights"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="LicensePlatesLights" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.WindshieldWiper)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="WindshieldWiper"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="WindshieldWiper" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.WiperBlades)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="WiperBlades"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="WiperBlades" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.WindshieldCondition)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="WindshieldCondition"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="WindshieldCondition" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.EmergencyBrakeAdjustment)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="EmergencyBrakeAdjustment"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="EmergencyBrakeAdjustment" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.HornOperation)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="HornOperation"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="HornOperation" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.FuelTankCapBasket)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="FuelTankCapBasket"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="FuelTankCapBasket" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.AirConGasket)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="AirConGasket"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="AirConGasket" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.AirConFilter)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="AirConFilter"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="AirConFilter" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.ClutchOperation)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="ClutchOperation"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="ClutchOperation" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.BackupLights)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="BackupLights"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="BackupLights" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.DashWarningLights)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="DashWarningLights"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="DashWarningLights" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.Carpet)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Carpet"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Carpet" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.GlassAndMirrors)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="GlassAndMirrors"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="GlassAndMirrors" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.Wiring)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Wiring"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Wiring" class="text-danger"></span>
+            </div>
+           
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               id=""
+                               class="form-control"
+                               value="@Html.DisplayFor(model => model.Remarks)"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Remarks"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Delete" class="row">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="col-12 mb-4">
+                        <p>To proceed deleting this data. Please type <strong id="confirmValue"></strong>.</p>
+                        <div class="input-group" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                       id="confirmInput"
+                                       class="form-control"
+                                       required
+                                       pattern="\S+.*" />
+                                <div class="input-text"><label>Confirmation</label></div>
+                            </div>
+                        </div>
+                        <span><small>Note: This will be remove permanently.</small></span>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" value="Delete" class="btn btn-danger text-capitalize" disabled id="confirmDelete">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        const targetValue = document.querySelector('#targetValue');
+        console.log(targetValue)
+        const confirmValue = document.querySelector('#confirmValue');
+        const confirmInput = document.querySelector('#confirmInput');
+        const btnTrigger = document.querySelector('#confirmDelete')
+        confirmValue.innerText = `Delete ${targetValue.value}`
+
+        confirmInput.addEventListener('change', e => {
+            console.log(e.target.value)
+            if (e.target.value === confirmValue.innerText) {
+                btnTrigger.removeAttribute('disabled')
+            }
+            else {
+                btnTrigger.setAttribute('disabled', '')
+            }
+        })
+    </script>
+}

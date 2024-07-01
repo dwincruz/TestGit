@@ -1,0 +1,630 @@
+﻿@model VMNS.Models.Maintenance
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Body.cshtml";
+    var Monitoring = (IEnumerable<Monitoring>)ViewData["Monitoring"];
+    var DataA = (IEnumerable<Sub_BatteryPerformance>)ViewData["Sub_BatteryPerformances"];
+    var DataB = (IEnumerable<Sub_BrakeTires>)ViewData["Sub_BrakeTires"];
+    var DataC = (IEnumerable<Sub_InteriorExterior>)ViewData["Sub_InteriorExterior"];
+    var DataD = (IEnumerable<Sub_UnderHood>)ViewData["Sub_UnderHood"];
+    var DataE = (IEnumerable<Sub_UnderVehicle>)ViewData["Sub_UnderVehicle"];
+}
+
+<div class="row">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Vehicle Maintenance</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="Maintenances" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+        </div>
+    </div>
+    <div class="col-12">
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                <div class="rounded p-3 bg-lra-info box-lra-shadow">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Plate Number</strong>
+                            <h3 class="fw-bolder text-break  m-0">@Html.DisplayFor(model => model.Vehicle.PlateNo)</h3>
+                            <span class="text-secondary"><small>Currently Viewed</small></span>
+                        </div>
+
+                        <img src="/@ViewData["VehicleImage"]" height="" width="50%">
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                <div class="box-lra-shadow rounded rounded p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong>Date</strong>
+                        <span><i class="ri-calendar-check-line dashboard-icon"></i></span>
+                    </div>
+                    <div>
+                        <h1 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.DateChecked)</h1>
+                        <span class="text-secondary">
+                            <small>Inspected By:</small> @Html.DisplayFor(model => model.InspectorName)
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                <div class=" bg-lra-sub-info box-lra-shadow rounded p-3">
+                    <div class="d-flex justify-content-between">
+                        <strong>Mileage</strong>
+                        <span><i class="ri-speed-up-line dashboard-icon"></i></span>
+                    </div>
+                    <div>
+                        <h1 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.Mileage) Km</h1>
+                        <span class="text-secondary"><small>Distance Travelled</small></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                <div class="bg-lra-warning box-lra-shadow rounded p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <strong>Remarks</strong>
+                        <span><i class="ri-draft-line dashboard-icon"></i></span>
+                    </div>
+                    <div>
+                        <h1 class="fw-bolder text-break m-0"><a href="#" class="btn border rounded text-capitalize" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Remarks</a></h1>
+                        <span class="text-secondary"><small>Read full details</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 bg-white p-2">
+        <div class="row ">
+            <div class="col-12 header-text  mb-4">
+                <h5>Vehicle Parts Condition</h5>
+                <div class="mb-4">
+                    <span><i class="ri-circle-fill text-success px-2"></i><label>Good for service</label></span>
+                    <span><i class="ri-circle-fill text-warning px-2"></i><label>For Monitoring</label></span>
+                    <span><i class="ri-circle-fill text-danger px-2"></i><label>For Repair</label></span>
+                </div>
+                <div>
+                    <a asp-controller="Sub_UnderVehicle" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Vehicle</a>
+
+                    <a asp-controller="Sub_UnderHood" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Hood</a>
+
+                    <a asp-controller="Sub_BrakeTires" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Brake and Tires</a>
+
+                    <a asp-controller="Sub_InteriorExterior" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Interior / Exterior</a>
+
+                    <a asp-controller="Sub_BatteryPerformance" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Battery Performance</a>
+                    <a asp-controller="Monitorings" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Watch List</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            @foreach (var item in DataB)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="fw-bold">@item.lu_Wheel.WheelPosition</div>
+                                <div>
+                                    <a asp-controller="Sub_BrakeTires" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-controller="Sub_BrakeTires" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="ri-delete-bin-7-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Break Lining</label>
+                            <span class="badge text-status-color rounded-pill">@item.BreakLining</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Tire Tread</label>
+                            <span class="badge text-status-color rounded-pill">@item.TireTread</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Wear Pattern</label>
+                            <span class="badge text-status-color rounded-pill">@item.WearPattern</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Tire Pressure before</label>
+                            <span class="badge text-status-color rounded-pill">@item.TirePressureBefore</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Tire Pressure after</label>
+                            <span class="badge text-status-color rounded-pill">@item.TirePressureAfter</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Duration in Days</label>
+                            <span class="badge text-status-color rounded-pill">@item.LifeSpan</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           asp-for="@item.Remarks"
+                                           id="dateInspect"
+                                           class="form-control"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+        <div class="row">
+            @foreach (var item in DataD)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="fw-bold">Under Hood</div>
+                                <div>
+                                    <a asp-controller="Sub_UnderHood" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-controller="Sub_UnderHood" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="ri-delete-bin-7-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Fluid Levels</label>
+                            <span class="badge text-status-color rounded-pill">@item.FluidLevels</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Heater Hoses</label>
+                            <span class="badge text-status-color rounded-pill">@item.HeaterHoses</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Air Condition</label>
+                            <span class="badge text-status-color rounded-pill">@item.AirCondition</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Drive Belt</label>
+                            <span class="badge text-status-color rounded-pill">@item.DriveBelt</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Computer Box</label>
+                            <span class="badge text-status-color rounded-pill">@item.ComputerBox</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Electric Fuses</label>
+                            <span class="badge text-status-color rounded-pill">@item.ElectricFuses</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Alternator</label>
+                            <span class="badge text-status-color rounded-pill">@item.Alternator</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Coolant Recovery Reservoir Fluid Level</label>
+                            <span class="badge text-status-color rounded-pill">@item.CoolantRecoveryReservoirFluidLevel</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Air Conditioner Condenser</label>
+                            <span class="badge text-status-color rounded-pill">@item.AirConditionerCondenser</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Cooling System Hoses</label>
+                            <span class="badge text-status-color rounded-pill">@item.CoolingSystemHoses</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Engine Air Filter</label>
+                            <span class="badge text-status-color rounded-pill">@item.EngineAirFilter</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Clutch Reservoir Fluid</label>
+                            <span class="badge text-status-color rounded-pill">@item.ClutchReservoirFluid</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Auxiliary Belt</label>
+                            <span class="badge text-status-color rounded-pill">@item.AuxiliaryBelt</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Washer</label>
+                            <span class="badge text-status-color rounded-pill">@item.Washer</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Radiator Core</label>
+                            <span class="badge text-status-color rounded-pill">@item.RadiatorCore</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Power Steering</label>
+                            <span class="badge text-status-color rounded-pill">@item.PowerSteering</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Brake Fluid</label>
+                            <span class="badge text-status-color rounded-pill">@item.BrakeFluid</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Hose and Connections</label>
+                            <span class="badge text-status-color rounded-pill">@item.HosesandConnections</span>
+                        </li>
+                    </ul>
+                </div>
+
+            }
+            @foreach (var item in DataE)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="fw-bold">Under Vehicle</div>
+                                <div>
+                                    <a asp-controller="Sub_UnderVehicle" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-controller="Sub_UnderVehicle" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="ri-delete-bin-7-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Transmission Fluid</label>
+                            <span class="badge text-status-color rounded-pill">@item.TransmissionFluid</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Coolant</label>
+                            <span class="badge text-status-color rounded-pill">@item.Coolant</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Exhaust Pipes</label>
+                            <span class="badge text-status-color rounded-pill">@item.ExhaustPipes</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Transfer Case</label>
+                            <span class="badge text-status-color rounded-pill">@item.TransferCase</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Fluid Lines Connections</label>
+                            <span class="badge text-status-color rounded-pill">@item.FluidLinesConnections</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Wiring</label>
+                            <span class="badge text-status-color rounded-pill">@item.Wiring</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Engine Oil</label>
+                            <span class="badge text-status-color rounded-pill">@item.EngineOil</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Parking Brake Cable</label>
+                            <span class="badge text-status-color rounded-pill">@item.ParkingBrakeCable</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Nuts and Bolts</label>
+                            <span class="badge text-status-color rounded-pill">@item.NutsAndBolts</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Muffler</label>
+                            <span class="badge text-status-color rounded-pill">@item.Muffler</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Shock Absorber</label>
+                            <span class="badge text-status-color rounded-pill">@item.ShockAbsorber</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Drive Shaft Boots</label>
+                            <span class="badge text-status-color rounded-pill">@item.DriveShaftBoots</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Transmission Assembly</label>
+                            <span class="badge text-status-color rounded-pill">@item.TransmissionAssembly</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>U Joints</label>
+                            <span class="badge text-status-color rounded-pill">@item.UJoints</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Dust Cover</label>
+                            <span class="badge text-status-color rounded-pill">@item.DustCover</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Hoses</label>
+                            <span class="badge text-status-color rounded-pill">@item.Hoses</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Fuel Tank Vapor Vent Systems Hoses</label>
+                            <span class="badge text-status-color rounded-pill">@item.FuelTankVaporVentSystemsHoses</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Fluid Tank Band</label>
+                            <span class="badge text-status-color rounded-pill">@item.FluidTankBand</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Automatic Transmission Fluid</label>
+                            <span class="badge text-status-color rounded-pill">@item.AutomaticTransmissionFluid</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Ball Joints</label>
+                            <span class="badge text-status-color rounded-pill">@item.BallJoints</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Brake Lines</label>
+                            <span class="badge text-status-color rounded-pill">@item.BrakeLines</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Catalytic Converter</label>
+                            <span class="badge text-status-color rounded-pill">@item.CatalyticConverter</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Constant Velocity Boots</label>
+                            <span class="badge text-status-color rounded-pill">@item.ConstantVelocityBoots</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Differential</label>
+                            <span class="badge text-status-color rounded-pill">@item.Differential</span>
+                        </li>
+                    </ul>
+                </div>
+            }
+            @foreach (var item in DataC)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="fw-bold">Interior / Exterior</div>
+                                <div>
+                                    <a asp-controller="Sub_InteriorExterior" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-controller="Sub_InteriorExterior" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="ri-delete-bin-7-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Head Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.HeadLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Tail Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.TailLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Tail Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.TurnSignals</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Brake Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.BrakeLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Hazard Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.HazardLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Exterior Lamps</label>
+                            <span class="badge text-status-color rounded-pill">@item.ExteriorLamps</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>License Plates Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.LicensePlatesLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Windshield Wiper</label>
+                            <span class="badge text-status-color rounded-pill">@item.WindshieldWiper</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Wiper Blades</label>
+                            <span class="badge text-status-color rounded-pill">@item.WiperBlades</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Wipershield Condition</label>
+                            <span class="badge text-status-color rounded-pill">@item.WindshieldCondition</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Emergency Brake Adjustment</label>
+                            <span class="badge text-status-color rounded-pill">@item.EmergencyBrakeAdjustment</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Horn Operation</label>
+                            <span class="badge text-status-color rounded-pill">@item.HornOperation</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Fuel Tank Cap Basket</label>
+                            <span class="badge text-status-color rounded-pill">@item.FuelTankCapBasket</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Air Condition Gasket</label>
+                            <span class="badge text-status-color rounded-pill">@item.AirConGasket</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Air Condition Filter</label>
+                            <span class="badge text-status-color rounded-pill">@item.AirConFilter</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Clutch Operation</label>
+                            <span class="badge text-status-color rounded-pill">@item.ClutchOperation</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Back up Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.BackupLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Dash warning Lights</label>
+                            <span class="badge text-status-color rounded-pill">@item.DashWarningLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Carpet</label>
+                            <span class="badge text-status-color rounded-pill">@item.Carpet</span>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+        <div class="row">
+            @foreach (var item in DataA)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="fw-bold">Battery Performance</div>
+                                <div>
+                                    <a asp-controller="Sub_BatteryPerformance" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-controller="Sub_BatteryPerformance" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="ri-delete-bin-7-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Battery Terminal</label>
+                            <span class="badge text-status-color rounded-pill">@item.BatteryTerminal</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Condition of Battery</label>
+                            <span class="badge text-status-color rounded-pill">@item.ConditionOfBattery</span>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+        <div class="row">
+            @foreach (var item in Monitoring)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="fw-bold">@item.Replacement.Parts</div>
+                                <div>
+                                    <a asp-controller="Monitorings" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-controller="Monitorings" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="ri-delete-bin-7-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Acquired Date</label>
+                            <span class="badge text-status-color rounded-pill">@item.DateAcquired</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Replaced Date </label>
+                            <span class="badge text-status-color rounded-pill"></span>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Vehicle Remarks</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    @Html.DisplayFor(model => model.Remarks)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+
+        const itemsStatus = document.querySelectorAll('.text-status-color')
+
+        const partsCondition = async (items) => {
+            try {
+                console.log(await items)
+                await items.forEach(item => {
+                    console.log(item.innerText)
+                    switch (item.innerText) {
+                        case "Good for Service":
+                            item.style.backgroundColor = "#93c54b"
+                            break;
+                        case "For Monitoring":
+                            item.style.backgroundColor = "#ffff33"
+                            break;
+                        case "Needs Repair":
+                            item.style.backgroundColor = "#cd5c5c"
+                            break;
+                        default:
+                            item.style.color = "#494949"
+                            item.style.backgroundColor = "#f2f2f2"
+                    }
+                })
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+        partsCondition(itemsStatus)
+
+
+
+        const deleteMaintenanceRecord = () => {
+            try {
+                const targetValue = document.querySelector('#targetValue');
+                const confirmValue = document.querySelector('#confirmValue');
+                const confirmInput = document.querySelector('#confirmInput');
+                const btnTrigger = document.querySelector('#confirmDelete')
+                confirmValue.innerText = `Delete ${targetValue.value}`
+
+                confirmInput.addEventListener('change', e => {
+                    if (e.target.value === confirmValue.innerText) {
+                        btnTrigger.removeAttribute('disabled')
+                    }
+                    else {
+                        btnTrigger.setAttribute('disabled', '')
+                    }
+                })
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        deleteMaintenanceRecord()
+    </script>
+}

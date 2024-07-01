@@ -1,0 +1,78 @@
+﻿@model IEnumerable<VMNS.Models.Sub_BrakeTires>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BreakLining)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TireTread)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WearPattern)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TirePressureBefore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TirePressureAfter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remarks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lu_Wheel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maintenance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BreakLining)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TireTread)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WearPattern)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TirePressureBefore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TirePressureAfter)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lu_Wheel.WheelPosition)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Maintenance.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

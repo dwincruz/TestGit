@@ -1,0 +1,141 @@
+﻿@model VMNS.ViewModels.EditUserViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<form asp-action="Edit">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+        <div class="col-md-6 col-sm-4 col-6 my-auto">
+            <h2>Users</h2>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+            <div class="float-end">
+                <a asp-area="" asp-controller="UsersAdmin" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+                <button type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+        <div class="col-lg-7 col-sm-7 col-12">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="FirstName"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="FirstName"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="LastName"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="LastName"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="EmpNo"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="EmpNo"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="EmpNo" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Position"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Position"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Position" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="OfficeId" class="form-control" asp-items="ViewBag.OfficeId"></select>
+                            <div class="input-text"><label asp-for="OfficeId"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="OfficeId" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Email"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Email"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="UserName"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="UserName"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div
+                <div class="col-12 mb-4">
+                    <label class="col-md-10 mb-3 control-label fw-semibold">
+                        Select User Role
+                    </label>
+                    <div class="col-md-10">
+                        @foreach (var item in Model.RolesList)
+                        {
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" name="SelectedRole" id="@item.Text" value="@item.Value" checked="@item.Selected" class="form-check-input" />
+                                @Html.Label(item.Value, item.Text, new { @class = "form-check-label", @for = item.Text })
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

@@ -1,0 +1,96 @@
+﻿@model VMNS.Models.lu_VehicleType
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<div class="row">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Vehicle Types</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="RolesAdmin" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button type="button" class="btn btn-sm text-capitalize border rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-delete-bin-7-line"></i> Delete</button>
+            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-edit-box-line"></i> Edit</a>
+
+        </div>
+    </div>
+    <div class="col-12">
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+    <div class="col-lg-7 col-sm-7 col-12">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="VehicleType"
+                               id="targetValue"
+                               class="form-control"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="VehicleType"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="VehicleType" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Confirmation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Delete" class="row">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="col-12 mb-4">
+                        <p>To proceed deleting this data. Please type <strong id="confirmValue"></strong>.</p>
+                        <div class="input-group" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                       id="confirmInput"
+                                       class="form-control"
+                                       required
+                                       pattern="\S+.*" />
+                                <div class="input-text"><label>Confirmation</label></div>
+                            </div>
+                        </div>
+                        <span><small>Note: This will be remove permanently.</small></span>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" value="Delete" class="btn btn-danger text-capitalize" disabled id="confirmDelete">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        const targetValue = document.querySelector('#targetValue');
+        console.log(targetValue)
+        const confirmValue = document.querySelector('#confirmValue');
+        const confirmInput = document.querySelector('#confirmInput');
+        const btnTrigger = document.querySelector('#confirmDelete')
+        confirmValue.innerText = `Delete ${targetValue.value}`
+
+        confirmInput.addEventListener('change', e => {
+            console.log(e.target.value)
+            if (e.target.value === confirmValue.innerText) {
+                btnTrigger.removeAttribute('disabled')
+            }
+            else {
+                btnTrigger.setAttribute('disabled', '')
+            }
+        })
+    </script>
+}

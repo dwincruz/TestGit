@@ -1,0 +1,265 @@
+html {
+  font-size: 14px;
+}
+.dropdown-menu {
+    min-width: 200px;
+}
+#customDropdown {
+    position: relative;
+}
+#customDropdown ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
+#customDropdown:hover ul {
+    display: block;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.nav-tabs .dropdown-menu {
+    margin-top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.container-fluid {
+    max-width: 1320px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+/* LOGIN PAGE */
+#login {
+    color: #fff;
+    margin: 7% 20% auto;
+    /* min-height: 550px; */
+    border: 1px solid #E6E9FA;
+    box-shadow: 0px 10px 20px -6px #17328E;
+    /* filter: drop-shadow(0px 0px 1px #17328E); */
+    border-radius: 0px 14px 14px 0px;
+}
+
+.login-form a {
+    color: #828282;
+}
+
+.login-form .input-group-text {
+    color: #828282;
+}
+
+.login-hero {
+    background: #ecf4ff;
+    backdrop-filter: blur(20px);
+    border-radius: 14px 0 0 14px;
+}
+
+.login-form {
+    color: #343434;
+    padding: 12% 7% 5%;
+}
+
+.login-lra-logo {
+    width: 120px;
+    margin: 30px;
+}
+
+.login-img {
+    width: 100%;
+}
+
+.login-txt {
+    color: #1C2455;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.login-line {
+    width: 100px;
+    height: 0;
+    margin: 12px 10px;
+}
+
+/* Home */
+#header .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-link {
+    color: rgb(255 255 255);
+}
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
+
+a.nav-link.dropdown-toggle {
+    color: white;
+}
+
+.card.border-left-primary.shadow.h-100.py-2 {
+    border-left: 0.25rem solid #4e73df !important;
+}
+
+#files-area {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.file-block {
+    border-radius: 10px;
+    background-color: rgba(144, 163, 203, 0.2);
+    margin: 5px;
+    color: initial;
+    display: inline-flex;
+}
+
+    .file-block > span.name {
+        padding-right: 10px;
+        width: max-content;
+        display: inline-flex;
+    }
+
+
+
+.file-delete {
+    display: flex;
+    width: 24px;
+    color: initial;
+    background-color: #6eb4ff00;
+    font-size: large;
+    justify-content: center;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+    .file-delete:hover {
+        background-color: rgba(144, 163, 203, 0.2);
+        border-radius: 10px;
+    }
+
+    .file-delete > span {
+        transform: rotate(45deg);
+    }
+/*
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+}
+
+.dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+ul.dropdown-menu.show {
+    position: absolute;
+    top: 8rem;
+    left: 100%;
+}*/
+
+/*
+a#myBtn {
+    color: (0,0,0,0.5);
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #15824B;
+    padding: 20px 0;
+}
+
+#files-area {
+    width: 100%;
+    margin: 0 auto;
+}
+*/
+
+/*preview images*/
+
+.imageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+#imageSelector {
+    display: none;
+}
+
+#imagePreview {
+    width: 400px;
+    height: 400px;   
+}
+#imagePreview object {
+    width: 100%;
+    height: 100%;
+}
+#imagePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: auto;
+    background-color: #323639;
+}
+#file-input-label {
+    
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid rgba(0,0,0,.1) !important;
+    color: grey
+}
+.row-results {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    place-items: center start;
+    gap: 10px;
+    padding: 10px;
+}
+    .row-results button{
+        margin: auto;
+    }
+    .row-results button:hover {
+        background-color: #828282;
+    }
+.row-results div {
+    max-width: 2fr;
+    }
+.row-results div p {
+    word-break: break-all;
+}
+.image-display {
+    height: 500px;
+}
+/*end of css for preview images*/

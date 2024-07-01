@@ -1,0 +1,150 @@
+﻿@model IEnumerable<VMNS.Models.Sub_InteriorExterior>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TailLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TurnSignals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrakeLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HazardLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExteriorLamps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LicensePlatesLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindshieldWiper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WiperBlades)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindshieldCondition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmergencyBrakeAdjustment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HornOperation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FuelTankCapBasket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirConGasket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirConFilter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClutchOperation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BackupLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DashWarningLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carpet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maintenance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TailLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TurnSignals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrakeLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HazardLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExteriorLamps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LicensePlatesLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindshieldWiper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WiperBlades)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindshieldCondition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmergencyBrakeAdjustment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HornOperation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuelTankCapBasket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirConGasket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirConFilter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClutchOperation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackupLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DashWarningLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carpet)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Maintenance.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

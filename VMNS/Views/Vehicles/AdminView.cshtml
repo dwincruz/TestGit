@@ -1,0 +1,863 @@
+﻿@model VMNS.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";
+    string currentVehicle = $"{Model.PlateNo}";
+    var pmsParts = (List<object[]>)ViewData["PMSParts"];
+    var pmsTires = (List<object[]>)ViewData["PMSTires"];
+    var myListG = ViewData["CurrentVehicleStatus"] as List<object>;
+
+
+    int AccordionId = 0;
+}
+<div class="row justify-content-center">
+    <div class="col-12">
+
+        <div class="row">
+            <div class="col-md-6 col-sm-4 col-6 my-auto">
+                <h2>Vehicle Information</h2>
+            </div>
+            <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+                <div class="float-end">
+                    @if (!User.IsInRole("Administrator"))
+                    {
+                        <a asp-area="" asp-controller="Maintenances" asp-action="SummaryReport" asp-route-id="@ViewData["MaintenanceId"]" class="btn btn-sm text-capitalize bg-lra-info rounded box-lra-shadow"><i class="ri-upload-line"></i> Checkbox form</a>
+                    }
+                    <a asp-area="" asp-controller="Accidents" asp-action="History" asp-route-selectedValue=@ViewData["VehicleId"] class="btn btn-sm text-capitalize bg-lra-danger rounded box-lra-shadow"><i class="ri-history-line"></i> Accidents</a>
+                    <a asp-area="" asp-controller="Maintenances" asp-action="History" asp-route-selectedValue=@ViewData["VehicleId"] class="btn btn-sm text-capitalize bg-white rounded box-lra-shadow"><i class="ri-tools-line"></i> Maintenance </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @if (ViewData["Maintenance"] != null)
+            {
+                var maintenance = ViewData["Maintenance"] as Maintenance;
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="rounded p-3 bg-lra-info box-lra-shadow">
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                            <div>
+                                <strong>Plate Number</strong>
+                                <h3 class="fw-bolder text-break  m-0">@currentVehicle</h3>
+                                <span class="text-secondary"><small>Currently Viewed</small></span>
+                            </div>
+
+                            @*  <span><i class="ri-roadster-line dashboard-icon"></i></span> *@
+                            <img src="/@ViewData["VehicleImage"]" height="" width="50%">
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="rounded p-3 bg-white box-lra-shadow">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>Date</strong>
+                            <span><i class="ri-calendar-check-line dashboard-icon"></i></span>
+                        </div>
+                        <div>
+                            <h1 class="fw-bolder text-break m-0">@maintenance.DateChecked.ToShortDateString()</h1>
+                            <span class="text-secondary"><small>Inspected by @maintenance.InspectorName </small></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="rounded p-3 bg-lra-sub-info box-lra-shadow">
+                        <div class="d-flex justify-content-between">
+                            <strong>Mileage</strong>
+                            <span><i class="ri-speed-up-line dashboard-icon"></i></span>
+                        </div>
+                        <div>
+                            <h1 class="fw-bolder text-break m-0">@maintenance.Mileage Km</h1>
+                            <span class="text-secondary"><small>Distance Travelled</small></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="rounded p-3 bg-lra-warning box-lra-shadow" style="height:100%">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <strong>Accountable personnel</strong>
+                            <span><i class="ri-draft-line dashboard-icon"></i></span>
+                        </div>
+                        <div>
+                            <h5 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.AssignedOfficer)</h5>
+                            <span class="text-white"><small>Read full details</small></span>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="col-12 border rounded p-3 mb-4 ">
+                    <label>No maintenance record found.</label>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 d-flex flex-column mb-3">
+                <div class="rounded p-3 bg-white box-lra-shadow">
+                    <div class="header-text mb-3">
+                        <h5>General Information</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.Brand)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Brand)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.Model)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Model)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.lu_VehicleType.VehicleType)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.lu_VehicleType)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.lu_Transmission.TransmissionName)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.lu_Transmission)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.Color)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Color)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.lu_FuelType.FuelName)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.lu_FuelType)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.PlateNo)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.PlateNo)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.ConductionNo)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.ConductionNo)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.InsuranceType)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.InsuranceType)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.InsuranceDate)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.InsuranceDate)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.LtoRegDate)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.LtoRegDate)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.LtoDueDate)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.LtoDueDate)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.AssignedOfficer)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.AssignedOfficer)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.IssuedDate)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.IssuedDate)</label></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.Description)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Description)</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 d-flex flex-column  mb-3">
+                <div class="rounded p-3 mb-3 bg-white box-lra-shadow">
+                    <div class="header-text mb-3">
+                        <h5>Vehicle Part's Condition</h5>
+                    </div>
+                    @if (myListG != null)
+                    {
+                        <canvas class="col-12" id="vehicleChart" height="200"></canvas>
+                    }
+                    else
+                    {
+                        <label>no maintenance record found.</label>
+                    }
+
+                </div>
+
+                <div class="rounded p-3 mb-3 bg-white box-lra-shadow">
+                    <div class="header-text mb-3">
+                        <h5>Parts for Monitoring</h5>
+                    </div>
+                    <div>
+                        <ul>
+                            @* @foreach (var item in ViewData["ForMonitoring"] as List<string>)
+                            {
+                            <li>@item</li>
+                            } *@
+                            @if (ViewData["ForMonitoring"] != null && (ViewData["ForMonitoring"] as List<string>).Count > 0)
+                            {
+                                foreach (var item in ViewData["ForMonitoring"] as List<string>)
+                                {
+                                    <li>@item</li>
+                                }
+                            }
+                            else
+                            {
+                                <label>No maintenance record found.</label>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="rounded p-3 bg-white box-lra-shadow">
+                    <div class="header-text mb-3">
+                        <h5>Parts for Repair</h5>
+                    </div>
+                    <div>
+                        <ul>
+                            @if (ViewData["NeedsRepair"] != null && (ViewData["NeedsRepair"] as List<string>).Count > 0)
+                            {
+                                foreach (var item in ViewData["NeedsRepair"] as List<string>)
+                                {
+                                    <li>@item</li>
+                                }
+                            }
+                            else
+                            {
+                                <label>No maintenance record found.</label>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 p-3">
+                <div class="rounded p-3 bg-white box-lra-shadow">
+                    <div class="row">
+                        <div class="header-text mb-5">
+                            <h5>Preventive Maintenance</h5>
+                            <span><i class="ri-circle-fill text-success px-2"></i><label>Good</label></span>
+                            <span><i class="ri-circle-fill text-warning px-2"></i><label>For Monitoring</label></span>
+                            <span><i class="ri-circle-fill text-danger px-2"></i><label>Urgent Attention</label></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row col-md-12">
+                        @if (pmsParts?.Count > 0 || pmsTires?.Count > 0)
+                        {
+                            <div class="parts  col-md-4 mb-4">
+                                <ul class="list-group" id="ListScrollSpy">
+                                    @if (pmsTires.Count > 0)
+                                    {
+                                        <li class="list-group-item list-group-item-action border-0 parts-item"><a href="#BreaksAndTires">Breaks and Tires</a></li>
+
+                                    }
+                                    @foreach (var item in pmsParts)
+                                    {
+                                        <li class="list-group-item list-group-item-action border-0 parts-item"><a href="#@item[0]">@item[0]</a></li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="col-md-8 pms-details" item-content" data-spy="scroll" data-target="#ListScrollSpy" data-offset="0">
+                                <div id="BreaksAndTires" class="row" style="min-height: 100vh !important;">
+                                    @foreach (var item in pmsTires)
+                                    {
+
+                                        <div class="col-lg-6 col-12 p-2">
+                                            <div class="border rounded p-3">
+                                                <div class="header-text mb-3">
+                                                    <h5>@item[0]<span class="px-3 icon-status"><i class="ri-information-line"></i></span></h5>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 mb-4">
+                                                        <div class="input-group" id="">
+                                                            <div id="" class="custom-input w-100">
+                                                                <input type="text"
+                                                                       id=""
+                                                                       class="form-control date-fields acquired-date"
+                                                                       value="@item[7]"
+                                                                       readonly
+                                                                       required
+                                                                       pattern="\S+.*" />
+                                                                <div class="input-text"><label>Date acquired</label></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mb-4">
+                                                        <div class="input-group" id="">
+                                                            <div id="" class="custom-input w-100">
+                                                                <input type="text"
+                                                                       id=""
+                                                                       class="form-control date-fields replaced-date"
+                                                                       value="@item[9]"
+                                                                       readonly
+                                                                       required
+                                                                       pattern="\S+.*" />
+                                                                <div class="input-text"><label>Date for replacement</label></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>
+                                                                <small id="dayValue">
+                                                                    @item[10]
+                                                                </small>
+                                                            </span>
+                                                        </div>
+                                                        <div class="progress progress-days"
+                                                             role="progressbar"
+                                                             aria-label="Basic example"
+                                                             aria-valuenow="@item[10]"
+                                                             aria-valuemin="0"
+                                                             aria-valuemax="@item[8]">
+                                                            <div class="progress-bar text-white"></div>
+                                                        </div>
+                                                        <div class="accordion" id="partsForRepair">
+                                                            <div class="accordion-item border-0">
+                                                                <h2 class="accordion-header">
+                                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-@AccordionId" aria- expanded="false" aria-controls="accordion-@AccordionId">
+                                                                        view more
+                                                                    </button>
+                                                                </h2>
+                                                            </div>
+                                                            <div id="accordion-@AccordionId" class="accordion-collapse collapse" data-bs-parent="#accordion-@AccordionId">
+                                                                <div class="accordion-body p-0">
+                                                                    <div class="row">
+                                                                        <div class="col-12 my-3">
+                                                                            <ul class="list-group list-group-flush">
+                                                                                <li class="list-group-item border-0 d-flex justify-content-between"><label><i class="ri-circle-fill status-icon"></i> Break Lining</label><label class="visually-hidden item-condition">@item[1]</label></li>
+                                                                                <li class="list-group-item border-0 d-flex justify-content-between"><label><i class="ri-circle-fill status-icon"></i> Wear Pattern </label><label class="visually-hidden item-condition">@item[2]</label></li>
+                                                                                <li class="list-group-item border-0 d-flex justify-content-between"><label><i class="ri-circle-fill status-icon"></i> Tire Tread </label><label class="visually-hidden item-condition">@item[3]</label></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="col-12 mb-3">
+                                                                            <div class="input-group" id="">
+                                                                                <div id="" class="custom-input w-100">
+                                                                                    <input type="text"
+                                                                                           id=""
+                                                                                           class="form-control"
+                                                                                           value="@item[4]"
+                                                                                           readonly
+                                                                                           required
+                                                                                           pattern="\S+.*" />
+                                                                                    <div class="input-text"><label>Tire Pressure Before</label></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 mb-3">
+                                                                            <div class="input-group" id="">
+                                                                                <div id="" class="custom-input w-100">
+                                                                                    <input type="text"
+                                                                                           id=""
+                                                                                           class="form-control"
+                                                                                           value="@item[5]"
+                                                                                           readonly
+                                                                                           required
+                                                                                           pattern="\S+.*" />
+                                                                                    <div class="input-text"><label>Tire Pressure After</label></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12 mb-3">
+                                                                            <div class="input-group" id="">
+                                                                                <div id="" class="custom-input w-100">
+                                                                                    <input type="text"
+                                                                                           id=""
+                                                                                           class="form-control"
+                                                                                           value="@item[6]"
+                                                                                           readonly
+                                                                                           required
+                                                                                           pattern="\S+.*" />
+                                                                                    <div class="input-text"><label>Remarks</label></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        AccordionId++;
+                                    }
+                                </div>
+                                @foreach (var item in pmsParts)
+                                {
+
+                                    <div id="@item[0]" class="row" style="min-height: 100vh !important;">
+                                        <div class="col-lg-6 col-12 p-2">
+                                            <div class="border rounded p-3">
+                                                <div class="header-text mb-3">
+                                                    <h5>@item[0]<span class="px-3 icon-status"><i class="ri-information-line"></i></span></h5>
+                                                </div>
+                                                <div class="row">
+                                                    <input type="hidden" class="addedDays" value="" />
+                                                    <div class="col-12 mb-4">
+                                                        <div class="input-group" id="">
+                                                            <div id="" class="custom-input w-100">
+                                                                <input type="text"
+                                                                       id=""
+                                                                       class="form-control date-fields acquired-date"
+                                                                       value="@item[2]"
+                                                                       readonly
+                                                                       required
+                                                                       pattern="\S+.*" />
+                                                                <div class="input-text"><label>Date acquired</label></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mb-4">
+                                                        <div class="input-group" id="">
+                                                            <div id="" class="custom-input w-100">
+                                                                <input type="text"
+                                                                       id=""
+                                                                       class="form-control date-fields replaced-date"
+                                                                       value="@item[4]"
+                                                                       readonly
+                                                                       required
+                                                                       pattern="\S+.*" />
+                                                                <div class="input-text"><label>Date for replacement</label></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="d-flex justify-content-between">
+                                                            <span>
+                                                                <small id="dayValue">@item[5]</small>
+                                                            </span>
+                                                        </div>
+                                                        <div class="progress progress-days"
+                                                             role="progressbar"
+                                                             aria-label="Basic example"
+                                                             aria-valuenow="@item[5]"
+                                                             aria-valuemin="0"
+                                                             aria-valuemax="@item[3]">
+                                                            <div class="progress-bar text-white"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+
+
+                            </div>
+                        }
+                        else
+                        {
+                            <p class="text-secondary text-center">No result as of now.</p>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Vehicle Remarks</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="">
+                    @if (ViewData["Maintenance"] != null)
+                    {
+                        var maintenance = ViewData["Maintenance"] as Maintenance;
+                        <p>@maintenance.Remarks</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    let vehicleLists;
+    const vehicleResultContainer = document.querySelector('#vehicleResultContainer')
+    const resultFilter = async (url, httpRequest, dataValues) => {
+        await fetch(url, {
+            method: httpRequest,
+            body: dataValues
+        }).then(async response => {
+            vehicleLists = await response.json()
+            // createOptions(vehicleLists, vehicleResultContainer)
+            createLists(vehicleLists, vehicleResultContainer)
+
+        }).catch(error => {
+            console.log('Error: ', error.message)
+        })
+    }
+
+
+
+    const createLists = async (lists, container) => {
+        const items = await lists.map(vehicle =>
+            `
+                                <li class="list-group-item border rounded mb-2">
+                                    <a redirect-to="/Vehicles/AdminView/${vehicle.id}" data-toggle="tooltip" data-placement="top" title="View Details" class="btn btn-sm">
+                                            ${vehicle.brandName} - ${vehicle.plateNumber}
+                                    </a>
+                                </li>
+                            `).join('');
+
+
+        container.innerHTML = items;
+
+        const linkElement = await container.querySelectorAll('li a');
+
+        linkElement.forEach(item => {
+            item.addEventListener('click', e => {
+                window.location.href = window.location.origin + `${e.target.attributes[0].value}`
+            })
+        })
+    }
+    //PMS
+
+    const progressBar = () => {
+        const progressDays = document.querySelectorAll('.progress-days')
+        const progressBar = document.querySelectorAll('.progress-bar')
+        const iconStatus = document.querySelectorAll('.icon-status')
+        const dayValue = document.querySelectorAll('#dayValue');
+
+
+        for (let i = 0; i < progressDays.length; i++) {
+
+            let x = progressDays[i].getAttribute('aria-valuenow')
+            let y = progressDays[i].getAttribute('aria-valuemax')
+            const z = Math.round(x / y * 100)
+            progressBar[i].style.width = `${z}%`
+            progressBar[i].innerHTML = `${z}%`
+
+            let day = parseInt(dayValue[i].innerHTML);
+
+            if (day > 0) {
+                dayValue[i].innerHTML = `${day} remaining days`;
+            } else {
+                dayValue[i].innerHTML = "Need for replacement";
+                progressDays[i].classList.add('visually-hidden');
+            }
+
+
+            if (z >= 75) {
+                iconStatus[i].classList.add('text-success')
+                progressBar[i].classList.add('bg-success')
+            }
+            else if (z >= 25) {
+                iconStatus[i].classList.add('text-warning')
+                progressBar[i].classList.add('bg-warning')
+            }
+            if (z < 25) {
+                iconStatus[i].classList.add('text-danger')
+                progressBar[i].classList.add('bg-danger')
+            }
+        }
+    }
+
+
+    progressBar()
+
+    const dateFormatter = async (val) => {
+        const formatDate = new Date(val);
+        const formattedDate = new Intl.DateTimeFormat('en-US').format(formatDate);
+        return formattedDate;
+    }
+
+    const dateInputs = document.querySelectorAll('.date-fields')
+    dateInputs.forEach(eachDate => {
+        dateFormatter(eachDate.value).then((formattedDate) => {
+            eachDate.value = formattedDate
+        });
+
+    })
+
+
+    const statusColorIdentification = () => {
+        const itemCondition = document.querySelectorAll('.item-condition')
+        const statusIcon = document.querySelectorAll('.status-icon')
+
+        for (let i = 0; i < itemCondition.length; i++) {
+            statusIcon[i].style.paddingRight = '10px'
+            if (itemCondition[i].innerText === "Good for Service") {
+
+                statusIcon[i].classList.add('text-success')
+            }
+            if (itemCondition[i].innerText === "For Monitoring") {
+                statusIcon[i].classList.add('text-warning')
+            }
+            if (itemCondition[i].innerText === "Needs Repair") {
+                statusIcon[i].classList.add('text-danger')
+            }
+        }
+    }
+    statusColorIdentification()
+
+
+
+    var vehiclesData = @Json.Serialize(ViewData["CurrentVehicleStatus"]);
+    console.log(vehiclesData)
+    const generateBarChart = async (container, dataValues) => {
+        const setDatValues = await dataValues
+        console.log(setDatValues)
+        const setContainer = await container;
+
+
+        let labels = setDatValues.map(({ Vehicle, MaintenanceDate, ...entry }) => {
+            return `${Vehicle}, ${new Date(MaintenanceDate).toLocaleDateString()}`
+        });
+
+
+        const totalGoodForServiceData = await setDatValues.map(entry => entry.Good);
+        const totalForMonitoringData = await setDatValues.map(entry => entry.ForMonitoring);
+        const totalNeedsRepairData = await setDatValues.map(entry => entry.NeedsRepair);
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Good',
+                    data: totalGoodForServiceData,
+                    backgroundColor: 'rgb(30, 50, 92)',
+                    borderColor: 'rgba(147, 197, 75, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'for Monitoring',
+                    data: totalForMonitoringData,
+                    backgroundColor: 'rgb(255, 179, 25)',
+                    borderColor: 'rgba(255, 255, 51, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Needs Repair/ Replacements',
+                    data: totalNeedsRepairData,
+                    backgroundColor: 'rgb(146, 20, 12)',
+                    borderColor: 'rgba(205, 92, 92, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+        if (setContainer.chart) {
+            setContainer.chart.destroy();
+        }
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                layout: {
+                    padding: 10
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: false,
+                            text: 'Date',
+                            stacked: false,
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: false,
+                            text: 'Totality of Parts per status',
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+        };
+
+        setContainer.chart = new Chart(setContainer, config);
+
+    }
+
+
+    generateBarChart(document.getElementById('vehicleChart'), vehiclesData);
+
+
+
+
+</script>
+
+
+

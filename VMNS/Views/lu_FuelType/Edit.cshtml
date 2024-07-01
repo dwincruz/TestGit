@@ -1,0 +1,46 @@
+﻿@model VMNS.Models.lu_FuelType
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<form asp-action="Edit">
+    <div class="row">
+        <input type="hidden" asp-for="Id" />
+        <div class="col-md-6 col-sm-4 col-6 my-auto">
+            <h2>Fuel Types</h2>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+            <div class="float-end">
+                <a asp-area="" asp-controller="lu_FuelType" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+                <button type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+        <div class="col-lg-7 col-sm-7 col-12">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="FuelName"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="FuelName"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="FuelName" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

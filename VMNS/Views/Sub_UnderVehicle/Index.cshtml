@@ -1,0 +1,139 @@
+﻿@model IEnumerable<VMNS.Models.Sub_UnderVehicle>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Oil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Coolant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Battery)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PowerSteering)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrakeFluid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Washer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AutomaticTransmission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineAirFilter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriveBelts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoolingSystemHoses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeaterHoses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirCon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HosesConnections)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RadiatorCore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirConCondenser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoolantFluid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClutchFluid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maintenance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coolant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Battery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PowerSteering)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrakeFluid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Washer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AutomaticTransmission)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineAirFilter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriveBelts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoolingSystemHoses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeaterHoses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirCon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HosesConnections)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RadiatorCore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirConCondenser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoolantFluid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClutchFluid)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Maintenance.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@

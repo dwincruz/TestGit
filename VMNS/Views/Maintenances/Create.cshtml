@@ -1,0 +1,120 @@
+﻿@model VMNS.Models.Maintenance
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<form class="row" asp-action="Create" enctype="multipart/form-data">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Vehicle Maintenance</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="Maintenances" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button asp-action="Create" type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+        </div>
+    </div>
+    <div class="col-12">
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+    <div class="col-lg-7 col-sm-7 col-12">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="VehicleId" class="form-control" asp-items="ViewBag.VehicleId"></select>
+                        <div class="input-text"><label>Plate Number</label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="VehicleId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="date"
+                               asp-for="DateChecked"
+                               id="dateInspect"
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="DateChecked"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="DateChecked" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="Mileage"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Mileage"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Mileage" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="InspectorName"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="InspectorName"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="InspectorName" class="text-danger"></span>
+            </div>
+
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="Remarks"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Remarks"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="file"
+                               id="file"
+                               class="form-control"
+                               required
+                               name="file"
+                               accept="image/*,.pdf"
+                               multiple />
+                        <div class="input-text"><label>Upload File</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    @*<partial name="_ValidationScriptsPartial" />*@
+    <script>
+        window.onload = () => {
+            const dateInspect = document.querySelector("#dateInspect")
+
+            const currentDate = (inputDateValue) => {
+                inputDateValue.value = new Date().toISOString().split("T")[0];
+            }
+            currentDate(dateInspect)
+        }
+    </script>
+}

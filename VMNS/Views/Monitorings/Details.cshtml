@@ -1,0 +1,43 @@
+﻿@model VMNS.Models.Monitoring
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Monitoring</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReplacementId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReplacementId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CurrentKM)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CurrentKM)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LifeSpan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LifeSpan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maintenance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maintenance.Remarks)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

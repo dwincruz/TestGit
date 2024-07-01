@@ -1,0 +1,89 @@
+﻿@model IEnumerable<VMNS.Models.Maintenance>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<div class="row">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Vehicle Maintenance</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+             @if (!User.IsInRole("Administrator"))
+            {
+                <a asp-action="Create" type="button" class="btn btn-sm bg-lra-warning text-capitalize  rounded "><i class="ri-add-line"></i> Create New</a>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="row px-3">
+    <div class="col-12 bg-white border-lra-shadow rounded p-3">
+        <table class="custom-table table table-hover" id="myTable" width="100%" cellspacing="0" data-page-length='10'>
+            <thead class="table-primary">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehicle.PlateNo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vehicle.Model)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DateChecked)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Mileage)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.InspectorName)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Remarks)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vehicle.PlateNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Vehicle.Model)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateChecked)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mileage)
+                    </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InspectorName)
+                        </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Remarks)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </a>
+                        |
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Details">
+                            <i class="fa-regular fa-eye"></i>
+                        </a>
+                        |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
+                            <i class="ri-delete-bin-7-line"></i>
+                        </a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

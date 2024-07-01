@@ -1,0 +1,61 @@
+﻿@model IEnumerable<VMNS.Areas.Identity.Data.ApplicationRole>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";    
+}
+
+<div class="row">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Roles</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <a asp-action="Create" type="button" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-add-line"></i> Create New</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row px-3">
+    <div class="col-12 border rounded p-3">
+        <table class="custom-table table table-hover" id="myTable" width="100%" cellspacing="0" data-page-length='10'>
+            <thead class="table-primary">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th width="150"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </a>
+                            |
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Details">
+                                <i class="fa-regular fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

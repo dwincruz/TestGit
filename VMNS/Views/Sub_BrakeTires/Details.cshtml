@@ -1,0 +1,67 @@
+﻿@model VMNS.Models.Sub_BrakeTires
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sub_BrakeTires</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BreakLining)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BreakLining)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TireTread)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TireTread)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WearPattern)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WearPattern)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TirePressureBefore)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TirePressureBefore)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TirePressureAfter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TirePressureAfter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.lu_Wheel)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.lu_Wheel.WheelPosition)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maintenance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maintenance.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

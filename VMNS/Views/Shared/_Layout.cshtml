@@ -1,0 +1,338 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using VMNS.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    bool isAdmin = User.Identity.IsAuthenticated && User.IsInRole("Administrator");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VMNS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/admin_layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/print.css" asp-append-version="true" media="screen, print" />
+
+
+    <link rel="stylesheet" href="~/VMNS.styles.css" asp-append-version="true" />
+    @*<link rel="stylesheet" href="~/css/select2.min.css">*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template-->
+    <link href="~/datatable/datatables.min.css" rel="stylesheet">
+
+</head>
+<body>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        @* <nav id="secondScenePt2">
+            <div>
+                @if (!User.IsInRole("Administrator"))
+                {
+                    <button id="minimizeSideBar" data- class="btn border rounded"><i class="ri-layout-left-line"></i></button>
+                }
+                <label class="fw-bold">VMNS</label>
+            </div>
+            <div>
+                <ul style="display: flex;margin: 0; gap: 10px;">
+                    <li class="visually-hidden">
+                        <div class="btn-group">
+                            <button type="button" class="btn border rounded-circle dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <i class="ri-notification-2-line"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <button type="button" class="btn border rounded-circle dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <i class="ri-user-line"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                                <li>
+                                    <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button id="logout" type="submit" class="btn btn-sm w-100 text-lowercase text-start"><i class="ri-logout-box-line"></i> sign out</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav> *@
+        <nav id="secondScenePt2" class="bg-lra-primary">
+            <div>
+                @if (!User.IsInRole("Administrator"))
+                {
+                    <button id="minimizeSideBar" data- class="btn border rounded"><i class="ri-layout-left-line"></i></button>
+                }
+                <a class="navbar-brand" href="/">
+                    
+                    <div class="d-flex">
+                        <div class="p-2 flex-fill"><img src="/images/lra-logo.png" alt="Logo" style="height:50px;opacity:100;position:unset;" class="d-inline-block align-text-top"></div>
+                        <div class="p-2 flex-fill"><img src="/images/vmms.png" alt="Logo" style="height:50px;opacity:100;position:unset;" class="d-inline-block align-text-top"></div>
+                       @*  <div class="p-2 flex-fill align-self-center" style="font-size:12px">
+                            <small class="fw-bold text-white">Vehicle</small>
+                            <small class="fw-bold text-white">Maintenance</small>
+                            <small class="fw-bold text-white">Monitoring</small>
+                            <small class="fw-bold text-white">System</small>
+                        </div> *@
+                        
+                    </div>
+                    
+                </a>
+            </div>
+            <div>
+                <ul style="display: flex;margin: 0; gap: 10px;">
+                    <li class="visually-hidden">
+                        <div class="btn-group">
+                            <button type="button" class="btn border rounded-circle dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <i class="ri-notification-2-line"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <button type="button" class="btn border rounded-circle dropdown-toggle bg-lra-warning" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <i class="ri-user-line"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                                <li>
+                                    <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button id="logout" type="submit" class="btn btn-sm w-100 text-lowercase text-start "><i class="ri-logout-box-line"></i> sign out</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content-wrapper" id="pageContent">
+            <aside class="sidebar bg-white">
+
+
+                <div class="sidebar-links" style="padding: 10px 0px !important;">
+                    @if (!User.IsInRole("Administrator"))
+                    {
+                        <ul style="padding: 0px 10px !important;">
+                            <li class="page-link">
+                                <a class="" asp-area="" asp-controller="Home" asp-action="Index">
+                                    <i class="ri-home-2-line icon"></i>
+                                    <span class="theme-text link-text">Home</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item border-0">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <i class="ri-user-settings-line icon"></i>
+                                        <span class="theme-text link-text-group">User Management</span>
+                                    </button>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0">
+                                    <ul class="list-group list-group-flush rounded p-0">
+                                        <li class="page-link list-group-item p-0"><a class="" asp-area="" asp-controller="UsersAdmin" asp-action="Index"><i class="ri-group-line icon"></i><span class="theme-text link-text">Users</span></a></li>
+                                        <li class="page-link list-group-item p-0"><a class="" asp-area="" asp-controller="RolesAdmin" asp-action="Index"><i class="ri-key-2-line icon"></i><span class="theme-text link-text">Roles</span></a></li>
+                                        <li class="page-link list-group-item p-0"><a class="" asp-area="" asp-controller="lu_Office" asp-action="Index"><i class="ri-building-2-line icon"></i><span class="theme-text link-text">Offices</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div class="accordion-item border-0">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vehicleModule" aria-expanded="false" aria-controls="vehicleModule">
+                                        <i class="ri-steering-2-line icon"></i>
+                                        <span class="theme-text link-text-group">Vehicle</span>
+                                    </button>
+                                </h4>
+                            </div>
+                            <div id="vehicleModule" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0">
+                                    <ul class="list-group list-group-flush rounded p-0">
+
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="lu_VehicleType" asp-action="Index"><i class="ri-roadster-line icon"></i><span class="theme-text link-text">Vehicle Types</span></a>
+                                        </li>
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="lu_FuelType" asp-action="Index"><i class="ri-oil-line icon"></i><span class="theme-text link-text">Fuel</span></a>
+                                        </li>
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="lu_Transmission" asp-action="Index"><i class="ri-git-branch-fill icon"></i><span class="theme-text link-text">Transmission</span></a>
+                                        </li>
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="lu_EquipmentStatus" asp-action="Index"><i class="ri-tools-line icon"></i><span class="theme-text link-text">Equipment Status</span></a>
+                                        </li>
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="Replacements" asp-action="Index"><i class="ri-loop-left-line icon"></i><span class="theme-text link-text">Replacements</span></a>
+                                        </li>
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="lu_Wheel" asp-action="Index"><i class="ri-qr-scan-2-fill icon"></i><span class="theme-text link-text">Wheel Position</span></a>
+                                        </li>
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="lu_WheelDrive" asp-action="Index"><i class="ri-expand-width-line icon"></i><span class="theme-text link-text">Wheel Drive</span></a>
+                                        </li>
+                                        <li class="page-link list-group-item p-0">
+                                            <a class="" asp-area="" asp-controller="lu_DamageScale" asp-action="Index"><i class="ri-error-warning-line icon"></i><span class="theme-text link-text">Damage Scale</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div class="accordion-item border-0">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vehicleInfoModule" aria-expanded="false" aria-controls="vehicleInfoModule">
+                                        <i class="ri-file-info-line icon"></i>
+                                        <span class="theme-text link-text-group">Master List</span>
+                                    </button>
+                                </h4>
+                            </div>
+                            <div id="vehicleInfoModule" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-0">
+                                    <ul class="list-group list-group-flush rounded p-0">
+                                        @if (User.IsInRole("Administrator"))
+                                        {
+                                            <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Vehicles" asp-action="AdminView"><i class="ri-settings-3-line icon"></i><span class="theme-text link-text">Administrator View</span></a></li>
+
+                                        }
+                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Vehicles" asp-action="Index"><i class="ri-information-2-line icon"></i><span class="theme-text link-text">Vehicle Information</span></a></li>
+                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Maintenances" asp-action="Index"><i class="ri-tools-fill icon"></i><span class="theme-text link-text">Vehicle Maintenance</span></a></li>
+                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Maintenances" asp-action="History"><i class="ri-tools-fill icon"></i><span class="theme-text link-text">Vehicle Maintenance History</span></a></li>
+                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Accidents" asp-action="Index"><i class="ri-history-line icon"></i><span class="theme-text link-text">Accident Logs</span></a></li>
+                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Extras" asp-action="Index"><i class="ri-shapes-line icon"></i><span class="theme-text link-text">Accessories</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div></div>
+
+                        </div>
+
+
+
+                    }
+                    @if (User.IsInRole("Administrator"))
+                    {
+
+                        <div class=" rounded p-3  bg-white">
+                            <div class="input-group mb-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="search"
+                                           id="searchInput"
+                                           onkeyup="onSearch()"
+                                           class="form-control"
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Search Vehicle</label></div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <ul class="list-group" id="list">
+
+                                    @foreach (var vehicle in (IEnumerable<Vehicle>)ViewData["Vehicles"])
+                                    {
+                                        <li class="list-group-item p-0 rounded mt-2">
+                                            @*     <div class="d-flex justify-content-center">
+                                <button class="vehicle-item w-100 btn btn-lg p-3" id="@vehicle.Id">@vehicle.FullDetail</button>
+                                </div> *@
+
+                                            <a class="btn stretched-link" href="/Vehicles/AdminView/@vehicle.Id">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+                                                    <div class="rounded p-3 bg-lra-primary box-lra-shadow">
+                                                        <div class="d-flex">
+                                                            <div class="me-auto col-6">
+                                                                @*  <img src="https://www.isuzu-gencars.com.ph/wp-content/uploads/2023/05/LS-A-4x4-MT-Front-Onyx-Black-1024x670.png" height="50px"> *@
+                                                                @*  <img src="https://visor.ph/wp-content/uploads/2018/03/nissan-urvan-premium-main1.jpg" height="50px"> *@
+                                                                @* <img src="https://www.mitsubishi-motors.com.ph/content/dam/mitsubishi-motors-ph/images/cars/xpander/2022/models/nc1wlnhhlvp-ge-ph-opt/primary/exterior/X37_135_22RN_GLX.png" height="50px"> *@
+                                                                <img src="/@vehicle.ImagePath" height="" width="100%">
+                                                                @* <img src="https://w7.pngwing.com/pngs/136/201/png-transparent-toyota-innova-car-toyota-highlander-toyota-hilux-toyota-compact-car-bicycle-car.png" height="50px" width="100%"> *@
+                                                            </div>
+                                                            <div class="d-flex align-items-end flex-column col-6">
+                                                                <div class="mb-auto p-2"></div>
+                                                                <div class=""><strong>@vehicle.PlateNo</strong></div>
+                                                                <div class=""><span class="badge text-bg-primary ">@vehicle.Brand @vehicle.Model</span></div>
+                                                            </div>
+                                                            @*   <div class="align-self-end"><br /></div> *@
+
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                    }
+
+
+
+                </div>
+
+
+
+            </aside>
+
+
+            <main class="container-fluid">
+                @RenderBody()
+            </main>
+        </div>
+    }
+    else
+    {
+        <main class="container-fluid">
+            @RenderBody()
+        </main>
+    }
+
+    @*<script src="~/js/select2.min.js"></script>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/datatable/datatables.js"></script>
+    <script src="~/datatable/datatables.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/06fa9aefed.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    @await Html.PartialAsync("_NotificationPartial")
+    @await Html.PartialAsync("_LoginNotificationPartial")
+    <script>
+        const body = document.querySelector("body");
+        const sidebar = body.querySelector(".sidebar");
+        //const modeSwitch = body.querySelector(".toggle-switch");
+        const modeText = body.querySelector(".mode-text");
+
+
+            const minimizeSideBar = body.querySelector("#minimizeSideBar");
+            if (minimizeSideBar) {
+                minimizeSideBar.addEventListener("click", (e) => {
+                    sidebar.classList.toggle("close");
+                });
+            }
+
+        const onSearch = () => {
+            const searchField = document.querySelector("#searchInput");
+            let filter = searchField.value.toUpperCase();
+
+            const lists = document.querySelectorAll("#list li");
+            lists.forEach((list) => {
+                const text = list.textContent.toUpperCase();
+                list.style.display = text.includes(filter) ? "block" : "none";
+            });
+        };
+
+    </script>
+</body>
+</html>

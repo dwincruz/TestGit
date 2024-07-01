@@ -1,0 +1,283 @@
+﻿@model VMNS.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<form class="row" asp-action="Create" enctype="multipart/form-data">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Vehicle Information</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="Vehicles" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button asp-action="Create" type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+        </div>
+    </div>
+    <div class="col-12">
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+    <div class="col-lg-7 col-sm-7 col-12">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="Brand"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Brand"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="Model"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Model"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="lu_VehicleTypeId" class="form-control" asp-items="ViewBag.lu_VehicleTypeId"></select>
+                        <div class="input-text"><label>Vehicle Type</label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="lu_VehicleTypeId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="lu_TransmissionId" class="form-control" asp-items="ViewBag.lu_TransmissionId"></select>
+                        <div class="input-text"><label>Transmission Type</label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="lu_TransmissionId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="Color"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Color"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+           
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="lu_WheelDriveId" class="form-control" asp-items="ViewBag.lu_WheelDriveId"></select>
+                        <div class="input-text"><label>Wheel Drive</label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="lu_WheelDriveId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="lu_FuelTypeId" class="form-control" asp-items="ViewBag.lu_FuelTypeId"></select>
+                        <div class="input-text"><label>Fuel Type</label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="lu_FuelTypeId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="PlateNo"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="PlateNo"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="PlateNo" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="ConductionNo"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="ConductionNo"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="ConductionNo" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="InsuranceType"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="InsuranceType"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="InsuranceType" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="date"
+                               asp-for="InsuranceDate"
+                               id="insuranceDate"
+                               class="form-control "
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="InsuranceDate"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="InsuranceDate" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="date"
+                               asp-for="LtoRegDate"
+                               id="ltoRegDate"
+                               class="form-control "
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="LtoRegDate"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="LtoRegDate" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="date"
+                               asp-for="LtoDueDate"
+                               id="ltoDueDate"
+                               class="form-control "
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="LtoDueDate"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="LtoDueDate" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="AssignedOfficer"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="AssignedOfficer"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="AssignedOfficer" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="date"
+                               asp-for="IssuedDate"
+                               id="issuedDate"
+                               class="form-control "
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="IssuedDate"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="IssuedDate" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="date"
+                               asp-for="AquisitionDate"
+                               id="aquisitionDate"
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="AquisitionDate"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="AquisitionDate" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="Description"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="Description"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="file"
+                               id="file"
+                               name="file"
+                               class="form-control"
+                               accept="image/*"
+                               multiple />
+                        <div class="input-text"><label>Upload Image</label></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+@*  accept="image/*,.png" *@
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        window.onload = () => {
+            const insuranceDate = document.querySelector("#insuranceDate")
+            const ltoRegDate = document.querySelector("#ltoRegDate")
+            const ltoDueDate = document.querySelector("#ltoDueDate")
+            const issuedDate = document.querySelector("#issuedDate")
+            const aquisitionDate = document.querySelector('#aquisitionDate')
+
+
+            const currentDate = (inputDateValue) => {
+                inputDateValue.value = new Date().toISOString().split("T")[0];
+            }
+            currentDate(insuranceDate)
+            currentDate(ltoRegDate)
+            currentDate(ltoDueDate)
+            currentDate(issuedDate)
+            currentDate(aquisitionDate)
+
+
+        }
+    </script>
+}
+

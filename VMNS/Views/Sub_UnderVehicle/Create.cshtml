@@ -1,0 +1,281 @@
+﻿@model VMNS.Models.Sub_UnderVehicle
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+<form class="row" asp-action="Create">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Under Vehicle</h2>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="float-end">
+            <a asp-area="" asp-controller="Maintenances" asp-action="Details" asp-route-Id=@ViewData["MaintenanceId"] class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button asp-action="Create" type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+        </div>
+    </div>
+    <div class="col-12">
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+    <div class="col-lg-7 col-sm-7 col-12">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="MaintenanceId"
+                               id=""
+                               class="form-control"
+                               required
+                               readonly
+                               pattern="\S+.*" />
+                        <div class="input-text"><label asp-for="MaintenanceId"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="MaintenanceId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="TransmissionFluid" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="TransmissionFluid"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="TransmissionFluid" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="Coolant" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="Coolant"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Coolant" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="ExhaustPipes" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="ExhaustPipes"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="ExhaustPipes" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="TransferCase" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="TransferCase"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="TransferCase" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="FluidLinesConnections" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="FluidLinesConnections"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="FluidLinesConnections" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="Wiring" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="Wiring"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Wiring" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="EngineOil" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="EngineOil"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="EngineOil" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="ParkingBrakeCable" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="ParkingBrakeCable"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="ParkingBrakeCable" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="NutsAndBolts" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="NutsAndBolts"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="NutsAndBolts" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="Muffler" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="Muffler"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Muffler" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="ShockAbsorber" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="ShockAbsorber"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="ShockAbsorber" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="DriveShaftBoots" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="DriveShaftBoots"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="DriveShaftBoots" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="TransmissionAssembly" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="TransmissionAssembly"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="TransmissionAssembly" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="UJoints" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="UJoints"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="UJoints" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="DustCover" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="DustCover"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="DustCover" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="Hoses" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="Hoses"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Hoses" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="FuelTankVaporVentSystemsHoses" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="FuelTankVaporVentSystemsHoses"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="FuelTankVaporVentSystemsHoses" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="FuelTankVaporVentSystemsHoses" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="FuelTankVaporVentSystemsHoses"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="FuelTankVaporVentSystemsHoses" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="FluidTankBand" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="FluidTankBand"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="FluidTankBand" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="AutomaticTransmissionFluid" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="AutomaticTransmissionFluid"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="AutomaticTransmissionFluid" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="BallJoints" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="BallJoints"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="BallJoints" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="BrakeLines" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="BrakeLines"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="BrakeLines" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="CatalyticConverter" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="CatalyticConverter"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="CatalyticConverter" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="ConstantVelocityBoots" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="ConstantVelocityBoots"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="ConstantVelocityBoots" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select asp-for="Differential" class="form-control" asp-items="ViewBag.Status"></select>
+                        <div class="input-text"><label asp-for="Differential"></label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Differential" class="text-danger"></span>
+            </div>
+            <div class="col-lg-6 col-12 mb-4">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <input type="text"
+                               asp-for="Remarks"
+                               id=""
+                               class="form-control"
+                               required
+                               pattern="\S+.*" />
+                        <div class="input-text"><label>Remarks</label></div>
+                    </div>
+                </div>
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,127 @@
+﻿@model VMNS.Models.Sub_UnderVehicle
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sub_UnderVehicle</h4>
+    <hr />
+    @* <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Oil)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Oil)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Coolant)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Coolant)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Battery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Battery)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PowerSteering)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PowerSteering)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrakeFluid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrakeFluid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Washer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Washer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AutomaticTransmission)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AutomaticTransmission)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EngineAirFilter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EngineAirFilter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DriveBelts)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DriveBelts)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoolingSystemHoses)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoolingSystemHoses)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HeaterHoses)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HeaterHoses)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AirCon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AirCon)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HosesConnections)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HosesConnections)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RadiatorCore)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RadiatorCore)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AirConCondenser)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AirConCondenser)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoolantFluid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoolantFluid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClutchFluid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClutchFluid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maintenance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maintenance.Id)
+        </dd>
+    </dl> *@
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

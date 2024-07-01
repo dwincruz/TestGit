@@ -1,0 +1,540 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PCIS
+build_property.RootNamespace = PCIS
+build_property.ProjectDir = C:\Users\ICTD\Desktop\Public Concerns Information System\PCIS\PCIS\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ICTD\Desktop\Public Concerns Information System\PCIS\PCIS
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Lockout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Home/_OtherConcerns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfT3RoZXJDb25jZXJucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_CategoryOfConcern/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2F0ZWdvcnlPZkNvbmNlcm5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_CategoryOfConcern/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2F0ZWdvcnlPZkNvbmNlcm5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_CategoryOfConcern/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2F0ZWdvcnlPZkNvbmNlcm5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_CategoryOfConcern/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2F0ZWdvcnlPZkNvbmNlcm5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_CategoryOfConcern/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2F0ZWdvcnlPZkNvbmNlcm5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Channel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2hhbm5lbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Channel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2hhbm5lbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Channel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2hhbm5lbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Channel/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2hhbm5lbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Channel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ2hhbm5lbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_ConcernedOffice/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ29uY2VybmVkT2ZmaWNlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_ConcernedOffice/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ29uY2VybmVkT2ZmaWNlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_ConcernedOffice/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ29uY2VybmVkT2ZmaWNlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_ConcernedOffice/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ29uY2VybmVkT2ZmaWNlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_ConcernedOffice/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfQ29uY2VybmVkT2ZmaWNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Gender/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfR2VuZGVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Gender/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfR2VuZGVyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Gender/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfR2VuZGVyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Gender/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfR2VuZGVyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Gender/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfR2VuZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_NatureOfConcern/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfTmF0dXJlT2ZDb25jZXJuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_NatureOfConcern/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfTmF0dXJlT2ZDb25jZXJuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_NatureOfConcern/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfTmF0dXJlT2ZDb25jZXJuXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_NatureOfConcern/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfTmF0dXJlT2ZDb25jZXJuXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_NatureOfConcern/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfTmF0dXJlT2ZDb25jZXJuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Office/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Office/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Office/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Office/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Office/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Remarks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfUmVtYXJrc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Remarks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfUmVtYXJrc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Remarks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfUmVtYXJrc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Remarks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfUmVtYXJrc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_Remarks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfUmVtYXJrc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SocMed/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU29jTWVkXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SocMed/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU29jTWVkXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SocMed/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU29jTWVkXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SocMed/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU29jTWVkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SocMed/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU29jTWVkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SourceOfConcern/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU291cmNlT2ZDb25jZXJuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SourceOfConcern/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU291cmNlT2ZDb25jZXJuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SourceOfConcern/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU291cmNlT2ZDb25jZXJuXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SourceOfConcern/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU291cmNlT2ZDb25jZXJuXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_SourceOfConcern/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU291cmNlT2ZDb25jZXJuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_StatusOfTicket/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU3RhdHVzT2ZUaWNrZXRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_StatusOfTicket/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU3RhdHVzT2ZUaWNrZXRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_StatusOfTicket/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU3RhdHVzT2ZUaWNrZXRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_StatusOfTicket/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU3RhdHVzT2ZUaWNrZXRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/lu_StatusOfTicket/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfU3RhdHVzT2ZUaWNrZXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/OtherConcerns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJDb25jZXJuc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/OtherConcerns/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJDb25jZXJuc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/OtherConcerns/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJDb25jZXJuc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/OtherConcerns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJDb25jZXJuc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/OtherConcerns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3RoZXJDb25jZXJuc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/PublicConcerns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQ29uY2VybnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/PublicConcerns/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQ29uY2VybnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/PublicConcerns/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQ29uY2VybnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/PublicConcerns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQ29uY2VybnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/PublicConcerns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljQ29uY2VybnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Reports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/RolesAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/RolesAdmin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/RolesAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/RolesAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/RolesAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/RolesAdmin/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxfSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/_Body.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb2R5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/_LoginNotificationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbk5vdGlmaWNhdGlvblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/_NotificationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/SocMedConcerns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jTWVkQ29uY2VybnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/SocMedConcerns/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jTWVkQ29uY2VybnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/SocMedConcerns/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jTWVkQ29uY2VybnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/SocMedConcerns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jTWVkQ29uY2VybnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/SocMedConcerns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29jTWVkQ29uY2VybnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/UsersAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/UsersAdmin/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/UsersAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/UsersAdmin/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/UsersAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/UsersAdmin/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxfSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-v9f2od72ob
+
+[C:/Users/ICTD/Desktop/Public Concerns Information System/PCIS/PCIS/Views/Shared/_Layout_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-yvjptqf472

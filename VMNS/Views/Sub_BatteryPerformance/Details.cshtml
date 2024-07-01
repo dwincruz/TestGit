@@ -1,0 +1,37 @@
+﻿@model VMNS.Models.Sub_BatteryPerformance
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Body.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sub_BatteryPerformance</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BatteryTerminal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BatteryTerminal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ConditionOfBattery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ConditionOfBattery)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maintenance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maintenance.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

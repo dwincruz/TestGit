@@ -1,0 +1,270 @@
+﻿@{
+    Layout = "~/Views/Shared/_Body.cshtml";
+
+}
+
+<div class="row">
+    <div class="col-md-6 col-sm-4 col-6 my-auto">
+        <h2>Dashboard</h2>
+    </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+        <div class="border rounded p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <strong>Vehicles</strong>
+                <span><i class="ri-roadster-line dashboard-icon"></i></span>
+            </div>
+            <div>
+                <h1 class="fw-bolder text-break  m-0">@ViewBag.TotalVehicles</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+        <div class="border rounded p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <strong>Users</strong>
+                <span><i class="ri-user-3-line dashboard-icon"></i></span>
+            </div>
+            <div>
+                <h1 class="fw-bolder text-break m-0">@ViewBag.MotorpoolOfficer</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12  mb-4">
+        <div class="border rounded p-3">
+            <div class="row m-0">
+                <div class="col-md-6 col-sm-6 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select id="selectVehicle" class="form-select" asp-items="ViewBag.VehicleId">
+                                <option selected disabled>---</option>
+                            </select>
+                            <div class="input-text"><label>Select Vehicle</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                </div>
+                <div class="col-md-6 col-sm-12 col-12">
+                    <div class="row chart">
+                        <canvas id="myChart"  height="200" ></canvas>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12">
+                    
+                    <ul class="list-group" id="currentPartsConditionLists">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>   
+ </div>  
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+         const filterResult = (value) => {
+            const filteredData = value.map(record => {
+                let totalGFS = 0;
+                let totalFM = 0;
+                let totalNR = 0;
+                const filteredProperties = Object.entries(record)
+                    .filter(([key, value]) => key === "MaintenanceDate" || value === "Good for Service" || value === "For Monitoring" || value === "Needs Repair")
+                    .reduce((obj, [key, value]) => {
+                        if (value === "Good for Service") {
+                            totalGFS++
+                        }
+                        if (value === "For Monitoring") {
+
+                            totalFM++
+                        }
+                        if (value === "Needs Repair") {
+                            totalNR++
+                        }
+                        obj[key] = value;
+                        return obj;
+                    }, {});
+                filteredProperties.totalForMonitoring = totalFM;
+                filteredProperties.totalGoodForService = totalGFS;
+                filteredProperties.totalNeedsRepair = totalNR;
+                return filteredProperties;
+            });
+            console.log(filteredData)
+            return filteredData;
+        }
+
+        const currentPartsCondition = async (dataValues) => {
+            const currentPartsConditionLists = document.querySelector('#currentPartsConditionLists')
+            currentPartsConditionLists.innerHTML = ""
+            const current = await [dataValues[0]]
+
+            if (current) {
+                const currentLists = current.map(eachItem => {
+                    return Object.entries(eachItem)
+                        .filter(([key, value]) => value === "Good for Service" || value === "For Monitoring" || value === "Needs Repair")
+                        .map(([key, value]) => {
+                            return `<li class="list-group-item d-flex justify-content-between"><label>${key}</label> <span class="conditionStatus">${value}</span></li>`;
+                        }).join("");
+                })
+                console.log(currentLists)
+                currentPartsConditionLists.innerHTML = currentLists
+                const conditionStatus = document.querySelectorAll('.conditionStatus');
+                for (let i = 0; i < conditionStatus.length; i++) {
+                    if (conditionStatus[i].innerText === "Good for Service") {
+                        conditionStatus[i].style.backgroundColor = 'rgba(147, 197, 75, 1)'
+                        conditionStatus[i].style.padding = '5px 10px'
+                        conditionStatus[i].style.borderRadius = '30px'
+
+
+                    }
+                    else if (conditionStatus[i].innerText === "For Monitoring") {
+                        conditionStatus[i].style.backgroundColor = 'rgba(255, 255, 51, 1)'
+                        conditionStatus[i].style.padding = '5px 10px'
+                        conditionStatus[i].style.borderRadius = '30px'
+
+
+                    }
+                    else if (conditionStatus[i].innerText === "Needs Repair") {
+                        conditionStatus[i].style.backgroundColor = 'rgba(205, 92, 92, 1)'
+                        conditionStatus[i].style.padding = '5px 10px'
+                        conditionStatus[i].style.borderRadius = '30px'
+
+
+                    }
+                }
+            }
+            
+            
+        }
+        
+
+        const generateChart = async (container, chartType, dataValues) => {
+            currentPartsCondition(dataValues)
+
+            let setContainer = await container;
+            const setChartType = await chartType;
+
+            const labels = dataValues.map(entry => {
+                let formatDate = new Date(entry.MaintenanceDate).toLocaleString();
+                return formatDate
+            });
+            const totalForMonitoringData = dataValues.map(entry => entry.totalForMonitoring);
+            const totalGoodForServiceData = dataValues.map(entry => entry.totalGoodForService);
+            const totalNeedsRepairData = dataValues.map(entry => entry.totalNeedsRepair);
+            const data = {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Total Parts in  Good for Service',
+                        data: totalGoodForServiceData,
+                        backgroundColor: 'rgba(147, 197, 75, 0.2)',
+                        borderColor: 'rgba(147, 197, 75, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Total Parts for Monitoring',
+                        data: totalForMonitoringData,
+                        backgroundColor: 'rgba(255, 255, 51, 0.2)',
+                        borderColor: 'rgba(255, 255, 51, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Total Parts in Needs Repair',
+                        data: totalNeedsRepairData,
+                        backgroundColor: 'rgba(205, 92, 92, 0.2)',
+                        borderColor: 'rgba(205, 92, 92, 1)',
+                        borderWidth: 1
+                    }
+                ]  
+                        
+                    
+            };
+            if (setContainer.chart) {
+                setContainer.chart.destroy();
+            }
+
+            const config = {
+                type: setChartType,
+                data: data,
+                options: {
+                    responsive: true,
+                    layout: {
+                        padding: 10
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Date',
+                                stacked: false,
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: false,
+                                text: 'Totality of Parts per status',
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                }
+            };
+
+            setContainer.chart = new Chart(setContainer, config);
+
+        }
+
+
+
+       
+
+        let vehicleInfos;
+        const resultFilter = async (url, httpRequest, dataValues) => {
+            try {
+                const response = await fetch(url, {
+                    method: httpRequest,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataValues)
+                });
+                if (!response.ok) {
+                    throw new Error('Check Backend');
+                }
+                vehicleInfos = await response.json();
+                const res = filterResult(vehicleInfos)
+                generateChart(document.getElementById('myChart'), 'bar', res);
+
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        const selectVehicle = document.querySelector('#selectVehicle');
+        selectVehicle.addEventListener('change', async (event) => {
+            await resultFilter('/Home/VehicleMaintenanceInfo', 'POST', event.target.value);
+        });
+
+
+       
+        
+     
+
+
+
+    </script>
+}
