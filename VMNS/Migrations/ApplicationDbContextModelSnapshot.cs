@@ -701,6 +701,10 @@ namespace VMNS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("BatteryVoltage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("BrakeLights")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -725,6 +729,10 @@ namespace VMNS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FuelGuage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FuelTankCapBasket")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -745,12 +753,20 @@ namespace VMNS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Indicators")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LicensePlatesLights")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid?>("MaintenanceId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Odometer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Remarks")
                         .IsRequired()

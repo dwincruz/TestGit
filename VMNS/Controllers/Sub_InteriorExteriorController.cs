@@ -78,7 +78,7 @@ namespace VMNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,MaintenanceId,HeadLights,TailLights,TurnSignals,BrakeLights,HazardLights,ExteriorLamps," +
             "LicensePlatesLights,WindshieldWiper,WiperBlades,WindshieldCondition,EmergencyBrakeAdjustment,HornOperation,FuelTankCapBasket," +
-            "AirConGasket,AirConFilter,ClutchOperation,BackupLights,DashWarningLights,Carpet,Remarks,DateReplaced,GlassAndMirrors,Wiring")] Sub_InteriorExterior sub_InteriorExterior)
+            "AirConGasket,AirConFilter,ClutchOperation,BackupLights,DashWarningLights,Carpet,Remarks,DateReplaced,GlassAndMirrors,Wiring,Odometer,FuelGuage,BatteryVoltage,Indicators")] Sub_InteriorExterior sub_InteriorExterior)
         {
             if (ModelState.IsValid)
             {
@@ -120,7 +120,7 @@ namespace VMNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,MaintenanceId,HeadLights,TailLights,TurnSignals,BrakeLights,HazardLights,ExteriorLamps," +
             "LicensePlatesLights,WindshieldWiper,WiperBlades,WindshieldCondition,EmergencyBrakeAdjustment,HornOperation,FuelTankCapBasket,AirConGasket," +
-            "AirConFilter,ClutchOperation,BackupLights,DashWarningLights,Carpet,Remarks,DateReplaced,GlassAndMirrors,Wiring")] Sub_InteriorExterior sub_InteriorExterior)
+            "AirConFilter,ClutchOperation,BackupLights,DashWarningLights,Carpet,Remarks,DateReplaced,GlassAndMirrors,Wiring,Odometer,FuelGuage,BatteryVoltage,Indicators")] Sub_InteriorExterior sub_InteriorExterior)
         {
             if (id != sub_InteriorExterior.Id)
             {

@@ -50,8 +50,13 @@ namespace VMNS.Models
         public string GlassAndMirrors{ get; set; }
         public string Wiring { get; set; }
 
-
-
+        [Display(Name = "Odometer")]
+        public string Odometer { get; set; }
+        [Display(Name = "Fuel Guage")]
+        public string FuelGuage {  get; set; }
+        [Display(Name = "Battery Voltage")]
+        public string BatteryVoltage {  get; set; }
+        public string Indicators {  get; set; }
         public string Remarks { get; set; }
 
         //look up
