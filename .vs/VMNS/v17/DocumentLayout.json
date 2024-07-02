@@ -34,11 +34,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -48,14 +52,10 @@
               "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
               "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
               "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAACUAAAAZAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAwAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-02T05:39:15.287Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -117,7 +117,7 @@
               "RelativeDocumentMoniker": "VMNS\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\wwwroot\\css\\site.css",
               "RelativeToolTip": "VMNS\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAKwGAAAAAAAAAAAnwLUGAAAUAAAA",
+              "ViewState": "AQIAAGcDAAAAAAAAAAAnwHADAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-07-01T08:15:09.135Z",
               "EditorCaption": ""
