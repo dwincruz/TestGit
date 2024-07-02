@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\TestGit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\views\\sub_underhood\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\sub_underhood\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\views\\sub_underhood\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -47,19 +51,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\appsettings.json",
+              "RelativeDocumentMoniker": "VMNS\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\appsettings.json",
+              "RelativeToolTip": "VMNS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-02T05:48:34.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AdminSearch.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
               "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
               "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
               "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAwAAABCAAAA",
+              "ViewState": "AQIAAAsBAAAAAAAAAAAAAHkBAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-02T05:39:15.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Sub_UnderHood\\Delete.cshtml",
               "RelativeDocumentMoniker": "VMNS\\Views\\Sub_UnderHood\\Delete.cshtml",
@@ -78,14 +95,14 @@
               "RelativeDocumentMoniker": "VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
               "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
               "RelativeToolTip": "VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB8AAAApAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAB8AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-02T05:03:51.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Sub_UnderHood\\Edit.cshtml",
               "RelativeDocumentMoniker": "VMNS\\Views\\Sub_UnderHood\\Edit.cshtml",
@@ -98,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Sub_UnderHood.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_UnderHood.cs",
               "RelativeDocumentMoniker": "VMNS\\Models\\Sub_UnderHood.cs",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "VMNS\\wwwroot\\css\\site.css",
