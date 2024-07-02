@@ -875,3 +875,48 @@ body {
 .border-lra {
     border: var(--bs-border-width) var(--bs-border-style) #1e325c !important;
 }
+
+.checkbox-container input{
+    position: relative;
+}
+.checkbox-container input:not(:checked )::before {
+    content: '\25FD';
+    position: absolute;
+    top: -.5em;
+    right: -.4em;
+    font-size: 1.6em;
+}
+.checkbox-container input:checked::before {
+    content: '\25FE';
+    position: absolute;
+    top: -.5em;
+    right: -.4em;
+    font-size: 1.6em;
+ 
+}
+.good {
+    background-color: #B3E2A7 !important;
+}
+
+.warning {
+    background-color: #F6F193 !important;
+}
+
+.danger {
+    background-color: #EE4E4E !important;
+}
+
+.category-name {
+    background-color: black !important;
+    text-align: center !important;
+    color: white !important
+}
+.condition-row td:nth-child(1) {
+    background-color: #B3E2A7 !important;
+}
+.condition-row td:nth-child(2) {
+    background-color: #F6F193 !important;
+}
+.condition-row td:nth-child(3){
+    background-color: #EE4E4E !important;
+}

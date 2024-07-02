@@ -23,7 +23,6 @@ namespace VMNS.Models
         public string DriveBelt { get; set; }
         [Display(Name = "Electric Fuses")]
         public string ElectricFuses { get; set; }
-        [Display(Name = "Electric Fuses")]
         public string Alternator { get; set; }
 
         [Display(Name = "Computer Box")]
