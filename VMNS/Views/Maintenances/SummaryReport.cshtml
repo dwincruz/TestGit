@@ -123,7 +123,7 @@
                         @foreach (var currentValue in currentValues)
                         {
                             <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
-                                <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.HeadLights == currentValue ? "checked" : "") />
+                                <input type="checkbox" class="checkbox-item" value="@currentValue"  @(item.HeadLights == currentValue ? "checked" : "") />
                             </td>
                         }
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Head Lights</td>
