@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Body.cshtml";
+    var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
+
 }
 <form asp-action="Edit">
     <div class="row">
@@ -21,269 +23,281 @@
         </div>
         <div class="col-lg-7 col-sm-7 col-12">
             <div class="row">
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <input type="text"
-                                   asp-for="MaintenanceId"
-                                   id=""
-                                   class="form-control"
-                                   required
-                                   readonly
-                                   pattern="\S+.*" />
-                            <div class="input-text"><label asp-for="MaintenanceId"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="MaintenanceId" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="HeadLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="HeadLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="HeadLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="TailLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="TailLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="TailLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="TurnSignals" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="TurnSignals"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="TurnSignals" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="BrakeLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="BrakeLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="BrakeLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="HazardLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="HazardLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="HazardLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="ExteriorLamps" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="ExteriorLamps"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="ExteriorLamps" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="LicensePlatesLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="LicensePlatesLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="LicensePlatesLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="WindshieldWiper" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="WindshieldWiper"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="WindshieldWiper" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="WiperBlades" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="WiperBlades"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="WiperBlades" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="WindshieldCondition" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="WindshieldCondition"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="WindshieldCondition" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="EmergencyBrakeAdjustment" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="EmergencyBrakeAdjustment"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="EmergencyBrakeAdjustment" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="HornOperation" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="HornOperation"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="HornOperation" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="FuelTankCapBasket" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="FuelTankCapBasket"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="FuelTankCapBasket" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="AirConGasket" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="AirConGasket"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="AirConGasket" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="AirConFilter" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="AirConFilter"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="AirConFilter" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="ClutchOperation" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="ClutchOperation"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="ClutchOperation" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="BackupLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="BackupLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="BackupLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="DashWarningLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="DashWarningLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="DashWarningLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="DashWarningLights" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="DashWarningLights"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="DashWarningLights" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="Carpet" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="Carpet"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="Carpet" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="GlassAndMirrors" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="Carpet"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="GlassAndMirrors" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="Wiring" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="Carpet"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="Wiring" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="Odometer" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="Odometer"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="Odometer" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="FuelGuage" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="FuelGuage"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="FuelGuage" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="BatteryVoltage" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="BatteryVoltage"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="BatteryVoltage" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="Indicators" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="Indicators"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="Indicators" class="text-danger"></span>
-                </div>
+                <div class="col-12">
+                    <input type="text"
+                           asp-for="MaintenanceId"
+                           id=""
+                           class="form-control"
+                           required
+                           readonly
+                           hidden
+                           pattern="\S+.*" />
+                    <table class="table table-bordered table-borderless">
+                        <thead>
+                            <tr>
+                                <th colspan="4" class="good">
+                                    Good for Service
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="good"></th>
+                                <th colspan="3" class="warning">
+                                    For Monitoring
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="good"></th>
+                                <th class="warning"></th>
+                                <th colspan="2" class="danger">
+                                    Needs Repair
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="4" class="category-name">
+                                    Interior / Exterior
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="HeadLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.HeadLights == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.HeadLights)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="TailLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.TailLights == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.TailLights)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="TurnSignals" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.TurnSignals == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.TurnSignals)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="BrakeLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.BrakeLights == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.BrakeLights)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="HazardLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.HazardLights == currentValue ? "checked" : "")/>
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.HazardLights)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="ExteriorLamps" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.ExteriorLamps == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.ExteriorLamps)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="LicensePlatesLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.LicensePlatesLights == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.LicensePlatesLights)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="WindshieldWiper" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WindshieldWiper == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.WindshieldWiper)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="WiperBlades" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WiperBlades == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.WiperBlades)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="WindshieldCondition" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WindshieldCondition == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.WindshieldCondition)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="EmergencyBrakeAdjustment" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.EmergencyBrakeAdjustment == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.EmergencyBrakeAdjustment)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="HornOperation" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.HornOperation == currentValue ? "checked" : "")/>
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.HornOperation)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="FuelTankCapBasket" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.FuelTankCapBasket == currentValue ? "checked" : "")/>
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.FuelTankCapBasket)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="AirConGasket" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.AirConGasket == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.AirConGasket)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="AirConFilter" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.AirConFilter == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.AirConFilter)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="ClutchOperation" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.ClutchOperation == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.ClutchOperation)</td>
+                            </tr>
 
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <input type="text"
-                                   asp-for="Remarks"
-                                   id=""
-                                   class="form-control"
-                                   required
-                                   pattern="\S+.*" />
-                            <div class="input-text"><label>Remarks</label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="Remarks" class="text-danger"></span>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="BackupLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.BackupLights == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.BackupLights)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="DashWarningLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.DashWarningLights == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.DashWarningLights)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="Carpet" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Carpet == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.Carpet)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="GlassAndMirrors" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Carpet == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.GlassAndMirrors)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="Wiring" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Wiring == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.Wiring)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="Odometer" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Odometer == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.Odometer)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="FuelGuage" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.FuelGuage == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.FuelGuage)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="BatteryVoltage" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.BatteryVoltage == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.BatteryVoltage)</td>
+                            </tr>
+                            <tr class="condition-row">
+                                @foreach (var currentValue in currentValues)
+                                {
+                                    <td class="checkbox-container">
+                                        <input type="radio" name="Indicators" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Indicators == currentValue ? "checked" : "") />
+                                    </td>
+                                }
+                                <td>@Html.DisplayNameFor(model => model.Indicators)</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="category-name">
+                                    Remarks
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <textarea class="form-control" placeholder="Leave a comment here" asp-for="Remarks">
+                                    </textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
