@@ -1,4 +1,4 @@
-﻿@{
+﻿@* @{
     Layout = "~/Views/Shared/_Body.cshtml";
 
 }
@@ -47,3 +47,405 @@
 
     </script>
 }
+ *@
+
+        @model VMNS.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Body.cshtml";
+
+}
+
+<div class="row justify-content-center mt-3">
+
+    <div class="col-12 " id="secondScene">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 col-12">
+            </div>
+            <div class="col-lg-12 col-sm-12 col-12">
+                <div class="row mb-3 pt-3" style="border-radius:10px">
+                    <div class="col-12 my-auto">
+                        <h2><i class="ri-dashboard-horizontal-fill text-lra-primary"></i> MOTORPOOL DASHBOARD</h2>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                        <div class="rounded p-3 bg-lra-warning box-lra-shadow">
+                            <div class="d-flex">
+                                <div class="me-auto">
+                                    <strong>Registered Vehicles</strong>
+                                    <h1 class="fw-bolder text-break m-0">@ViewBag.TotalVehicles</h1>
+                                </div>
+                                <div class=""><span><i class="ri-roadster-line dashboard-icon" style="font-size:xxx-large"></i></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                        <div class="rounded p-3 bg-lra-info box-lra-shadow">
+                            <div class="d-flex">
+                                <div class="me-auto">
+                                    <strong>Registered Officers</strong>
+                                    <h1 class="fw-bolder text-break  m-0">@ViewBag.MotorpoolOfficer</h1>
+                                </div>
+                                <div class=""><span><i class="ri-user-line dashboard-icon" style="font-size:xxx-large"></i></span></div>
+                            </div>
+                            @* <div class="d-flex justify-content-between align-items-center" id="changeCategory">
+                            <strong>Officers</strong>
+                            <span><i class="ri-user-line dashboard-icon"></i></span>
+                            </div>
+                            <div>
+                            <h1 class="fw-bolder text-break  m-0">@ViewBag.MotorpoolOfficer</h1>
+                            </div> *@
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                        <div class="rounded p-3 bg-white box-lra-shadow">
+                            <div class="d-flex">
+                                <div class="me-auto">
+                                    <strong>Maintenance Report</strong>
+                                    <h1 class="fw-bolder text-break m-0"><a asp-controller="Maintenances" asp-action="Index" class="btn border rounded text-capitalize bg-lra-info">View All</a></h1>
+                                </div>
+                                <div class=""><span><i class="ri-survey-line dashboard-icon" style="font-size:xxx-large"></i></span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                        <div class="rounded p-3 bg-lra-danger box-lra-shadow">
+                            <div class="d-flex">
+                                <div class="me-auto">
+                                    <strong>Accident Report</strong>
+                                    <h1 class="fw-bolder text-break m-0"><a asp-controller="Accidents" asp-action="Index" class="btn border rounded text-capitalize bg-lra-warning">View All</a></h1>
+                                </div>
+                                <div class=""><span><i class="ri-alert-fill dashboard-icon" style="font-size:xxx-large"></i></span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 col-12">
+                        <div class=" rounded p-3 bg-white box-lra-shadow">
+                            <p class="fw-bold">Vehicle Maintenance Occur</p>
+                            <canvas class="col-12 rounded p-3" id="maintenancesChart" height="100"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-12">
+                        <div class="rounded p-3 bg-white box-lra-shadow">
+                            <p class="fw-bold">Vehicle Accidents Occur</p>
+                            <canvas class="col-12 rounded p-3" id="accidentsChart" height="100"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-12">
+                        <div class="rounded p-3 bg-white box-lra-shadow">
+                            <div class="d-flex ">
+                                <div class="me-auto"><p class="fw-bold">LTO Renewal in Days</p></div>
+                                <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#listModal"> view more</button></div>
+
+                            </div>
+
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+                                @*   <div class="rounded p-1  box-lra-shadow">
+                                <div class="d-flex">
+                                <div class="me-auto col-6">
+
+                                <div class="" style="font-size:14px"><strong>SFX-332</strong></div>
+                                <div class="" style="font-size:11px"><span class="badge text-bg-primary ">TOYOTA REVO</span></div>
+                                </div>
+                                <div class="d-flex align-items-end flex-column col-6">
+                                <div class="" style="font-size:14px"><strong>25 DAYS</strong></div>
+                                <div class="" style="font-size:11px"><span class="badge text-bg-primary ">06/1/2023</span></div>
+                                </div>
+                                @*   <div class="align-self-end"><br /></div>
+
+                                </div>
+                                </div> *@
+
+                            </div>
+                            <ul class="list-group" id="vehicleLists">
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="listModalLabel">All Vehicle LTO Renewal in Days</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" id="vehicleChart2">
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                @* <button type="button" class="btn btn-primary">Save changes</button> *@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const onSearch = () => {
+        const searchField = document.querySelector("#searchInput");
+        let filter = searchField.value.toUpperCase();
+
+        const lists = document.querySelectorAll("#list li");
+        lists.forEach((list) => {
+            const text = list.textContent.toUpperCase();
+            list.style.display = text.includes(filter) ? "block" : "none";
+        });
+    };
+
+    const hideByDefault = async (targetElement) => {
+        const setTargetElement = await targetElement
+        for (let i = 7; i < setTargetElement.length; i++) {
+
+            setTargetElement[i].classList.add('visually-hidden')
+        }
+
+    }
+
+
+
+
+    const transferData = async (dataValues) => {
+        const setDataValues = await dataValues[0]
+        const plateNumberVal = document.querySelector('#plateNumberVal');
+        const dateVal = document.querySelector('#dateVal');
+        const inspectedVal = document.querySelector('#inspectedVal');
+        const mileageVal = document.querySelector('#mileageVal');
+        const remarksVal = document.querySelector('#remarksVal');
+
+
+        plateNumberVal.innerHTML = setDataValues.PlateNo
+        dateVal.innerHTML = setDataValues.MaintenanceDate
+        inspectedVal.innerHTML = `Inspected by ${setDataValues.InspectedBy}`
+        mileageVal.innerHTML = setDataValues.Mileage
+        remarksVal.innerHTML = setDataValues.Remarks
+    }
+
+    const generatePartsCondition = async (container, modalContainer, dataValues) => {
+        const setDataValues = await dataValues
+    }
+    const generateLists = async (container, container2, dataValues) => {
+        const setDataValues = await dataValues
+        const setContainer = await container;
+        const setContainer2 = await container2;
+
+        const limitedLists = Object.entries(setDataValues).map(([key, value]) => {
+
+            if (key < 6) {
+                // return `<li class="list-group-item vehicle-due-dates">
+                //                     <p>${value.Brand}, ${value.Model} - ${value.PlateNo} <button>${value.DueInDays}</button></p>
+                //             ${new Date(value.LtoDuedate).toLocaleDateString()}
+                //         </li>`
+                return ` <div class="rounded p-1  box-lra-shadow"><div class="d-flex" >
+                            <div class="me-auto col-6" >
+                               <div class="" style="font-size:14px" > <strong>${value.PlateNo} </strong></div>
+                                       <div class="" style = "font-size:11px" > <span class="badge text-bg-primary " > ${value.Brand} ${value.Model} </span></div></div>
+                                           <div class="d-flex align-items-end flex-column col-6" >
+                                               <div class="" style = "font-size:14px" ><strong>${value.DueInDays} Days</strong></div >
+                                                                    <div class="" style = "font-size:11px;background:${value.DUE};" > <span class="badge" > ${new Date(value.LtoDuedate).toLocaleDateString()}</span></div></div></div></div>
+                                            `
+            }
+
+
+        }).join('');
+
+        const lists = Object.entries(setDataValues).map(([key, value]) => {
+
+
+            //         <div class="" style = "font-size:14px" > <strong>SFX - 332 < /strong></div >
+            //             <div class="" style = "font-size:11px" > <span class="badge text-bg-primary " > TOYOTA REVO < /span></div >
+            //                 </div>
+            //                 <div class="d-flex align-items-end flex-column col-6" >
+            //                     <div class="" style = "font-size:14px" > <strong>25 DAYS < /strong></div >
+            //                         <div class="" style = "font-size:11px" > <span class="badge text-bg-primary " >06 / 1 / 2023 < /span></div >
+            //                             </div>
+
+            // </div>
+            // < /div>
+
+            return ` <div class="rounded p-1  box-lra-shadow"><div class="d-flex" >
+                                <div class="me-auto col-6" >
+                                   <div class="" style="font-size:14px" > <strong>${value.PlateNo} </strong></div>
+                                           <div class="" style = "font-size:11px" > <span class="badge text-bg-primary " > ${value.Brand} ${value.Model} </span></div></div>
+                                               <div class="d-flex align-items-end flex-column col-6" >
+                                                   <div class="" style = "font-size:14px" ><strong>${value.DueInDays} Days</strong></div >
+                                                                        <div class="" style = "font-size:11px;background:${value.DUE};" > <span class="badge" > ${new Date(value.LtoDuedate).toLocaleDateString()}</span></div></div></div></div>
+                                                `
+
+            // return `<li class="list-group-item">
+            //             <p>${value.Brand}, ${value.Model} - ${value.PlateNo} <button>${value.DueInDays}</button></p>
+            //     ${new Date(value.LtoDuedate).toLocaleDateString()}
+            // </li>`
+
+        }).join('');
+
+
+
+        setContainer.innerHTML = limitedLists
+        setContainer2.innerHTML = lists
+        hideByDefault(document.querySelectorAll('.vehicle-due-dates'))
+
+    }
+
+    const generateBarChart = async (container, dataValues) => {
+        const setDatValues = await dataValues
+        const setContainer = await container;
+
+
+        let labels = setDatValues.map(({ Vehicle, MaintenanceDate, ...entry }) => {
+            return `${Vehicle}`
+        });
+
+
+        const totalGoodForServiceData = await setDatValues.map(entry => entry.Good);
+        const totalForMonitoringData = await setDatValues.map(entry => entry.ForMonitoring);
+        const totalNeedsRepairData = await setDatValues.map(entry => entry.NeedsRepair);
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Good',
+                    data: totalGoodForServiceData,
+                    backgroundColor: 'rgb(30, 50, 92)',
+                    borderColor: 'rgba(191, 205, 224, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'for Monitoring',
+                    data: totalForMonitoringData,
+                    backgroundColor: 'rgb(255, 179, 25)',
+                    borderColor: 'rgba(255, 255, 51, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Needs Repair/ Replacements',
+                    data: totalNeedsRepairData,
+                    backgroundColor: 'rgb(146, 20, 12)',
+                    borderColor: 'rgba(205, 92, 92, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+        if (setContainer.chart) {
+            setContainer.chart.destroy();
+        }
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                layout: {
+                    padding: 10
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: false,
+                            text: 'Date',
+                            stacked: false,
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: false,
+                            text: 'Totality of Parts per status',
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+        };
+
+        setContainer.chart = new Chart(setContainer, config);
+
+    }
+    const generateDonutPieChart = async (container, dataValues) => {
+        const setContainer = await container;
+        const setDataValues = await dataValues;
+        const labels = setDataValues.map(entry => entry.itemName);
+
+        const total = setDataValues.map(entry => entry.total);
+        const data = {
+            labels: labels,
+            datasets: [{
+                data: total,
+                backgroundColor: ['rgb(30, 50, 92)', 'rgb(255, 179, 25)', 'rgb(146, 20, 12)', 'rgb(190, 204, 224)', '#8D99AE', 'rgb(55, 70, 109)', 'rgb(255, 187, 63)', 'rgb(162, 54, 36)', 'rgb(197, 210, 227)', 'rgb(30, 29, 29)'],
+                hoverOffset: 4
+            }]
+        };
+
+        const config = {
+            type: 'doughnut',
+            data: data,
+        };
+
+        setContainer.chart = new Chart(setContainer, config);
+    };
+
+    var maintenancesData = @Json.Serialize(ViewData["MaintenancesData"]);
+    var accidentsData = @Json.Serialize(ViewData["AccidentsData"]);
+    var vehiclesData = @Json.Serialize(ViewData["VehiclesData"]);
+    var lTODueDates = @Json.Serialize(ViewData["LTODueDates"]);
+
+    generateDonutPieChart(document.getElementById('maintenancesChart'), maintenancesData.value);
+    generateDonutPieChart(document.getElementById('accidentsChart'), accidentsData.value);
+
+    generateBarChart(document.getElementById('vehicleChart'), vehiclesData.value);
+    generateLists(document.getElementById('vehicleLists'), document.getElementById('vehicleChart2'), lTODueDates.value)
+
+    let vehicleInfos;
+    const retrieveData = async (url, httpRequest, dataValues) => {
+        try {
+            const response = await fetch(url, {
+                method: httpRequest,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataValues)
+            });
+            if (!response.ok) {
+                throw new Error('Check Backend');
+            }
+            const result = await response.json();
+            return result
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
