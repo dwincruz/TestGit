@@ -341,12 +341,11 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        const targetValue = document.querySelector('#targetValue');
-        console.log(targetValue)
         const confirmValue = document.querySelector('#confirmValue');
         const confirmInput = document.querySelector('#confirmInput');
         const btnTrigger = document.querySelector('#confirmDelete')
-        confirmValue.innerText = `Delete ${targetValue.value}`
+        confirmValue.innerText = `Proceed to delete`
+
 
         confirmInput.addEventListener('change', e => {
             console.log(e.target.value)
