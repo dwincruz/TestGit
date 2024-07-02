@@ -20,16 +20,22 @@ namespace VMNS.Models
         [Required]
         public int Mileage { get; set; }
 
+
         [Required]
+        [Display(Name = "Description")]
         [Column(TypeName = "varchar(512)")]
         public string Remarks { get; set; }
 
         //For Tracking
         public Guid CreatorId { get; set; }
         public Guid? ModifierId { get; set; }
+        [Display(Name = "Date Created")]
         public DateTime DateCreated { get; set; }
+        [Display(Name = "Date Modified")]
         public DateTime DateModified { get; set; }
 
+
+        [Display(Name = "Inspector")]
         public string InspectorName { get; set; }
 
 

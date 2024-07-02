@@ -16,8 +16,10 @@ namespace VMNS.Models
 
         [MaxLength(512)]
         [Column(TypeName = "varchar(512)")]
+        [Display(Name = "File path")]
         public string FilePath { get; set; }
 
+        [Display(Name = "Date upload")]
         public DateTime UploadDate { get; set; }
     }
 }

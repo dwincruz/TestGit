@@ -23,7 +23,7 @@
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
                         <select asp-for="ReplacementId" class="form-control" asp-items="ViewBag.ReplacementId"></select>
-                        <div class="input-text"><label asp-for="ReplacementId"></label></div>
+                        <div class="input-text"><label>Replacement parts</label></div>
                     </div>
                 </div>
                 <span asp-validation-for="ReplacementId" class="text-danger"></span>
@@ -60,7 +60,7 @@
                         <input type="date"
                                asp-for="DateAcquired"
                                id="insuranceDate"
-                               class="form-control "
+                               class="form-control"
                                required
                                pattern="\S+.*" />
                         <div class="input-text"><label>Aquired date</label></div>

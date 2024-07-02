@@ -9,8 +9,9 @@ namespace VMNS.Models
 
         public Guid? MaintenanceId { get; set; }
 
+        [Display(Name = "Battery Terminal")]
         public string BatteryTerminal { get; set; }
-
+        [Display(Name = "Condition of Battery")]
         public string ConditionOfBattery { get; set; }
         
 

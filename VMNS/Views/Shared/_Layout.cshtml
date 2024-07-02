@@ -29,40 +29,7 @@
 <body>
     @if (SignInManager.IsSignedIn(User))
     {
-        @* <nav id="secondScenePt2">
-            <div>
-                @if (!User.IsInRole("Administrator"))
-                {
-                    <button id="minimizeSideBar" data- class="btn border rounded"><i class="ri-layout-left-line"></i></button>
-                }
-                <label class="fw-bold">VMNS</label>
-            </div>
-            <div>
-                <ul style="display: flex;margin: 0; gap: 10px;">
-                    <li class="visually-hidden">
-                        <div class="btn-group">
-                            <button type="button" class="btn border rounded-circle dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                <i class="ri-notification-2-line"></i>
-                            </button>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="btn-group">
-                            <button type="button" class="btn border rounded-circle dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                                <i class="ri-user-line"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-lg-end">
-                                <li>
-                                    <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                                        <button id="logout" type="submit" class="btn btn-sm w-100 text-lowercase text-start"><i class="ri-logout-box-line"></i> sign out</button>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav> *@
+       
         <nav id="secondScenePt2" class="bg-lra-primary">
             <div>
                 @if (!User.IsInRole("Administrator"))
@@ -73,14 +40,7 @@
                     
                     <div class="d-flex">
                         <div class="p-2 flex-fill"><img src="/images/lra-logo.png" alt="Logo" style="height:50px;opacity:100;position:unset;" class="d-inline-block align-text-top"></div>
-                        <div class="p-2 flex-fill"><img src="/images/vmms.png" alt="Logo" style="height:50px;opacity:100;position:unset;" class="d-inline-block align-text-top"></div>
-                       @*  <div class="p-2 flex-fill align-self-center" style="font-size:12px">
-                            <small class="fw-bold text-white">Vehicle</small>
-                            <small class="fw-bold text-white">Maintenance</small>
-                            <small class="fw-bold text-white">Monitoring</small>
-                            <small class="fw-bold text-white">System</small>
-                        </div> *@
-                        
+                        <div class="p-2 flex-fill"><img src="/images/vmms.png" alt="Logo" style="height:50px;opacity:100;position:unset;" class="d-inline-block align-text-top"></div>   
                     </div>
                     
                 </a>
@@ -232,15 +192,11 @@
                                 </div>
                             </div>
                             <div class="">
-                                <ul class="list-group" id="list">
+                                <ul class="list-group" id="list" style="width: 260px; max-height: 60dvh; overflow: auto;">
 
                                     @foreach (var vehicle in (IEnumerable<Vehicle>)ViewData["Vehicles"])
                                     {
                                         <li class="list-group-item p-0 rounded mt-2">
-                                            @*     <div class="d-flex justify-content-center">
-                                <button class="vehicle-item w-100 btn btn-lg p-3" id="@vehicle.Id">@vehicle.FullDetail</button>
-                                </div> *@
-
                                             <a class="btn stretched-link" href="/Vehicles/AdminView/@vehicle.Id">
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">
 
@@ -258,7 +214,6 @@
                                                                 <div class=""><strong>@vehicle.PlateNo</strong></div>
                                                                 <div class=""><span class="badge text-bg-primary ">@vehicle.Brand @vehicle.Model</span></div>
                                                             </div>
-                                                            @*   <div class="align-self-end"><br /></div> *@
 
                                                         </div>
                                                     </div>
@@ -311,7 +266,6 @@
     <script>
         const body = document.querySelector("body");
         const sidebar = body.querySelector(".sidebar");
-        //const modeSwitch = body.querySelector(".toggle-switch");
         const modeText = body.querySelector(".mode-text");
 
 

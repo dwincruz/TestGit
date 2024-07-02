@@ -237,6 +237,43 @@
                 <div class="col-lg-6 col-12 mb-4">
                     <div class="input-group" id="">
                         <div id="" class="custom-input w-100">
+                            <select asp-for="Odometer" class="form-control" asp-items="ViewBag.Status"></select>
+                            <div class="input-text"><label asp-for="Odometer"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Odometer" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="FuelGuage" class="form-control" asp-items="ViewBag.Status"></select>
+                            <div class="input-text"><label asp-for="FuelGuage"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="FuelGuage" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="BatteryVoltage" class="form-control" asp-items="ViewBag.Status"></select>
+                            <div class="input-text"><label asp-for="BatteryVoltage"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="BatteryVoltage" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="Indicators" class="form-control" asp-items="ViewBag.Status"></select>
+                            <div class="input-text"><label asp-for="Indicators"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Indicators" class="text-danger"></span>
+                </div>
+
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
                             <input type="text"
                                    asp-for="Remarks"
                                    id=""
