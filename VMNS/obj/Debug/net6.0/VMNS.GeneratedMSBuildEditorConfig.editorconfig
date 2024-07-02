@@ -9,683 +9,683 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VMNS
 build_property.RootNamespace = VMNS
-build_property.ProjectDir = C:\Users\ICTD-GLICO\source\repos\VMMS\VMNS\
+build_property.ProjectDir = C:\Users\User\source\repos\TestGit\VMNS\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ICTD-GLICO\source\repos\VMMS\VMNS
+build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\TestGit\VMNS
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Lockout.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/Error.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Accidents/AccidentRecord.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Accidents/AccidentRecord.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjaWRlbnRzXEFjY2lkZW50UmVjb3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Accidents/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Accidents/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjaWRlbnRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Accidents/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Accidents/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjaWRlbnRzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Accidents/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Accidents/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjaWRlbnRzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Accidents/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Accidents/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjaWRlbnRzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Accidents/History.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Accidents/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjaWRlbnRzXEhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Accidents/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Accidents/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjaWRlbnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Extras/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Extras/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Extras/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Extras/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Extras/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Extras/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Extras/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Extras/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Extras/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Extras/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXh0cmFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Home/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Home/Privacy.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_DamageScale/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_DamageScale/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRGFtYWdlU2NhbGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_DamageScale/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_DamageScale/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRGFtYWdlU2NhbGVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_DamageScale/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_DamageScale/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRGFtYWdlU2NhbGVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_DamageScale/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_DamageScale/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRGFtYWdlU2NhbGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_DamageScale/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_DamageScale/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRGFtYWdlU2NhbGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_EquipmentStatus/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_EquipmentStatus/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRXF1aXBtZW50U3RhdHVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_EquipmentStatus/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_EquipmentStatus/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRXF1aXBtZW50U3RhdHVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_EquipmentStatus/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_EquipmentStatus/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRXF1aXBtZW50U3RhdHVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_EquipmentStatus/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_EquipmentStatus/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRXF1aXBtZW50U3RhdHVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_EquipmentStatus/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_EquipmentStatus/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRXF1aXBtZW50U3RhdHVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_FuelType/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_FuelType/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRnVlbFR5cGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_FuelType/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_FuelType/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRnVlbFR5cGVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_FuelType/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_FuelType/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRnVlbFR5cGVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_FuelType/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_FuelType/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRnVlbFR5cGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_FuelType/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_FuelType/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfRnVlbFR5cGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Office/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Office/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Office/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Office/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Office/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Office/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Office/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Office/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Office/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Office/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfT2ZmaWNlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Transmission/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Transmission/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVHJhbnNtaXNzaW9uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Transmission/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Transmission/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVHJhbnNtaXNzaW9uXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Transmission/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Transmission/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVHJhbnNtaXNzaW9uXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Transmission/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Transmission/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVHJhbnNtaXNzaW9uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Transmission/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Transmission/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVHJhbnNtaXNzaW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_VehicleType/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_VehicleType/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVmVoaWNsZVR5cGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_VehicleType/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_VehicleType/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVmVoaWNsZVR5cGVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_VehicleType/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_VehicleType/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVmVoaWNsZVR5cGVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_VehicleType/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_VehicleType/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVmVoaWNsZVR5cGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_VehicleType/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_VehicleType/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfVmVoaWNsZVR5cGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_WheelDrive/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_WheelDrive/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxEcml2ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_WheelDrive/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_WheelDrive/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxEcml2ZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_WheelDrive/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_WheelDrive/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxEcml2ZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_WheelDrive/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_WheelDrive/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxEcml2ZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_WheelDrive/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_WheelDrive/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxEcml2ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Wheel/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Wheel/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Wheel/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Wheel/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Wheel/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Wheel/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Wheel/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Wheel/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/lu_Wheel/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/lu_Wheel/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbHVfV2hlZWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/DetailsHistory.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/DetailsHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXERldGFpbHNIaXN0b3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/History.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXEhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Maintenances/SummaryReport.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Maintenances/SummaryReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbnRlbmFuY2VzXFN1bW1hcnlSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Monitorings/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Monitorings/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uaXRvcmluZ3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Monitorings/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Monitorings/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uaXRvcmluZ3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Monitorings/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Monitorings/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uaXRvcmluZ3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Monitorings/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Monitorings/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uaXRvcmluZ3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Monitorings/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Monitorings/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9uaXRvcmluZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Replacements/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Replacements/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwbGFjZW1lbnRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Replacements/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Replacements/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwbGFjZW1lbnRzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Replacements/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Replacements/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwbGFjZW1lbnRzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Replacements/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Replacements/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwbGFjZW1lbnRzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Replacements/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Replacements/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwbGFjZW1lbnRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/RolesAdmin/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/RolesAdmin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/RolesAdmin/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/RolesAdmin/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/RolesAdmin/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/RolesAdmin/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/RolesAdmin/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/RolesAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/RolesAdmin/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/RolesAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/RolesAdmin/_Header.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/RolesAdmin/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNBZG1pblxfSGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/Error.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/_Body.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/_Body.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb2R5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/_LoginNotificationPartial.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/_LoginNotificationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbk5vdGlmaWNhdGlvblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/_NotificationPartial.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/_NotificationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BatteryPerformance/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BatteryPerformance/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JhdHRlcnlQZXJmb3JtYW5jZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BatteryPerformance/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BatteryPerformance/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JhdHRlcnlQZXJmb3JtYW5jZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BatteryPerformance/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BatteryPerformance/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JhdHRlcnlQZXJmb3JtYW5jZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BatteryPerformance/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BatteryPerformance/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JhdHRlcnlQZXJmb3JtYW5jZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BatteryPerformance/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BatteryPerformance/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JhdHRlcnlQZXJmb3JtYW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BrakeTires/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BrakeTires/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JyYWtlVGlyZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BrakeTires/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BrakeTires/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JyYWtlVGlyZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BrakeTires/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BrakeTires/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JyYWtlVGlyZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BrakeTires/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BrakeTires/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JyYWtlVGlyZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_BrakeTires/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_BrakeTires/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0JyYWtlVGlyZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_InteriorExterior/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_InteriorExterior/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0ludGVyaW9yRXh0ZXJpb3JcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_InteriorExterior/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_InteriorExterior/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0ludGVyaW9yRXh0ZXJpb3JcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_InteriorExterior/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_InteriorExterior/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0ludGVyaW9yRXh0ZXJpb3JcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_InteriorExterior/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_InteriorExterior/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0ludGVyaW9yRXh0ZXJpb3JcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_InteriorExterior/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_InteriorExterior/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX0ludGVyaW9yRXh0ZXJpb3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderHood/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderHood/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVySG9vZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderHood/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderHood/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVySG9vZFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderHood/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderHood/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVySG9vZFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderHood/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderHood/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVySG9vZFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderHood/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderHood/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVySG9vZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderVehicle/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderVehicle/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVyVmVoaWNsZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderVehicle/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderVehicle/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVyVmVoaWNsZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderVehicle/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderVehicle/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVyVmVoaWNsZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderVehicle/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderVehicle/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVyVmVoaWNsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Sub_UnderVehicle/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Sub_UnderVehicle/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViX1VuZGVyVmVoaWNsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/UsersAdmin/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/UsersAdmin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/UsersAdmin/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/UsersAdmin/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/UsersAdmin/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/UsersAdmin/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/UsersAdmin/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/UsersAdmin/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/UsersAdmin/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/UsersAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/UsersAdmin/_Header.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/UsersAdmin/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNBZG1pblxfSGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/AdminSearch.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/AdminSearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcQWRtaW5TZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/AdminView.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/AdminView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcQWRtaW5WaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/Create.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/Delete.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/Details.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/Edit.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/History.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcSGlzdG9yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/Index.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Vehicles/VehicleTimeline.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Vehicles/VehicleTimeline.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVoaWNsZXNcVmVoaWNsZVRpbWVsaW5lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/_ViewImports.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/_ViewStart.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/_Layout.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-s3tdgtpan1
 
-[C:/Users/ICTD-GLICO/source/repos/VMMS/VMNS/Views/Shared/_Layout_Login.cshtml]
+[C:/Users/User/source/repos/TestGit/VMNS/Views/Shared/_Layout_Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-62nxxyw673
