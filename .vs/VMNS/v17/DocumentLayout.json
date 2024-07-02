@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\maintenances\\summaryreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\maintenances\\summaryreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\vehicles\\adminview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\maintenances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\maintenances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\sub_underhood\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\sub_underhood\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,14 +47,6 @@
       "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\maintenances\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\vehicles\\adminview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\maintenances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\maintenances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\accidents\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\accidents\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -35,16 +55,8 @@
       "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\accidents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\wwwroot\\css\\admin_layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\wwwroot\\css\\admin_layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,37 +66,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAD0AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T05:45:54.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T05:45:39.238Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -96,7 +86,121 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "VMNS\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "VMNS\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAGMDAAAAAAAAAAAAAG8DAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-02T07:08:44.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SummaryReport.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\SummaryReport.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Maintenances\\SummaryReport.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\SummaryReport.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Maintenances\\SummaryReport.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T06:58:29.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\History.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Accidents\\History.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\History.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Accidents\\History.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T03:24:09.356Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AdminView.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T03:23:12.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "admin_layout.css",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\admin_layout.css",
+              "RelativeDocumentMoniker": "VMNS\\wwwroot\\css\\admin_layout.css",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\admin_layout.css",
+              "RelativeToolTip": "VMNS\\wwwroot\\css\\admin_layout.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-02T02:27:23.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\Index.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Accidents\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\Index.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Accidents\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T02:12:03.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\Index.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Maintenances\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\Index.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Maintenances\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAADAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T02:09:53.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminSearch.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "ViewState": "AQIAAEwAAAAAAAAAAAArwFwAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T02:02:39.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\appsettings.json",
+              "RelativeDocumentMoniker": "VMNS\\appsettings.json",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\appsettings.json",
+              "RelativeToolTip": "VMNS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-02T01:59:14.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "History.cshtml",
               "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\History.cshtml",
               "RelativeDocumentMoniker": "VMNS\\Views\\Maintenances\\History.cshtml",
@@ -110,66 +214,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "History.cshtml",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\History.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Accidents\\History.cshtml",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\History.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Accidents\\History.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAABCAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAG0AAAAAAAAAAAArwHoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T03:24:09.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminView.cshtml",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEwAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T03:23:12.599Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "admin_layout.css",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\admin_layout.css",
-              "RelativeDocumentMoniker": "VMNS\\wwwroot\\css\\admin_layout.css",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\admin_layout.css",
-              "RelativeToolTip": "VMNS\\wwwroot\\css\\admin_layout.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-02T02:27:23.657Z"
+              "WhenOpened": "2024-07-02T05:57:03.372Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\Index.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Accidents\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\Index.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Accidents\\Index.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAA0AAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Sub_UnderHood\\Create.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAO0AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T02:12:03.9Z"
+              "WhenOpened": "2024-07-02T05:45:54.271Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\Index.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Maintenances\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\Index.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Maintenances\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACNAAAA",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Sub_UnderVehicle\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T02:09:53.925Z"
+              "WhenOpened": "2024-07-02T05:45:39.238Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "VMNS\\Views\\Shared\\_Layout.cshtml",
@@ -179,30 +262,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-02T02:06:20.514Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdminSearch.cshtml",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T02:02:39.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\appsettings.json",
-              "RelativeDocumentMoniker": "VMNS\\appsettings.json",
-              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\appsettings.json",
-              "RelativeToolTip": "VMNS\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-02T01:59:14.598Z"
             }
           ]
         }

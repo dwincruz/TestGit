@@ -131,13 +131,15 @@ aside.sidebar li .link-text {
 }
 
 aside.sidebar li a:hover {
-    background-color: var(--color-grey);
+    background-color: #BFCDE0; /*var(--color-grey);*/
+    color: #1e325c !important;
     border-radius: 5px;
 }
 
     aside.sidebar li a:hover i.icon,
     aside.sidebar li a:hover .link-text {
-        color: var(--sidebar-color);
+        /*color: var(--sidebar-color);*/
+        color: #1e325c !important;
     }
 
 body.dark aside.sidebar li a:hover i.icon,

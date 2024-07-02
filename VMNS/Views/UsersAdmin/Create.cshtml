@@ -10,160 +10,193 @@
   <li class="breadcrumb-item active">Create User</li>
 </ol> *@
 
-<form class="row" asp-action="Create">
+<form class="row mt-3" asp-action="Create">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Users</h2>
-
+        <h2><i class="ri-user-add-fill text-lra-primary"></i> Add User</h2>
+        
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="UsersAdmin" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-            <button asp-action="Create" type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+            <a asp-area="" asp-controller="UsersAdmin" asp-action="Index" class="btn btn-sm text-capitalize bg-white rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button asp-action="Create" type="submit" class="btn btn-sm text-white text-capitalize bg-lra-primary rounded "><i class="ri-save-line"></i> Save</button>
         </div>
     </div>
     <div class="col-12">
         <div asp-validation-summary="All" class="text-danger"></div>
     </div>
-    <div class="col-lg-7 col-sm-7 col-12">
-        <div class="row">
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="FirstName"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="FirstName"></label></div>
-                    </div>
+    <div class="row">
+       
+        <div class="col-md-8 col-sm-8 col-12 bg-white p-3 mx-3 rounded box-lra-shadow">
+            <div class="card">
+                <div class="card-header border-lra-info">
+                    <h5 class="card-title  fw-bold">User Information</h5>
                 </div>
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="LastName"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="LastName"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="EmpNo"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="EmpNo"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="EmpNo" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Position"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="Position"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="Position" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <select asp-for="OfficeId" class="form-control" asp-items="ViewBag.OfficeId"></select>
-                        <div class="input-text"><label asp-for="OfficeId"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="OfficeId" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Email"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="Email"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="UserName"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="UserName"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="UserName" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="password"
-                               asp-for="Password"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="Password"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="password"
-                               asp-for="ConfirmPassword"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="ConfirmPassword"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
-            <div class="col-12 mb-4">
-                <label class="col-md-10 mb-3 control-label fw-semibold">
-                    Select User Role
-                </label>
-                <div class="col-md-10">
-                    @foreach (var item in (SelectList)ViewBag.RoleId)
-                    {
-                        <div class="form-check form-check-inline">
-                            <input type="checkbox" name="SelectedRoles" id="@item.Text" value="@item.Value" class="form-check-input" />
-                            @Html.Label(item.Value, item.Text, new { @class = "form-check-label", @for = item.Text })
-                        </div>
-                    }
-                </div>
-            </div>
+                <div class="card-body border-lra-info">     
+                        <div class="row">
+                            <div class="col-lg-6 col-12 mb-4">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100">
+                                        <input type="text"
+                                               asp-for="FirstName"
+                                               id=""
+                                               class="form-control"
+                                               required
+                                               pattern="\S+.*" />
+                                        <div class="input-text"><label asp-for="FirstName"></label></div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-4">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100">
+                                        <input type="text"
+                                               asp-for="LastName"
+                                               id=""
+                                               class="form-control"
+                                               required
+                                               pattern="\S+.*" />
+                                        <div class="input-text"><label asp-for="LastName"></label></div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-4">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100">
+                                        <input type="text"
+                                               asp-for="EmpNo"
+                                               id=""
+                                               class="form-control"
+                                               required
+                                               pattern="\S+.*" />
+                                        <div class="input-text"><label asp-for="EmpNo"></label></div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="EmpNo" class="text-danger"></span>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-4">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100">
+                                        <input type="text"
+                                               asp-for="Position"
+                                               id=""
+                                               class="form-control"
+                                               required
+                                               pattern="\S+.*" />
+                                        <div class="input-text"><label asp-for="Position"></label></div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="Position" class="text-danger"></span>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-4">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100">
+                                        <select asp-for="OfficeId" class="form-control" asp-items="ViewBag.OfficeId"></select>
+                                        <div class="input-text"><label asp-for="OfficeId"></label></div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="OfficeId" class="text-danger"></span>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-4">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100">
+                                        <input type="text"
+                                               asp-for="Email"
+                                               id=""
+                                               class="form-control"
+                                               required
+                                               pattern="\S+.*" />
+                                        <div class="input-text"><label asp-for="Email"></label></div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                          
 
-        </div>
+                        </div>
+                   
+                </div>
+            </div>
+            <div class="card mt-5 ">
+                <div class="card-header border-lra-info">
+                    <h5 class="card-title fw-bold">User Credentials</h5>
+                </div>
+                <div class="card-body border-lra-info">
+                                  
+                    <div class="row">
+                        
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           asp-for="UserName"
+                                           id=""
+                                           class="form-control"
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label asp-for="UserName"></label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="password"
+                                           asp-for="Password"
+                                           id=""
+                                           class="form-control"
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label asp-for="Password"></label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="password"
+                                           asp-for="ConfirmPassword"
+                                           id=""
+                                           class="form-control"
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label asp-for="ConfirmPassword"></label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
     </div>
+    <div class="col-md-3  col-sm-3 col-12 bg-white p-3 mx-3 box-lra-shadow rounded">
+            <div class="card">
+                <div class="card-header border-lra-info">
+                    <h5 class="card-title fw-bold"> Select User Role</h5>
+                </div>
+                <div class="card-body border-lra-info">
+                    <div class="d-flex flex-column mb-3">
+                        @foreach (var item in (SelectList)ViewBag.RoleId)
+                        {
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" name="SelectedRoles" id="@item.Text" value="@item.Value" class="form-check-input" />
+                                @Html.Label(item.Value, item.Text, new { @class = "form-check-label", @for = item.Text })
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            
+           
+    </div>
+  </div>
+
 </form>
 
 

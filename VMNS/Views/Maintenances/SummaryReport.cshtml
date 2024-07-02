@@ -12,10 +12,10 @@
 }
 <div class="row">
     <div class="offset-9"></div>
-    <div class="col-md-3 col-sm-6 col-6  my-auto py-3 position-relative">
-        <div class="float-end">
-            <button class="btn btn-sm text-capitalize border rounded" id="printBtn"><i class="ri-upload-line"></i> Print Data</button>
-            <a asp-controller="Vehicles" asp-action="AdminView" asp-route-id="@ViewData["MaintenanceId"]" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+    <div class="col-md-12 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-sm text-capitalize bg-lra-primary rounded mx-2" id="printBtn"><i class="ri-upload-line"></i> Print Data</button>
+            <a asp-controller="Vehicles" asp-action="AdminView" asp-route-id="@ViewData["MaintenanceId"]" class="btn btn-sm text-capitalize bg-white rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
         </div>
     </div>
 </div>
@@ -123,7 +123,7 @@
                         @foreach (var currentValue in currentValues)
                         {
                             <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
-                                <input type="checkbox" class="checkbox-item" value="@currentValue"  @(item.HeadLights == currentValue ? "checked" : "") />
+                                <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false"  @(item.HeadLights == currentValue ? "checked" : "") />
                             </td>
                         }
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Head Lights</td>

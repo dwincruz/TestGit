@@ -13,14 +13,14 @@
             <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize bg-white fw-bold rounded box-lra-shadow"><i class="ri-arrow-go-back-line"></i> Go Back</a>
             @if (!User.IsInRole("Administrator"))
             {
-                <a asp-action="Create" type="button" class="btn btn-sm bg-lra-warning text-capitalize  rounded "><i class="ri-add-line"></i> Create New</a>
+                <a asp-action="Create" type="button" class="btn btn-sm bg-lra-warning box-lra-shadow text-capitalize  rounded "><i class="ri-add-line"></i> Create New</a>
             }
         </div>
     </div>
 </div>
 
 <div class="row px-3">
-    <div class="col-12 bg-white border-lra-shadow rounded p-3">
+    <div class="col-12 bg-white box-lra-shadow rounded p-3">
         <table class="custom-table table table-hover" id="myTable" width="100%" cellspacing="0" data-page-length='10'>
             <thead class="table-primary">
                 <tr>
