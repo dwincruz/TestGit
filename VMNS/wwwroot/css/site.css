@@ -878,6 +878,7 @@ body {
 
 .checkbox-container input{
     position: relative;
+    cursor: pointer;
 }
 .checkbox-container input:not(:checked )::before {
     content: '\25FD';
