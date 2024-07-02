@@ -1,102 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\TestGit\\",
+  "WorkspaceRootPath": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\accident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\accident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\maintenances\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\maintenances\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\maintenances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\maintenances\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\extra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\extra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\accidents\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\accidents\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_damagescale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_damagescale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_equipmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_equipmentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\accidents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\accidents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_fueltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_fueltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_office.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_office.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_transmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_transmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_vehicletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_vehicletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_wheel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_wheel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\lu_wheeldrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\lu_wheeldrive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\monitoring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\monitoring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\replacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\replacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\sub_batteryperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\sub_batteryperformance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\sub_interiorexterior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\sub_interiorexterior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\sub_underhood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\sub_underhood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\sub_undervehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\sub_undervehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\vehiclehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\vehiclehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\models\\upload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\models\\upload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\views\\vehicles\\adminview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\vehicles\\adminview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\user\\source\\repos\\testgit\\vmns\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\views\\vehicles\\adminsearch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\wwwroot\\css\\admin_layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\wwwroot\\css\\admin_layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|c:\\users\\ictd-glico\\source\\repos\\vmms\\vmns\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0B1167A7-40E7-4656-9E70-BD9E70DDCF0C}|VMNS\\VMNS.csproj|solutionrelative:vmns\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,318 +50,140 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Accident.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Accident.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Accident.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Accident.cs",
-              "RelativeToolTip": "VMNS\\Models\\Accident.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:10:04.73Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "VMNS\\Models\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:10:02.926Z",
+              "DocumentIndex": 0,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\History.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Maintenances\\History.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\History.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Maintenances\\History.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T03:32:31.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Extra.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Extra.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Extra.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Extra.cs",
-              "RelativeToolTip": "VMNS\\Models\\Extra.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAcwBcAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:09:11.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "lu_DamageScale.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_DamageScale.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_DamageScale.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_DamageScale.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_DamageScale.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:09:10.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "lu_EquipmentStatus.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_EquipmentStatus.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_EquipmentStatus.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_EquipmentStatus.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_EquipmentStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:09:08.434Z",
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\History.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Accidents\\History.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\History.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Accidents\\History.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T03:24:09.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "lu_FuelType.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_FuelType.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_FuelType.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_FuelType.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_FuelType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:09:06.772Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "lu_Office.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_Office.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_Office.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_Office.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_Office.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:09:04.425Z",
+              "Title": "AdminView.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
+              "ViewState": "AQIAAHMBAAAAAAAAAAAkwIwBAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T03:23:12.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "lu_Transmission.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_Transmission.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_Transmission.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_Transmission.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_Transmission.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:09:02.665Z",
+              "Title": "admin_layout.css",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\admin_layout.css",
+              "RelativeDocumentMoniker": "VMNS\\wwwroot\\css\\admin_layout.css",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\admin_layout.css",
+              "RelativeToolTip": "VMNS\\wwwroot\\css\\admin_layout.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-02T02:27:23.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "lu_VehicleType.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_VehicleType.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_VehicleType.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_VehicleType.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_VehicleType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:08:57.218Z",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\Index.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Accidents\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Accidents\\Index.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Accidents\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T02:12:03.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\Index.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Maintenances\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Maintenances\\Index.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Maintenances\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T02:09:53.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-02T02:06:20.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "lu_Wheel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_Wheel.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_Wheel.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_Wheel.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_Wheel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:08:55.357Z",
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "VMNS\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "VMNS\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAAkBAAAAAAAAAAASwBkBAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-02T02:03:34.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "lu_WheelDrive.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_WheelDrive.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\lu_WheelDrive.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\lu_WheelDrive.cs",
-              "RelativeToolTip": "VMNS\\Models\\lu_WheelDrive.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:08:53.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Monitoring.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Monitoring.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Monitoring.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Monitoring.cs",
-              "RelativeToolTip": "VMNS\\Models\\Monitoring.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAA3wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:08:09.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "NotificationType.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\NotificationType.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\NotificationType.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\NotificationType.cs",
-              "RelativeToolTip": "VMNS\\Models\\NotificationType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:08:06.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Replacement.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Replacement.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Replacement.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Replacement.cs",
-              "RelativeToolTip": "VMNS\\Models\\Replacement.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAzwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:08:02.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Sub_BatteryPerformance.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_BatteryPerformance.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Sub_BatteryPerformance.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_BatteryPerformance.cs",
-              "RelativeToolTip": "VMNS\\Models\\Sub_BatteryPerformance.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAYwAsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:07:26.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Sub_InteriorExterior.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_InteriorExterior.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Sub_InteriorExterior.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_InteriorExterior.cs",
-              "RelativeToolTip": "VMNS\\Models\\Sub_InteriorExterior.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAcwDEAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:02:48.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Sub_UnderHood.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_UnderHood.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Sub_UnderHood.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_UnderHood.cs",
-              "RelativeToolTip": "VMNS\\Models\\Sub_UnderHood.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAAwDAAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:54:30.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Sub_UnderVehicle.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_UnderVehicle.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Sub_UnderVehicle.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Sub_UnderVehicle.cs",
-              "RelativeToolTip": "VMNS\\Models\\Sub_UnderVehicle.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAA7wDcAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:44:29.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "VehicleHistory.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\VehicleHistory.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\VehicleHistory.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\VehicleHistory.cs",
-              "RelativeToolTip": "VMNS\\Models\\VehicleHistory.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwA4AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:44:10.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Upload.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Upload.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Upload.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Upload.cs",
-              "RelativeToolTip": "VMNS\\Models\\Upload.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:43:39.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Maintenance.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Maintenance.cs",
-              "RelativeDocumentMoniker": "VMNS\\Models\\Maintenance.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Models\\Maintenance.cs",
-              "RelativeToolTip": "VMNS\\Models\\Maintenance.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAkwCEAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T02:36:52.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AdminView.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminView.cshtml",
-              "ViewState": "AQIAAIABAAAAAAAAAAAswI4BAAAnAAAA",
+              "DocumentIndex": 6,
+              "Title": "AdminSearch.cshtml",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "RelativeDocumentMoniker": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "RelativeToolTip": "VMNS\\Views\\Vehicles\\AdminSearch.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-01T01:45:15.142Z",
+              "WhenOpened": "2024-07-02T02:02:39.876Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAYBAAAAAAAAAAAAABABAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-01T01:24:40.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "VMNS\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\TestGit\\VMNS\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "VMNS\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAACkAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-01T01:17:34.273Z",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\appsettings.json",
+              "RelativeDocumentMoniker": "VMNS\\appsettings.json",
+              "ToolTip": "C:\\Users\\ICTD-GLICO\\source\\repos\\VMMS\\VMNS\\appsettings.json",
+              "RelativeToolTip": "VMNS\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-02T01:59:14.598Z",
               "EditorCaption": ""
             }
           ]

@@ -4,14 +4,14 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Body.cshtml";
 }
-<div class="row">
+<div class="row mt-3">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Vehicle Maintenance</h2>
+        <h2><i class="ri-tools-fill text-lra-primary"></i> All Vehicle Maintenance History</h2>
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-             @if (!User.IsInRole("Administrator"))
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize bg-white fw-bold rounded box-lra-shadow"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            @if (!User.IsInRole("Administrator"))
             {
                 <a asp-action="Create" type="button" class="btn btn-sm bg-lra-warning text-capitalize  rounded "><i class="ri-add-line"></i> Create New</a>
             }
