@@ -875,6 +875,13 @@ body {
 .border-lra {
     border: var(--bs-border-width) var(--bs-border-style) #1e325c !important;
 }
+.border-lra-info {
+    border: var(--bs-border-width) var(--bs-border-style) #BFCDE0 !important;
+}
+
+.btn:hover {
+    border-color: #1e325c !important;
+}
 
 .checkbox-container input{
     position: relative;

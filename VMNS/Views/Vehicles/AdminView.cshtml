@@ -20,10 +20,11 @@
             </div>
             <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
                 <div class="float-end">
-                    @if (!User.IsInRole("Administrator"))
-                    {
-                        <a asp-area="" asp-controller="Maintenances" asp-action="SummaryReport" asp-route-id="@ViewData["MaintenanceId"]" class="btn btn-sm text-capitalize bg-lra-info rounded box-lra-shadow"><i class="ri-upload-line"></i> Checkbox form</a>
-                    }
+                    @* @if (!User.IsInRole("Administrator"))
+                    { *@
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize bg-white fw-bold rounded box-lra-shadow"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+                        <a asp-area="" asp-controller="Maintenances" asp-action="SummaryReport" asp-route-id="@ViewData["MaintenanceId"]" class="btn btn-sm text-capitalize bg-lra-sub-info rounded box-lra-shadow"><i class="ri-upload-line"></i> Checkbox form</a>
+                   @*  } *@
                     <a asp-area="" asp-controller="Accidents" asp-action="History" asp-route-selectedValue=@ViewData["VehicleId"] class="btn btn-sm text-capitalize bg-lra-danger rounded box-lra-shadow"><i class="ri-history-line"></i> Accidents</a>
                     <a asp-area="" asp-controller="Maintenances" asp-action="History" asp-route-selectedValue=@ViewData["VehicleId"] class="btn btn-sm text-capitalize bg-white rounded box-lra-shadow"><i class="ri-tools-line"></i> Maintenance </a>
                 </div>
@@ -82,7 +83,7 @@
                         </div>
                         <div>
                             <h5 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.AssignedOfficer)</h5>
-                            <span class="text-white"><small>Read full details</small></span>
+                            @* <span class="text-white"><small>Read full details</small></span> *@
                         </div>
                     </div>
                 </div>
@@ -346,7 +347,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 d-flex flex-column  mb-3">
-                        <div class="rounded p-3 mb-3 bg-white box-lra-shadow">
+                        <div class="rounded p-3 mb-3 bg-white box-lra-shadow" style="overflow-x:auto">
                             <div class="header-text mb-3">
                                 <h5>Parts for Monitoring</h5>
                             </div>
@@ -372,7 +373,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 d-flex flex-column  mb-3">
-                        <div class="rounded p-3 bg-white box-lra-shadow">
+                        <div class="rounded p-3 bg-white box-lra-shadow" style="overflow-x:auto">
                             <div class="header-text mb-3">
                                 <h5>Parts for Repair</h5>
                             </div>
