@@ -6,73 +6,73 @@
     var data = (IEnumerable<Maintenance>)ViewData["Maintenance"];
 
 }
-<div class="row">
+<div class="row mt-3">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Vehicle History</h2>
+        <h2><i class="ri-hourglass-line text-lra-primary"></i> Vehicle History</h2>
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Vehicles" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-edit-box-line"></i> Edit</a>
+            <a asp-area="" asp-controller="Vehicles" asp-action="Index" class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm  text-dark text-capitalize bg-lra-sub-info box-lra-shadow rounded "><i class="ri-edit-box-line"></i> Edit</a>
         </div>
     </div>
-    <div class="col-12">
-        <div asp-validation-summary="All" class="text-danger"></div>
-    </div>
-    <div class="col-lg-7 col-sm-7 col-12">
-        <div class="row px-1">
-            <div class="col-lg-4 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Brand"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="Brand"></label></div>
+    <div class="col-12 bg-white box-lra-shadow py-4 rounded mb-3">
+        <div asp-validation-summary="All" class="text-danger"></div>    
+        <div class="col-lg-7 col-sm-7 col-12">
+            <div class="row ">
+                <div class="col-lg-4 col-12">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Brand"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Brand"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="Brand" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="Brand" class="text-danger"></span>
-            </div>
-            <div class="col-lg-4 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Model"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="Model"></label></div>
+                <div class="col-lg-4 col-12 ">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Model"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Model"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="Model" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="Model" class="text-danger"></span>
-            </div>
-            <div class="col-lg-4 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="PlateNo"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="PlateNo"></label></div>
+                <div class="col-lg-4 col-12 ">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="PlateNo"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="PlateNo"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="PlateNo" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="PlateNo" class="text-danger"></span>
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="row px-3">
-    <div class="col-12 border rounded p-3">
+<div class="row bg-white box-lra-shadow p-4 rounded">
+    <div class="col-12  rounded p-3">
         <table class="custom-table table table-hover" id="myTable" width="100%" cellspacing="0" data-page-length='10'>
             <thead class="table-primary">
                 <tr>
