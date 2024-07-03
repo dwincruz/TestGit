@@ -5,22 +5,22 @@
     Layout = "~/Views/Shared/_Body.cshtml";    
 }
 
-<div class="row">
+<div class="row mt-3">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Roles</h2>
+        <h2><i class="ri-key-2-line icon text-lra-primary"></i> Roles</h2>
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-            <a asp-action="Create" type="button" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-add-line"></i> Create New</a>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <a asp-action="Create" type="button" class="btn btn-sm text-dark text-capitalize bg-lra-warning box-lra-shadow rounded "><i class="ri-add-line"></i> Create New</a>
         </div>
     </div>
 </div>
 
 
 
-<div class="row px-3">
-    <div class="col-12 border rounded p-3">
+<div class="row px-3 bg-white box-lra-shadow rounded">
+    <div class="col-12  p-3">
         <table class="custom-table table table-hover" id="myTable" width="100%" cellspacing="0" data-page-length='10'>
             <thead class="table-primary">
                 <tr>
