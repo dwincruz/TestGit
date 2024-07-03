@@ -34,8 +34,12 @@ html {
 
 body {
     margin-bottom: 60px;
+    font-family: "Nunito Sans", sans-serif;
 }
 
+.h6, .h5, .h4, .h3, .h2, .h1 {
+    font-family: "Cabin", sans-serif;
+}
 .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
@@ -838,6 +842,10 @@ img {
     color: #fff;
 }
 
+.bg-lra-success {
+    background: #307351;
+}
+
 .bg-lra-warning {
     background: #FFB41B;
 }
@@ -862,6 +870,13 @@ img {
 
 .text-lra-danger {
     color: #92140C !important;
+}
+.text-lra-success {
+    color: #307351 !important;
+}
+
+.text-lra-warning {
+    color: #FFB41B !important;
 }
 
 body {

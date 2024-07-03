@@ -58,6 +58,11 @@ namespace VMNS.Controllers
             ViewData["Sub_UnderHood"] = _context.Sub_UnderHoods.Where(x => x.MaintenanceId == id);
             ViewData["Sub_UnderVehicle"] = _context.Sub_UnderVehicles.Where(x => x.MaintenanceId == id);
             ViewData["Vehicles"] = _context.Vehicles;
+
+            //Get Car Image
+            ViewData["VehicleImage"] = _context.Vehicles.Where(m => m.Id == maintenance.VehicleId).FirstOrDefault()?.ImagePath;
+
+
             if (maintenance == null)
             {
                 return NotFound();
