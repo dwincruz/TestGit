@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Body.cshtml";
+    var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
+
 }
 <form class="row mt-3" asp-action="Create">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
@@ -20,126 +22,136 @@
     <div class="row bg-white box-lra-shadow rounded pt-4">
         <div class="col-lg-7 col-sm-7 col-12">
         <div class="row">
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="MaintenanceId"
-                               id=""
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="MaintenanceId"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="MaintenanceId" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <select asp-for="lu_WheelId" class="form-control" asp-items="ViewBag.lu_WheelId"></select>
-                        <div class="input-text"><label asp-for="lu_WheelId"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="lu_WheelId" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <select asp-for="BreakLining" class="form-control" asp-items="ViewBag.Status"></select>
-                        <div class="input-text"><label asp-for="BreakLining"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="BreakLining" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <select asp-for="TireTread" class="form-control" asp-items="ViewBag.Status"></select>
-                        <div class="input-text"><label asp-for="TireTread"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="TireTread" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="TirePressureBefore"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="TirePressureBefore"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="TirePressureBefore" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="TirePressureAfter"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="TirePressureAfter"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="TirePressureAfter" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="date"
-                               asp-for="AcquisitionDate"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label>Date Acquired</label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="AcquisitionDate" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <select asp-for="WearPattern" class="form-control" asp-items="ViewBag.Status"></select>
-                        <div class="input-text"><label asp-for="WearPattern"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="WearPattern" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="LifeSpan"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label>Duration in Days</label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="LifeSpan" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Remarks"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label>Remarks</label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="Remarks" class="text-danger"></span>
+            <div class="col-12">
+                <input type="text"
+                       asp-for="MaintenanceId"
+                       id=""
+                       class="form-control"
+                       required
+                       readonly
+                       hidden
+                       pattern="\S+.*" />
+                <table class="table table-bordered table-borderless">
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="category-name">
+                                Wheel Position
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="4">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100 py-3">
+                                        <select asp-for="lu_WheelId" class="form-control" asp-items="ViewBag.lu_WheelId"></select>
+                                        <div class="input-text"><label>Wheel Position</label></div>
+                                    </div>
+                                </div>
+                                <span asp-validation-for="lu_WheelId" class="text-danger"></span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="category-name">
+                                Tire Pressure PSI
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100 py-3">
+                                        <input type="number"
+                                               asp-for="TirePressureBefore"
+                                               id=""
+                                               value="0"
+                                               class="form-control"
+                                               required
+                                               pattern="\S+.*" />
+                                        <div class="input-text"><label asp-for="TirePressureBefore"></label></div>
+                                    </div>
+                                </div>
+                            </th>
+                            <th colspan="2">
+                                <div class="input-group" id="">
+                                    <div id="" class="custom-input w-100 py-3">
+                                        <input type="number"
+                                               asp-for="TirePressureAfter"
+                                               id=""
+                                               value="0"
+                                               class="form-control"
+                                               required
+                                               pattern="\S+.*" />
+                                        <div class="input-text"><label asp-for="TirePressureAfter"></label></div>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="good">
+                                Good for Service
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="good"></th>
+                            <th colspan="3" class="warning">
+                                For Monitoring
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="good"></th>
+                            <th class="warning"></th>
+                            <th colspan="2" class="danger">
+                                Needs Repair
+                            </th>
+                        </tr>
+                       
+                    </thead>
+                    <tbody>    
+                        <tr>
+                            <td colspan="4" class="category-name">
+                                Brakes and Tires
+                            </td>
+                        </tr>
+                        <tr class="condition-row">
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td class="checkbox-container">
+                                    <input type="radio" name="BreakLining" id="@currentValue" class="checkbox-item" value="@currentValue" />
+                            </td>
+                        }
+                            <td>@Html.DisplayNameFor(model => model.BreakLining)</td>
+                        </tr>
+                        <tr class="condition-row">
+                            @foreach (var currentValue in currentValues)
+                            {
+                                <td class="checkbox-container">
+                                    <input type="radio" name="TireTread" id="@currentValue" class="checkbox-item" value="@currentValue" />
+                                </td>
+                            }
+                            <td>@Html.DisplayNameFor(model => model.TireTread)</td>
+                        </tr>
+                        <tr class="condition-row">
+                            @foreach (var currentValue in currentValues)
+                            {
+                                <td class="checkbox-container">
+                                    <input type="radio" name="WearPattern" id="@currentValue" class="checkbox-item" value="@currentValue" />
+                                </td>
+                            }
+                            <td>@Html.DisplayNameFor(model => model.WearPattern)</td>
+                        </tr>
+                        
+
+                        <tr>
+                            <td colspan="4" class="category-name">
+                                Remarks
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <textarea class="form-control" placeholder="Leave a comment here" asp-for="Remarks">
+                                    </textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

@@ -3,6 +3,8 @@
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Body.cshtml";
+    var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
+
 }
 <form class="row mt-3" asp-action="Create">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
@@ -17,57 +19,79 @@
     <div class="col-12">
         <div asp-validation-summary="All" class="text-danger"></div>
     </div>
-    <div class="row bg-white box-lra-shadow rounded d-flex justify-content-center pt-4">
-        <div class="col-lg-7 col-sm-7 col-12">
-            <div class="row">
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <input type="text"
-                                   asp-for="MaintenanceId"
-                                   id=""
-                                   class="form-control"
-                                   required
-                                   readonly
-                                   pattern="\S+.*" />
-                            <div class="input-text"><label asp-for="MaintenanceId"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="MaintenanceId" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="BatteryTerminal" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="BatteryTerminal"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="BatteryTerminal" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select asp-for="ConditionOfBattery" class="form-control" asp-items="ViewBag.Status"></select>
-                            <div class="input-text"><label asp-for="ConditionOfBattery"></label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="ConditionOfBattery" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <input type="text"
-                                   asp-for="Remarks"
-                                   id=""
-                                   class="form-control"
-                                   required
-                                   pattern="\S+.*" />
-                            <div class="input-text"><label>Remarks</label></div>
-                        </div>
-                    </div>
-                    <span asp-validation-for="Remarks" class="text-danger"></span>
-                </div>
+    <div class="col-lg-7 col-sm-7 col-12">
+        <div class="row">
+            <div class="col-12">
+                <input type="text"
+                       asp-for="MaintenanceId"
+                       id=""
+                       class="form-control"
+                       required
+                       readonly
+                       hidden
+                       pattern="\S+.*" />
+                <table class="table table-bordered table-borderless">
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="good">
+                                Good for Service
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="good"></th>
+                            <th colspan="3" class="warning">
+                                For Monitoring
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="good"></th>
+                            <th class="warning"></th>
+                            <th colspan="2" class="danger">
+                                Needs Repair
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="4" class="category-name">
+                                Battery and Performance
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="condition-row">
+                            @foreach (var currentValue in currentValues)
+                            {
+                                <td class="checkbox-container">
+                                    <input type="radio" name="BatteryTerminal" id="@currentValue" class="checkbox-item" value="@currentValue" />
+
+                                </td>
+                            }
+                            <td>@Html.DisplayNameFor(model => model.BatteryTerminal)</td>
+                        </tr>
+                        <tr class="condition-row">
+                            @foreach (var currentValue in currentValues)
+                            {
+                                <td class="checkbox-container">
+                                    <input type="radio" name="ConditionOfBattery" id="@currentValue" class="checkbox-item" value="@currentValue" />
+
+                                </td>
+                            }
+                            <td>@Html.DisplayNameFor(model => model.ConditionOfBattery)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="category-name">
+                                Remarks
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <textarea class="form-control" placeholder="Leave a comment here" asp-for="Remarks">
+                                    </textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+
         </div>
     </div>
 </form>

@@ -15,6 +15,14 @@
         </div>
     </div>
     <div class="col-12">
+        <input type="text"
+               asp-for="MaintenanceId"
+               id=""
+               class="form-control"
+               required
+               readonly
+               hidden
+               pattern="\S+.*" />
         <div asp-validation-summary="All" class="text-danger"></div>
     </div>
     <div class="row bg-white box-lra-shadow rounded d-flex justify-content-center pt-4">
