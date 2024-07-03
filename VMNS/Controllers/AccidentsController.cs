@@ -43,8 +43,8 @@ namespace VMNS.Controllers
             {
                 return NotFound();
             }
-            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
-            ViewData["DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
+            ViewData["lu_VehicleTypeId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
+            ViewData["lu_DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
 
             return View(accident);
         }
@@ -125,9 +125,9 @@ namespace VMNS.Controllers
             {
                 return NotFound();
             }           
-            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
-            ViewData["DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
-
+            ViewData["lu_VehicleTypeId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
+            ViewData["lu_DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
+            
             return View(accident);
         }
         // POST: Accidents/Edit/5

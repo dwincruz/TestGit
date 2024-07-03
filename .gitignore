@@ -73,3 +73,6 @@
 /VMNS/obj/VMNS.csproj.nuget.dgspec.json
 /VMNS/appsettings.json
 /.vs/VMNS/DesignTimeBuild/.dtbcache.v2
+/VMNS/obj/Debug/net6.0/VMNS.csproj.FileListAbsolute.txt
+/VMNS/obj/Debug/net6.0/project.razor.vs.bin.temp
+/VMNS/obj/Debug/net6.0/project.razor.vs.bin
