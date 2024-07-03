@@ -80,14 +80,14 @@
             </div>
         </div>
     </div>
-    <div class="col-12">
-        <div class="row">
+    <div class="col-12 bg-white box-lra-shadow p-4 rounded">
+        <div class="row px-3 ">
             <div class="col-12 header-text mb-4">
-                <h5>Vehicle Parts Condition</h5>
+                <h5><i class="ri-tools-fill text-lra-primary"></i> Vehicle Parts Condition</h5>
                 <div class="mb-4">
-                    <span><i class="ri-circle-fill text-success px-2"></i><label>Good for service</label></span>
-                    <span><i class="ri-circle-fill text-warning px-2"></i><label>For Monitoring</label></span>
-                    <span><i class="ri-circle-fill text-danger px-2"></i><label>For Repair</label></span>
+                    <span><i class="ri-circle-fill text-lra-primary px-2"></i><label>Good for service</label></span>
+                    <span><i class="ri-circle-fill text-lra-warning px-2"></i><label>For Monitoring</label></span>
+                    <span><i class="ri-circle-fill text-lra-danger px-2"></i><label>For Repair</label></span>
                 </div>
                 @* <div>
                     <a asp-controller="Sub_UnderVehicle" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
@@ -582,13 +582,18 @@
                     console.log(item.innerText)
                     switch (item.innerText) {
                         case "Good for Service":
-                            item.style.backgroundColor = "#93c54b"
+                            // item.style.backgroundColor = "#93c54b"
+                            item.style.backgroundColor = "#1e325c"
                             break;
                         case "For Monitoring":
-                            item.style.backgroundColor = "#ffff33"
+                            //item.style.backgroundColor = "#ffff33"
+                            item.style.backgroundColor = "#FFB41B"
+                            item.style.color = "#1E325C"
+
                             break;
                         case "Needs Repair":
-                            item.style.backgroundColor = "#cd5c5c"
+                            // item.style.backgroundColor = "#cd5c5c"
+                            item.style.backgroundColor = "#92140C"
                             break;
                         default:
                             item.style.color = "#494949"
