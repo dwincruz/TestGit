@@ -27,10 +27,22 @@ namespace VMNS.Controllers
 
         public async Task<IActionResult> History(Guid? selectedValue)
         {
+            
+            if (selectedValue == Guid.Empty || selectedValue == null)
+            {
                 ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo");
-            ViewData["Vehicles"] = _context.Vehicles;
-            var applicationDbContext = _context.Maintenances.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle).Where(x => x.VehicleId == selectedValue);
-            return View(await applicationDbContext.ToListAsync());
+                var applicationDbContext = _context.Maintenances.Include(m => m.Vehicle);
+                ViewData["Vehicles"] = _context.Vehicles;
+                return View(await applicationDbContext.ToListAsync());
+            }
+            else {
+                ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo");
+                ViewData["Vehicles"] = _context.Vehicles;
+                var applicationDbContext = _context.Maintenances.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle).Where(x => x.VehicleId == selectedValue);
+                return View(await applicationDbContext.ToListAsync());
+            }
+            return View();
+
         }
 
         // GET: Maintenances/Details/5
