@@ -9,6 +9,13 @@
     var DataC = (IEnumerable<Sub_InteriorExterior>)ViewData["Sub_InteriorExterior"];
     var DataD = (IEnumerable<Sub_UnderHood>)ViewData["Sub_UnderHood"];
     var DataE = (IEnumerable<Sub_UnderVehicle>)ViewData["Sub_UnderVehicle"];
+
+    int countDataA = DataA.Count();
+    int countDataB = DataB.Count();
+    int countDataC = DataC.Count();
+    int countDataD = DataD.Count();
+    int countDataE = DataE.Count();
+
 }
 <div class="row">
     <div class="offset-9"></div>
@@ -33,7 +40,10 @@
                         <p style="margin: 0"><strong>LAND REGISTRATION AUTHORITY</strong></p>
                         <p style="margin: 0">Vehicle Summary Report</p>
                     </td>
-                    <td colspan="1" valign="top" style="border: 1px solid rgba(0,0,0,0.2); width: 30%;"><p>Date: </p> @Html.DisplayFor(model => model.DateModified)</td>
+                    <td colspan="1" valign="top" style="border: 1px solid rgba(0,0,0,0.2); width: 30%;">
+                        <p>Date: </p> @Html.DisplayFor(model => model.DateModified)
+                        <p>Inspected By @Html.DisplayFor(model => model.InspectorName)</p>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="7" align="center" style="border: 1px solid rgba(0,0,0,0.2);  background-color: black; color: white;"><strong>Vehicle Information</strong></td>
@@ -113,9 +123,13 @@
                     <td style="border: 1px solid rgba(0,0,0,0.2)">Needs Repair</td>
                     <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"></td>
                 </tr>
-                <tr>
-                    <td colspan="7" class="header-table-data" align="center" ; style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Interior / Exterior</strong></td>
-                </tr>
+                @if (countDataC > 0)
+                {
+                    <tr>
+                        <td colspan="7" class="header-table-data" align="center" ; style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Interior / Exterior</strong></td>
+                    </tr>
+                }
+                
                 @foreach (var item in DataC)
                 {
                     var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
@@ -318,9 +332,12 @@
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Wiring</td>
                     </tr>
                 }
+                @if(countDataD > 0)
+                {
                 <tr>
                     <td colspan="7" class="header-table-data" align="center" ; style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Under Hood</strong></td>
                 </tr>
+                }
                 @foreach (var item in DataD)
                 {
                     var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
@@ -487,9 +504,13 @@
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Hoses and Connections</td>
                     </tr>
                 }
-                <tr>
-                    <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Under Vehicle</strong></td>
-                </tr>
+                @if (countDataE > 0)
+                {
+                    <tr>
+                        <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Under Vehicle</strong></td>
+                    </tr>
+                }
+                
                 @foreach (var item in DataE)
                 {
                     var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
@@ -711,9 +732,11 @@
                     </tr>
 
                 }
-                <tr>
-                    <td colspan="7" class="header-table-data" align="center" ; style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Battery and Performance</strong></td>
-                </tr>
+                @if(countDataA > 0){
+                    <tr>
+                        <td colspan="7" class="header-table-data" align="center" ; style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Battery and Performance</strong></td>
+                    </tr>
+                }
                 @foreach (var item in DataA)
                 {
                     var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
