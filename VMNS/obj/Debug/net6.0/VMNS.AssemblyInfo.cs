@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VMNS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+890f5f7304160687d99181f66b9061dc711a1905")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76badabf19dc50d1794c50d9f2cc00dec91cd0a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("VMNS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VMNS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
