@@ -72,11 +72,11 @@
                         <td>
                             @if (!User.IsInRole("Administrator"))
                             {
-                                <a asp-action="Edit" asp-route-id="@item.VehicleId" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
                                     <i class="fa-regular fa-pen-to-square"></i>
                                 </a>
                             }
-                            <a asp-action="Details" asp-route-id="@item.VehicleId" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Details">
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Details">
                                 <i class="fa-regular fa-eye"></i>
                             </a>
                         </td>

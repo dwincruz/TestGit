@@ -401,6 +401,7 @@ namespace VMNS.Controllers
             {
                 return RedirectToAction("AdminSearch");
             }
+
             var vehicle = await _context.Vehicles
                 .Include(v => v.lu_FuelType)
                 .Include(v => v.lu_Transmission)
