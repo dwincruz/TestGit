@@ -143,7 +143,10 @@ namespace VMNS.Controllers
 
             //Pass Sub tables
 
-            ViewData["Sub_BatteryPerformances"] = _context.Sub_BatteryPerformances.Where(x => x.MaintenanceId == id);
+            var xy = _context.Sub_BatteryPerformances.Where(x => x.MaintenanceId == id);
+            var total = xy.Count();
+            ViewData["Sub_BatteryPerformances"] = xy;
+
             ViewData["Sub_BrakeTires"] = _context.Sub_BrakeTires.Where(x => x.MaintenanceId == id).Include(x => x.lu_Wheel);
             ViewData["Sub_InteriorExterior"] = _context.Sub_InteriorExteriors.Where(x => x.MaintenanceId == id);
             ViewData["Sub_UnderHood"] = _context.Sub_UnderHoods.Where(x => x.MaintenanceId == id);
@@ -153,7 +156,6 @@ namespace VMNS.Controllers
             {
                 return View("AdminSearch");
             }
-
             return View(maintenance);
         }
 

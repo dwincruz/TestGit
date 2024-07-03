@@ -11,15 +11,13 @@
     var DataE = (IEnumerable<Sub_UnderVehicle>)ViewData["Sub_UnderVehicle"];
 }
 
-<div class="row">
+<div class="row mt-3">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Vehicle Maintenance</h2>
+        <h2><i class="ri-tools-fill text-lra-primary"></i> Vehicle Maintenance</h2>
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Maintenances" asp-action="History" asp-route-selectedValue=@ViewData["VehicleId"] class="btn btn-sm text-capitalize border rounded">
-                <i class="ri-arrow-go-back-line"></i> Go Back
-            </a>
+            <a asp-area="" asp-controller="Maintenances" asp-action="Index" class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
         </div>
     </div>
     <div class="col-12">
@@ -32,8 +30,8 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <strong>Plate Number</strong>
-                            <h2 class="fw-bolder text-break  m-0">@Html.DisplayFor(model => model.Vehicle.PlateNo)</h2>
-                            <span class="text-secondary"><small>Currently Viewed</small></span>
+                            <h3 class="fw-bolder text-break  m-0">@Html.DisplayFor(model => model.Vehicle.PlateNo)</h3>
+                            <span><small>Currently Viewed</small></span>
                         </div>
 
                         <img src="/@ViewData["VehicleImage"]" height="" width="50%">
@@ -43,70 +41,55 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
-                <div class="bg-white box-lra-shadow rounded p-3">
+                <div class="box-lra-shadow bg-white rounded p-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <strong>Date</strong>
                         <span><i class="ri-calendar-check-line dashboard-icon"></i></span>
                     </div>
                     <div>
                         <h1 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.DateChecked)</h1>
-                        <small>Inspected By:</small> @Html.DisplayFor(model => model.InspectorName)
+                        <span>
+                            <small>Inspected By:</small> @Html.DisplayFor(model => model.InspectorName)
+                        </span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
-                <div class="bg-lra-sub-info box-lra-shadow rounded p-3">
+                <div class=" bg-lra-sub-info box-lra-shadow rounded p-3">
                     <div class="d-flex justify-content-between">
                         <strong>Mileage</strong>
                         <span><i class="ri-speed-up-line dashboard-icon"></i></span>
                     </div>
                     <div>
                         <h1 class="fw-bolder text-break m-0">@Html.DisplayFor(model => model.Mileage) Km</h1>
-                        <span class="text-secondary"><small>Distance Travelled</small></span>
+                        <span><small>Distance Travelled</small></span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
                 <div class="bg-lra-warning box-lra-shadow rounded p-3">
                     <div class="d-flex justify-content-between align-items-center">
-                        <strong>Remarks</strong>
+                        <strong>Maintenance Description</strong>
                         <span><i class="ri-draft-line dashboard-icon"></i></span>
                     </div>
                     <div>
-                        <h1 class="fw-bolder text-break m-0"><a href="#" class="btn border rounded text-capitalize" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Remarks</a></h1>
-                        <span class="text-secondary"><small>Read full details</small></span>
+                        <h1 class="fw-bolder text-break mt-3"><a href="#" class="btn bg-lra-primary rounded text-capitalize" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View All</a></h1>
+                        <span><small></small></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-12 bg-white box-lra-shadow p-4 rounded">
-        <div class="row px-3 ">
-            <div class="col-12 header-text mb-4">
-                <h5><i class="ri-tools-fill text-lra-primary"></i> Vehicle Parts Condition</h5>
+    <div class="col-12 bg-white p-2">
+        <div class="row ">
+            <div class="col-12 header-text p-3 mb-4">
+                <h5>Vehicle Parts Condition</h5>
                 <div class="mb-4">
                     <span><i class="ri-circle-fill text-lra-primary px-2"></i><label>Good for service</label></span>
                     <span><i class="ri-circle-fill text-lra-warning px-2"></i><label>For Monitoring</label></span>
                     <span><i class="ri-circle-fill text-lra-danger px-2"></i><label>For Repair</label></span>
                 </div>
-                @* <div>
-                    <a asp-controller="Sub_UnderVehicle" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Vehicle</a>
-
-                    <a asp-controller="Sub_UnderHood" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Hood</a>
-
-                    <a asp-controller="Sub_BrakeTires" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Brake and Tires</a>
-
-                    <a asp-controller="Sub_InteriorExterior" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Interior / Exterior</a>
-
-                    <a asp-controller="Sub_BatteryPerformance" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Battery Performance</a>
-                    <a asp-controller="Monitorings" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Watch List</a>
-                </div> *@
+                
             </div>
 
         </div>
@@ -114,11 +97,11 @@
             @foreach (var item in DataB)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <ul class="list-group mb-4">
+                    <ul class="list-group p-3 mb-4">
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold">@item.lu_Wheel.WheelPosition</div>
-                                @* <div>
+                                <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i>@item.lu_Wheel.WheelPosition</div>
+                                <div>
                                     <a asp-controller="Sub_BrakeTires" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
                                        data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="fa-regular fa-pen-to-square"></i>
@@ -127,7 +110,7 @@
                                        data-toggle="tooltip" data-placement="top" title="Delete">
                                         <i class="ri-delete-bin-7-line"></i>
                                     </a>
-                                </div> *@
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
@@ -154,19 +137,20 @@
                             <label>Duration in Days</label>
                             <span class="badge text-status-color rounded-pill">@item.LifeSpan</span>
                         </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                        <li class="list-group-item">
                             <div class="input-group py-4" id="">
                                 <div id="" class="custom-input w-100">
                                     <input type="text"
-                                           asp-for="@item.Remarks"
-                                           id="dateInspect"
+                                           id=""
                                            class="form-control"
+                                           value="@item.Remarks"
                                            required
                                            readonly
                                            pattern="\S+.*" />
                                     <div class="input-text"><label>Remarks</label></div>
                                 </div>
                             </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
                         </li>
                     </ul>
                 </div>
@@ -176,11 +160,11 @@
             @foreach (var item in DataD)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <ul class="list-group mb-4">
+                    <ul class="list-group p-3 mb-4">
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold">Under Hood</div>
-                                @* <div>
+                                <div class="fw-bold"><i class="ri-steering-2-line text-lra-primary"></i> Under Hood</div>
+                                <div>
                                     <a asp-controller="Sub_UnderHood" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
                                        data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="fa-regular fa-pen-to-square"></i>
@@ -189,7 +173,7 @@
                                        data-toggle="tooltip" data-placement="top" title="Delete">
                                         <i class="ri-delete-bin-7-line"></i>
                                     </a>
-                                </div> *@
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
@@ -264,6 +248,21 @@
                             <label>Hose and Connections</label>
                             <span class="badge text-status-color rounded-pill">@item.HosesandConnections</span>
                         </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </li>
                     </ul>
                 </div>
 
@@ -271,11 +270,11 @@
             @foreach (var item in DataE)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <ul class="list-group mb-4">
+                    <ul class="list-group p-3 mb-4">
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold">Under Vehicle</div>
-                                @* <div>
+                                <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i> Under Vehicle</div>
+                                <div>
                                     <a asp-controller="Sub_UnderVehicle" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
                                        data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="fa-regular fa-pen-to-square"></i>
@@ -284,7 +283,7 @@
                                        data-toggle="tooltip" data-placement="top" title="Delete">
                                         <i class="ri-delete-bin-7-line"></i>
                                     </a>
-                                </div> *@
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
@@ -300,7 +299,7 @@
                             <span class="badge text-status-color rounded-pill">@item.ExhaustPipes</span>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <label>Trasnfer Case</label>
+                            <label>Transfer Case</label>
                             <span class="badge text-status-color rounded-pill">@item.TransferCase</span>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
@@ -380,8 +379,23 @@
                             <span class="badge text-status-color rounded-pill">@item.ConstantVelocityBoots</span>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <label>Diffential</label>
+                            <label>Differential</label>
                             <span class="badge text-status-color rounded-pill">@item.Differential</span>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
                         </li>
                     </ul>
                 </div>
@@ -389,11 +403,11 @@
             @foreach (var item in DataC)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <ul class="list-group mb-4">
+                    <ul class="list-group p-3 mb-4">
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold">Interior / Exterior</div>
-                                @* <div>
+                                <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i>  Interior / Exterior</div>
+                                <div>
                                     <a asp-controller="Sub_InteriorExterior" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
                                        data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="fa-regular fa-pen-to-square"></i>
@@ -402,7 +416,7 @@
                                        data-toggle="tooltip" data-placement="top" title="Delete">
                                         <i class="ri-delete-bin-7-line"></i>
                                     </a>
-                                </div> *@
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
@@ -481,6 +495,37 @@
                             <label>Carpet</label>
                             <span class="badge text-status-color rounded-pill">@item.Carpet</span>
                         </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Odometer</label>
+                            <span class="badge text-status-color rounded-pill">@item.Odometer</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Fuel Guage</label>
+                            <span class="badge text-status-color rounded-pill">@item.FuelGuage</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Battery Voltage</label>
+                            <span class="badge text-status-color rounded-pill">@item.BatteryVoltage</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Battery Indicators</label>
+                            <span class="badge text-status-color rounded-pill">@item.Indicators</span>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </li>
                     </ul>
                 </div>
             }
@@ -489,11 +534,11 @@
             @foreach (var item in DataA)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <ul class="list-group mb-4">
+                    <ul class="list-group p-3 mb-4">
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold">Battery Performance</div>
-                                @* <div>
+                                <div class="fw-bold"><i class="ri-battery-2-charge-fill text-lra-primary"></i> Battery Performance</div>
+                                <div>
                                     <a asp-controller="Sub_BatteryPerformance" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
                                        data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="fa-regular fa-pen-to-square"></i>
@@ -502,7 +547,7 @@
                                        data-toggle="tooltip" data-placement="top" title="Delete">
                                         <i class="ri-delete-bin-7-line"></i>
                                     </a>
-                                </div> *@
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
@@ -513,6 +558,21 @@
                             <label>Condition of Battery</label>
                             <span class="badge text-status-color rounded-pill">@item.ConditionOfBattery</span>
                         </li>
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </li>
                     </ul>
                 </div>
             }
@@ -521,11 +581,11 @@
             @foreach (var item in Monitoring)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                    <ul class="list-group mb-4">
+                    <ul class="list-group p-3 mb-4">
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold">@item.Replacement.Parts</div>
-                                @* <div>
+                                <div>
                                     <a asp-controller="Monitorings" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
                                        data-toggle="tooltip" data-placement="top" title="Edit">
                                         <i class="fa-regular fa-pen-to-square"></i>
@@ -534,7 +594,7 @@
                                        data-toggle="tooltip" data-placement="top" title="Delete">
                                         <i class="ri-delete-bin-7-line"></i>
                                     </a>
-                                </div> *@
+                                </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
@@ -558,12 +618,116 @@
     <div class="modal-dialog modal-dialog-center">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Vehicle Remarks</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel"><i class="ri-draft-line text-lra-primary"></i> Vehice remarks</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="">
-                    @Html.DisplayFor(model => model.Remarks)
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group mb-4" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                       id=""
+                                       class="form-control"
+                                       value="@Html.DisplayFor(model => model.Remarks)"
+                                       required
+                                       readonly
+                                       pattern="\S+.*" />
+                                <div class="input-text"><i class="ri-tools-fill text-lra-primary"></i><label>Maintenance remarks</label></div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Remarks" class="text-danger"></span>
+                    </div>
+                    @foreach (var item in DataA)
+                    {
+                        <div class="col-12">
+                            <div class="input-group mb-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><i class="ri-battery-2-charge-fill text-lra-primary"></i> <label>Battery Performance remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </div>
+                    }
+                    @foreach (var item in DataE)
+                    {
+                        <div class="col-12">
+                            <div class="input-group mb-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><i class="ri-car-fill text-lra-primary"></i> <label>Under Vehicle remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </div>
+                    }
+                    @foreach (var item in DataD)
+                    {
+                        <div class="col-12">
+                            <div class="input-group mb-3" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><i class="ri-steering-2-line text-lra-primary"></i> <label>Underhood remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </div>
+                    }
+                    @foreach (var item in DataC)
+                    {
+                        <div class="col-12">
+                            <div class="input-group mb-3" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><i class="ri-car-fill text-lra-primary"></i>  <label>Interior / Exterior remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </div>
+                    }
+                    @foreach (var item in DataB)
+                    {
+                        <div class="col-12">
+                            <div class="input-group mb-3" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><i class="ri-car-fill text-lra-primary"></i> <label>@item.lu_Wheel.WheelPosition remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
@@ -577,9 +741,7 @@
 
         const partsCondition = async (items) => {
             try {
-                console.log(await items)
                 await items.forEach(item => {
-                    console.log(item.innerText)
                     switch (item.innerText) {
                         case "Good for Service":
                             // item.style.backgroundColor = "#93c54b"

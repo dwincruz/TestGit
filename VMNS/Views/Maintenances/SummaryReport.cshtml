@@ -5,13 +5,13 @@
     Layout = "~/Views/Shared/_Body.cshtml";
     var Monitoring = (IEnumerable<Monitoring>)ViewData["Monitoring"];
     var DataA = (IEnumerable<Sub_BatteryPerformance>)ViewData["Sub_BatteryPerformances"];
-    var DataB = (IEnumerable<Sub_BrakeTires>)ViewData["Sub_BrakeTires"];
+    // var DataB = (IEnumerable<Sub_BrakeTires>)ViewData["Sub_BrakeTires"];
     var DataC = (IEnumerable<Sub_InteriorExterior>)ViewData["Sub_InteriorExterior"];
     var DataD = (IEnumerable<Sub_UnderHood>)ViewData["Sub_UnderHood"];
     var DataE = (IEnumerable<Sub_UnderVehicle>)ViewData["Sub_UnderVehicle"];
 
     int countDataA = DataA.Count();
-    int countDataB = DataB.Count();
+    // int countDataB = DataB.Count();
     int countDataC = DataC.Count();
     int countDataD = DataD.Count();
     int countDataE = DataE.Count();
@@ -272,15 +272,6 @@
                         @foreach (var currentValue in currentValues)
                         {
                             <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
-                                <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.AirConFilter == currentValue ? "checked" : "") />
-                            </td>
-                        }
-                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Clutch Operation</td>
-                    </tr>
-                    <tr>
-                        @foreach (var currentValue in currentValues)
-                        {
-                            <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
                                 <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.ClutchOperation == currentValue ? "checked" : "") />
                             </td>
                         }
@@ -330,6 +321,42 @@
                             </td>
                         }
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Wiring</td>
+                    </tr>
+                    <tr>
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
+                                <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.BatteryVoltage == currentValue ? "checked" : "") />
+                            </td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Battery Voltage</td>
+                    </tr>
+                    <tr>
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
+                                <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.FuelGuage == currentValue ? "checked" : "") />
+                            </td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Fuel Guage</td>
+                    </tr>
+                    <tr>
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
+                                <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Indicators == currentValue ? "checked" : "") />
+                            </td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Indicators</td>
+                    </tr>
+                    <tr>
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td align="center" style="border: 1px solid rgba(0,0,0,0.2)">
+                                <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Odometer == currentValue ? "checked" : "") />
+                            </td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Odometer</td>
                     </tr>
                 }
                 @if(countDataD > 0)
@@ -420,7 +447,7 @@
                                 <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.AirConditionerCondenser == currentValue ? "checked" : "") />
                             </td>
                         }
-                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Air Conditionercondenser</td>
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Air Conditioner Condenser</td>
                     </tr>
                     <tr>
                         @foreach (var currentValue in currentValues)
@@ -683,7 +710,7 @@
                                 <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.BrakeLines == currentValue ? "checked" : "") />
                             </td>
                         }
-                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">BallJoints</td>
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Ball Joints</td>
                     </tr>
                     <tr>
                         @foreach (var currentValue in currentValues)
@@ -692,7 +719,7 @@
                                 <input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.BrakeLines == currentValue ? "checked" : "") />
                             </td>
                         }
-                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">BrakeLines</td>
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Brake Lines</td>
                     </tr>
                     <tr>
                         @foreach (var currentValue in currentValues)
