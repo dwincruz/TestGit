@@ -49,7 +49,74 @@ namespace VMNS.Controllers
             ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "FullDetail");
             ViewData["MotorpoolOfficer"] = myListA.Count();
             ViewData["TotalVehicles"] = totalVehicles;
+
+
+            List<object> resultListA = new List<object>();
+            List<object> resultListB = new List<object>();
+            List<object> resultListC = new List<object>();
+            List<object> dueDateList = new List<object>();
+
+            var typeAcc = "Accidents";
+            var typeMain = "Maintenances";
+
+            db.Query("exec [dbo].[sp_chartsCategory] '" + typeAcc + "'");
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                {
+                    var rowData = new Dictionary<string, object>();
+
+                    for (int i = 0; i < db.Reader.FieldCount; i++)
+                    {
+                        string fieldName = db.Reader.GetName(i);
+                        object value = db.Reader.GetValue(i);
+                        rowData[fieldName] = value;
+                    }
+                    resultListA.Add(rowData);
+                }
+            }
+
+            db.Query("exec [dbo].[sp_chartsCategory] '" + typeMain + "'");
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                {
+                    var rowData = new Dictionary<string, object>();
+
+                    for (int i = 0; i < db.Reader.FieldCount; i++)
+                    {
+                        string fieldName = db.Reader.GetName(i);
+                        object value = db.Reader.GetValue(i);
+                        rowData[fieldName] = value;
+                    }
+                    resultListB.Add(rowData);
+                }
+            }
+
+            db.Query("exec [dbo].[sp_TopDueDate]");
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                {
+                    var rowData = new Dictionary<string, object>();
+
+                    for (int i = 0; i < db.Reader.FieldCount; i++)
+                    {
+                        string fieldName = db.Reader.GetName(i);
+                        object value = db.Reader.GetValue(i);
+                        rowData[fieldName] = value;
+                    }
+                    dueDateList.Add(rowData);
+                }
+            }
+
+
+            ViewData["LTODueDates"] = Json(dueDateList);
+            ViewData["AccidentsData"] = Json(resultListA);
+            ViewData["MaintenancesData"] = Json(resultListB);
             
+
+
             return View();
         }
 
