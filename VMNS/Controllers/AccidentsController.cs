@@ -31,22 +31,21 @@ namespace VMNS.Controllers
         }
 
         // GET: Accidents/Details/5
-        public async Task<IActionResult> Details(Guid? id)
+        public async Task<IActionResult> Details(int? id)
         {
+            ViewData["Vehicles"] = _context.Vehicles;
             if (id == null || _context.Accidents == null)
             {
                 return NotFound();
             }
-
-            var accident = await _context.Accidents
-                .Include(a => a.Vehicle)
-                .Include(x => x.lu_DamageScale)
-                .FirstOrDefaultAsync(m => m.VehicleId == id);
+            var accident = await _context.Accidents.FindAsync(id);
             if (accident == null)
             {
                 return NotFound();
             }
-            ViewData["Vehicles"] = _context.Vehicles;
+            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
+            ViewData["DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
+
             return View(accident);
         }
 
@@ -114,26 +113,23 @@ namespace VMNS.Controllers
             
         }
         // GET: Accidents/Edit/5
-        public async Task<IActionResult> Edit(Guid? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             ViewData["Vehicles"] = _context.Vehicles;
             if (id == null || _context.Accidents == null)
             {
                 return NotFound();
             }
-
             var accident = await _context.Accidents.FindAsync(id);
             if (accident == null)
             {
                 return NotFound();
             }           
-            
             ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
             ViewData["DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
 
             return View(accident);
         }
-
         // POST: Accidents/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
