@@ -63,7 +63,7 @@ namespace VMNS.Controllers
                 x = db.Reader.GetInt32(0);
             }
 
-            if (x >= 4)
+            if (x >= 2)
             {
                 Notify("Record already available", notificationType: NotificationType.warning);
                 return RedirectToAction("Details", "Maintenances", new { id = MaintenanceId });

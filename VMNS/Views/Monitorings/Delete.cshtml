@@ -18,24 +18,17 @@
     </div>
     <div class="col-12">
         <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="text"
+               asp-for="MaintenanceId"
+               id=""
+               class="form-control"
+               required
+               readonly
+               hidden
+               pattern="\S+.*" />
     </div>
     <div class="col-lg-7 col-sm-7 col-12">
         <div class="row">
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               id="targetValue"
-                               class="form-control"
-                               value="@Html.DisplayFor(model => model.Maintenance.Id)"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="MaintenanceId"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="MaintenanceId" class="text-danger"></span>
-            </div>
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
@@ -153,12 +146,11 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        const targetValue = document.querySelector('#targetValue');
-        console.log(targetValue)
         const confirmValue = document.querySelector('#confirmValue');
         const confirmInput = document.querySelector('#confirmInput');
         const btnTrigger = document.querySelector('#confirmDelete')
-        confirmValue.innerText = `Delete ${targetValue.value}`
+        confirmValue.innerText = `Proceed to delete`
+
 
         confirmInput.addEventListener('change', e => {
             console.log(e.target.value)

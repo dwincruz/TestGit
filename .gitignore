@@ -51,3 +51,5 @@
 /VMNS/obj/VMNS.csproj.nuget.dgspec.json
 /VMNS/obj/VMNS.csproj.nuget.g.props
 /.gitignore
+/VMNS/appsettings.json
+/.gitignore

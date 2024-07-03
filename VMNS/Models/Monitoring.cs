@@ -13,7 +13,7 @@ namespace VMNS.Models
 
         
         
-        [Display(Name = "Lifespan")]
+        [Display(Name = "Lifespan in Days")]
         public int? LifeSpan { get; set; }
         [Display(Name = "Distance Limit")]
         public int? DistanceLimit { get; set; }

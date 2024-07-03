@@ -64,7 +64,7 @@ namespace VMNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,MaintenanceId,ReplacementId,CurrentKM,CurrentDays,DateAcquired, LifeSpan")] Monitoring monitoring)
+        public async Task<IActionResult> Create([Bind("Id,MaintenanceId,ReplacementId,CurrentKM,LifeSpan,DateAcquired")] Monitoring monitoring)
         {
 
             string Parts = _context.Replacements.Where(x => x.Id == monitoring.ReplacementId).FirstOrDefault().Parts;
@@ -96,6 +96,7 @@ namespace VMNS.Controllers
             ViewData["MaintenanceId"] = monitoring.MaintenanceId;
             ViewData["ReplacementId"] = new SelectList(_context.Replacements, "Id", "Parts");
             return View(monitoring);
+
         }
 
 
@@ -123,7 +124,7 @@ namespace VMNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MaintenanceId,ReplacementId,CurrentKM,CurrentDays,DateAcquired,LifeSpan")] Monitoring monitoring)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,MaintenanceId,ReplacementId,CurrentKM,LifeSpan,DateAcquired")] Monitoring monitoring)
         {
             if (id != monitoring.Id)
             {
@@ -148,10 +149,11 @@ namespace VMNS.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Maintenances", new { id = monitoring.MaintenanceId });
             }
             ViewData["MaintenanceId"] = new SelectList(_context.Maintenances, "Id", "Remarks", monitoring.MaintenanceId);
             return View(monitoring);
+
         }
 
         // GET: Monitorings/Delete/5
