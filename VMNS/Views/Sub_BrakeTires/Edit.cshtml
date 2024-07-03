@@ -7,20 +7,21 @@
 
 }
 <form asp-action="Edit">
-    <div class="row">
+    <div class="row mt-3">
         <input type="hidden" asp-for="Id" />
         <div class="col-md-6 col-sm-4 col-6 my-auto">
-            <h2>Brakes and Tires</h2>
+            <h2><i class="ri-car-fill text-lra-primary"></i>  Brakes and Tires</h2>
         </div>
-        <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+        <div class="col-md-6 col-sm-6 col-6  my-auto position-relative">
             <div class="float-end">
-                <a asp-area="" asp-controller="Maintenances" asp-action="Details" asp-route-Id=@ViewData["MaintenanceId"] class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-                <button type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+                <a asp-area="" asp-controller="Maintenances" asp-action="Details" asp-route-Id=@ViewData["MaintenanceId"] class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+                <button type="submit" class="btn btn-sm  text-white text-capitalize bg-lra-primary box-lra-shadow rounded "><i class="ri-save-line"></i> Save</button>
             </div>
         </div>
         <div class="col-12">
             <div asp-validation-summary="All" class="text-danger"></div>
         </div>
+<<<<<<< HEAD
         <div class="col-md-7 col-12">
             <input type="text"
                    asp-for="MaintenanceId"
@@ -153,6 +154,135 @@
                     </tr>
                 </tbody>
             </table>
+=======
+        <div class="row bg-white box-lra-shadow rounded pt-4">
+            <div class="col-lg-7 col-sm-7 col-12">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="MaintenanceId"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="MaintenanceId"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="MaintenanceId" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="lu_WheelId" class="form-control" asp-items="ViewBag.lu_WheelId"></select>
+                            <div class="input-text"><label>Wheel Position</label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="lu_WheelId" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="BreakLining" class="form-control" asp-items="ViewBag.Status"></select>
+                            <div class="input-text"><label asp-for="BreakLining"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="BreakLining" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="TireTread" class="form-control" asp-items="ViewBag.Status"></select>
+                            <div class="input-text"><label asp-for="TireTread"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="TireTread" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="TirePressureBefore"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="TirePressureBefore"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="TirePressureBefore" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="TirePressureAfter"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="TirePressureAfter"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="TirePressureAfter" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="date"
+                                   asp-for="AcquisitionDate"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label>Date Acquired</label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="AcquisitionDate" class="text-danger"></span>
+                </div>
+                
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="WearPattern" class="form-control" asp-items="ViewBag.Status"></select>
+                            <div class="input-text"><label asp-for="WearPattern"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="WearPattern" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="LifeSpan"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label>Duration in Days</label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="LifeSpan" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="Status"
+                                   asp-for="Remarks"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label>Remarks</label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Remarks" class="text-danger"></span>
+                </div>
+            </div>
+>>>>>>> 0a68272b6a1b5be1369ace026342f75be0420f80
+        </div>
         </div>
     </div>
 </form>

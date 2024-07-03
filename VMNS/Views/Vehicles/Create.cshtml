@@ -4,20 +4,21 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Body.cshtml";
 }
-<form class="row" asp-action="Create" enctype="multipart/form-data">
+<form class="row mt-3" asp-action="Create" enctype="multipart/form-data">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Vehicle Information</h2>
+        <h2><i class="ri-play-list-add-fill text-lra-primary"></i> Add Vehicle Information</h2>       
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Vehicles" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-            <button asp-action="Create" type="submit" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-save-line"></i> Save</button>
+            <a asp-area="" asp-controller="Vehicles" asp-action="Index" class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button asp-action="Create" type="submit" class="btn btn-sm text-white text-capitalize bg-lra-primary rounded "><i class="ri-save-line"></i> Save</button>
         </div>
     </div>
     <div class="col-12">
         <div asp-validation-summary="All" class="text-danger"></div>
     </div>
-    <div class="col-lg-7 col-sm-7 col-12">
+    <div class="row bg-white box-lra-shadow p-4">
+        <div class="col-lg-7 col-sm-7 col-12 ">
         <div class="row">
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
@@ -253,6 +254,7 @@
             </div>
 
         </div>
+    </div>
     </div>
 </form>
 @*  accept="image/*,.png" *@
