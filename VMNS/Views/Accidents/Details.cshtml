@@ -26,13 +26,7 @@
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Vehicle.PlateNo"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
+                        <select asp-for="VehicleId" class="form-control" asp-items="ViewBag.lu_VehicleTypeId"></select>
                         <div class="input-text"><label asp-for="Vehicle.PlateNo"></label></div>
                     </div>
                 </div>
@@ -71,17 +65,11 @@
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="lu_DamageScale.DamageScale"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
+                        <select asp-for="lu_DamageScaleId" class="form-control" asp-items="ViewBag.lu_DamageScaleId"></select>
+
                         <div class="input-text"><label asp-for="lu_DamageScale.DamageScale"></label></div>
                     </div>
                 </div>
-                <span asp-validation-for="lu_DamageScale.DamageScale" class="text-danger"></span>
             </div>
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
