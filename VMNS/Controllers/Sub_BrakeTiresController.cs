@@ -119,7 +119,9 @@ namespace VMNS.Controllers
                 return NotFound();
             }
 
-            var sub_BrakeTires = await _context.Sub_BrakeTires.FindAsync(id);
+            var sub_BrakeTires = await _context.Sub_BrakeTires
+                .Include(sb => sb.lu_Wheel) // Include lu_Wheels navigation property
+                .FirstOrDefaultAsync(sb => sb.Id == id);
             if (sub_BrakeTires == null)
             {
                 return NotFound();

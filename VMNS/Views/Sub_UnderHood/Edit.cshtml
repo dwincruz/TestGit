@@ -32,51 +32,6 @@
                             readonly
                             hidden
                             pattern="\S+.*" />
-
-                <div class="col-12">
-                    <table class="table table-bordered table-borderless">
-                        <thead>
-                            <tr>
-                                <th colspan="4" class="good">
-                                    Good for Service
-                                </th>
-                            </tr>
-                            <tr>
-                                <th class="good"></th>
-                                <th colspan="3" class="warning">
-                                    For Monitoring
-                                </th>
-                            </tr>
-                            <tr>
-                                <th class="good"></th>
-                                <th class="warning"></th>
-                                <th colspan="2" class="danger">
-                                    Needs Repair
-                                </th>
-                            </tr>
-                            <tr>
-                                <th colspan="4" class="category-name">
-                                    Underhood
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="condition-row">
-                            @foreach (var currentValue in currentValues)
-                            {
-                                    <td class="checkbox-container">
-                                        <input type="radio" name="FluidLevels" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.FluidLevels == currentValue ? "checked" : "") />
-                                </td>
-                            }
-                                <td>@Html.DisplayNameFor(model => model.FluidLevels)</td>
-                            </tr>
-                            <tr class="condition-row">
-                                @foreach (var currentValue in currentValues)
-                                {
-                                    <td class="checkbox-container">
-                                        <input type="radio" name="HeaterHoses" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.HeaterHoses == currentValue ? "checked" : "") />
-                                    </td>
-                                }       
                     <div class="col-12">
                         <table class="table table-bordered table-borderless">
                             <thead>

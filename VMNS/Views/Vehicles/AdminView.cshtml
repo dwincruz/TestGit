@@ -789,6 +789,8 @@
         const totalGoodForServiceData = await setDatValues.map(entry => entry.Good);
         const totalForMonitoringData = await setDatValues.map(entry => entry.ForMonitoring);
         const totalNeedsRepairData = await setDatValues.map(entry => entry.NeedsRepair);
+        
+
         const data = {
             labels: labels,
             datasets: [
