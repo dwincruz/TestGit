@@ -5084,7 +5084,6 @@ C:\Users\ICTD-GLICO\source\repos\VMMS\VMNS\obj\Debug\net6.0\VMNS.pdb
 C:\Users\ICTD-GLICO\source\repos\VMMS\VMNS\obj\Debug\net6.0\VMNS.genruntimeconfig.cache
 C:\Users\ICTD-GLICO\source\repos\VMMS\VMNS\obj\Debug\net6.0\ref\VMNS.dll
 E:\ASP APPLICATIONS\TestGit\VMNS\bin\Debug\net6.0\appsettings.Development.json
-E:\ASP APPLICATIONS\TestGit\VMNS\bin\Debug\net6.0\appsettings.json
 E:\ASP APPLICATIONS\TestGit\VMNS\bin\Debug\net6.0\VMNS.staticwebassets.runtime.json
 E:\ASP APPLICATIONS\TestGit\VMNS\bin\Debug\net6.0\VMNS.exe
 E:\ASP APPLICATIONS\TestGit\VMNS\bin\Debug\net6.0\VMNS.deps.json
@@ -5370,3 +5369,4 @@ E:\ASP APPLICATIONS\TestGit\VMNS\obj\Debug\net6.0\refint\VMNS.dll
 E:\ASP APPLICATIONS\TestGit\VMNS\obj\Debug\net6.0\VMNS.pdb
 E:\ASP APPLICATIONS\TestGit\VMNS\obj\Debug\net6.0\VMNS.genruntimeconfig.cache
 E:\ASP APPLICATIONS\TestGit\VMNS\obj\Debug\net6.0\ref\VMNS.dll
+E:\ASP APPLICATIONS\TestGit\VMNS\bin\Debug\net6.0\appsettings.json
