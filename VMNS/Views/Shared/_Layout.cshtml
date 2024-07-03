@@ -52,7 +52,14 @@
                     <div class="">
                         @if (!User.IsInRole("Administrator"))
                         {
-                            <button id="minimizeSideBar" data- class="btn border rounded"><i class="ri-layout-left-line"></i></button>
+                            <div class="d-flex align-items-end flex-column" >
+                                <div class="p-2"></div>
+                               
+                                <div class="mt-auto p-2">
+                                    <button id="minimizeSideBar" data- class="btn border rounded"><i class="ri-menu-fill text-white"></i></button>
+                            </div>
+                            </div>
+                            
                         }
                     </div>
                    

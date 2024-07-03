@@ -896,6 +896,8 @@ body {
 
 .btn:hover {
     border-color: #1e325c !important;
+    background: #99B2DD !important;
+    color: #1e325c !important;
 }
 
 .checkbox-container input{

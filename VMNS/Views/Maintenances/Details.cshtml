@@ -27,10 +27,10 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
                 <div class="rounded p-3 bg-lra-info box-lra-shadow">
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center p-2">
                         <div>
                             <strong>Plate Number</strong>
-                            <h3 class="fw-bolder text-break  m-0">@Html.DisplayFor(model => model.Vehicle.PlateNo)</h3>
+                            <h3 class="fw-bolder text-break  m-0" style="font-size:26px">@Html.DisplayFor(model => model.Vehicle.PlateNo)</h3>
                             <span><small>Currently Viewed</small></span>
                         </div>
 
@@ -117,7 +117,7 @@
                     <ul class="list-group p-3 mb-4">
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i>@item.lu_Wheel.WheelPosition</div>
+                                <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i> @item.lu_Wheel.WheelPosition</div>
                                 <div>
                                     <a asp-controller="Sub_BrakeTires" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
                                        data-toggle="tooltip" data-placement="top" title="Edit">
