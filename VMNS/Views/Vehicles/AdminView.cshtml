@@ -347,11 +347,11 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12 d-flex flex-column  mb-3">
-                        <div class="rounded p-3 mb-3 bg-white box-lra-shadow" style="height:276px;overflow-x:auto">
+                        <div class="rounded p-3 mb-3 bg-white box-lra-shadow" >
                             <div class="header-text mb-3">
                                 <h5><i class="ri-menu-search-fill text-lra-primary"></i> Parts for Monitoring</h5>
                             </div>
-                            <div>
+                            <div style="height:210px;overflow-x:auto">
                                 <ul>
                                     @* @foreach (var item in ViewData["ForMonitoring"] as List<string>)
                                     {
@@ -373,11 +373,11 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 d-flex flex-column  mb-3">
-                        <div class="rounded p-3 bg-white box-lra-shadow" style="height:276px;overflow-x:auto">
+                        <div class="rounded p-3 bg-white box-lra-shadow" >
                             <div class="header-text mb-3">
                                 <h5><i class="ri-spam-2-fill text-lra-danger"></i> Parts for Repair</h5>
                             </div>
-                            <div>
+                            <div style="height:210px;overflow-x:auto">
                                 <ul>
                                     @if (ViewData["NeedsRepair"] != null && (ViewData["NeedsRepair"] as List<string>).Count > 0)
                                     {
