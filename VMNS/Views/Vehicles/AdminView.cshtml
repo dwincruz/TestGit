@@ -774,10 +774,8 @@
 
 
     var vehiclesData = @Json.Serialize(ViewData["CurrentVehicleStatus"]);
-    console.log(vehiclesData)
     const generateBarChart = async (container, dataValues) => {
         const setDatValues = await dataValues
-        console.log(setDatValues)
         const setContainer = await container;
 
 
@@ -789,28 +787,32 @@
         const totalGoodForServiceData = await setDatValues.map(entry => entry.Good);
         const totalForMonitoringData = await setDatValues.map(entry => entry.ForMonitoring);
         const totalNeedsRepairData = await setDatValues.map(entry => entry.NeedsRepair);
-        
 
+        const total = Number(totalGoodForServiceData[0]) + Number(totalForMonitoringData[0]) + Number(totalNeedsRepairData)
+        const goodAvg = (Number(totalGoodForServiceData[0]) / total) * 100
+        const monitoringAvg = (Number(totalForMonitoringData[0]) / total) * 100
+        const repairAvg = (Number(totalNeedsRepairData[0]) / total) * 100
+        
         const data = {
             labels: labels,
             datasets: [
                 {
                     label: 'Good',
-                    data: totalGoodForServiceData,
+                    data: [goodAvg.toFixed(1)],
                     backgroundColor: 'rgb(30, 50, 92)',
                     borderColor: 'rgba(147, 197, 75, 1)',
                     borderWidth: 1
                 },
                 {
                     label: 'for Monitoring',
-                    data: totalForMonitoringData,
+                    data: [monitoringAvg.toFixed(1)],
                     backgroundColor: 'rgb(255, 179, 25)',
                     borderColor: 'rgba(255, 255, 51, 1)',
                     borderWidth: 1
                 },
                 {
                     label: 'Needs Repair/ Replacements',
-                    data: totalNeedsRepairData,
+                    data: [repairAvg.toFixed(1)],
                     backgroundColor: 'rgb(146, 20, 12)',
                     borderColor: 'rgba(205, 92, 92, 1)',
                     borderWidth: 1
@@ -847,8 +849,13 @@
                         display: true,
                         title: {
                             display: false,
-                            text: 'Totality of Parts per status',
+                            text: 'Percentage of Parts per status',
                             beginAtZero: true
+                        },
+                        ticks: {
+                            callback: function (value) {
+                                return value.toString() + '%'; 
+                            }
                         }
                     }
                 }
