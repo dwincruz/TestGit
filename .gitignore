@@ -96,3 +96,14 @@
 /VMNS/obj/Debug/net6.0/apphost.exe
 /VMNS/obj/Debug/net6.0/VMNS.pdb
 /VMNS/obj/Debug/net6.0/VMNS.sourcelink.json
+/VMNS/Migrations/20240705091647_newColumns.cs
+/VMNS/Migrations/20240705091647_newColumns.Designer.cs
+/VMNS/Migrations/ApplicationDbContextModelSnapshot.cs
+/VMNS/obj/Debug/net6.0/VMNS.AssemblyInfo.cs
+/VMNS/obj/Debug/net6.0/VMNS.AssemblyInfoInputs.cache
+/VMNS/obj/Debug/net6.0/VMNS.dll
+/VMNS/obj/Debug/net6.0/VMNS.pdb
+/VMNS/obj/Debug/net6.0/VMNS.sourcelink.json
+/VMNS/obj/Debug/net6.0/ref/VMNS.dll
+/VMNS/obj/Debug/net6.0/apphost.exe
+/VMNS/obj/Debug/net6.0/refint/VMNS.dll
