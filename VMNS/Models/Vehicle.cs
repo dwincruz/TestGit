@@ -96,6 +96,22 @@ namespace VMNS.Models
         public int? lu_WheelDriveId { get; set; }
 
 
+        // New Addition 7.5.24
+        public int? lu_VehicleStatusId { get; set; }
+
+        [Display(Name = "EasyTrip RFID")]
+        public string EasyTripRFID { get; set; }
+
+        [Display(Name = "Autosweep RFID")]
+        public string AutosweepRFID { get; set; }
+
+        [Display(Name = "Vehicle Cost")]
+        public string Cost { get; set; }
+        
+
+
+
+
         public string FullDetail => $"{PlateNo} - {Brand}, {Model}";
 
 
@@ -120,6 +136,9 @@ namespace VMNS.Models
 
         [Display(Name = "Wheel Drive")]
         public virtual lu_WheelDrive? lu_WheelDrive { get; set; }
-        
+
+        [Display(Name = "Vehicle leStatus")]
+        public virtual lu_VehicleStatus? lu_VehicleStatus { get; set; }
+
     }
 }

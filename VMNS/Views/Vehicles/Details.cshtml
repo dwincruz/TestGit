@@ -26,6 +26,34 @@
                     <div class="input-group" id="">
                         <div id="" class="custom-input w-100">
                             <input type="text"
+                                   asp-for="PlateNo"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="PlateNo"></label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   value="@Html.DisplayFor(model => model.lu_VehicleStatus.VehicleStatus)"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label>@Html.DisplayNameFor(model => model.lu_VehicleStatus)</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
                                    asp-for="Brand"
                                    class="form-control"
                                    required
@@ -189,6 +217,48 @@
                     </div>
                     <span asp-validation-for="InsuranceType" class="text-danger"></span>
                 </div>
+
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="EasyTripRFID"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="EasyTripRFID"></label></div>
+                        </div>
+                    </div>
+                </div><div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="AutosweepRFID"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="AutosweepRFID"></label></div>
+                        </div>
+                    </div>
+                </div><div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Cost"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Cost"></label></div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-6 col-12 mb-4">
                     <div class="input-group" id="">
                         <div id="" class="custom-input w-100">

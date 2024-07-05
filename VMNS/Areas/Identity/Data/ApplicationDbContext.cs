@@ -49,6 +49,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<lu_Wheel> lu_Wheels { get; set; }
     public DbSet<lu_WheelDrive> lu_WheelDrives { get; set; }
     public DbSet<lu_DamageScale> lu_DamageScales { get; set; }
+    public DbSet<lu_VehicleStatus> lu_VehicleStatus { get; set; }
 
 
 }

@@ -31,7 +31,8 @@ namespace VMNS.Controllers
         // GET: Vehicles
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Vehicles.Include(v => v.lu_FuelType).Include(v => v.lu_Transmission).Include(v => v.lu_VehicleType).Include(v => v.lu_WheelDrive);
+            var applicationDbContext = _context.Vehicles.Include(v => v.lu_FuelType).Include(v => v.lu_Transmission)
+                .Include(v => v.lu_VehicleType).Include(v => v.lu_WheelDrive).Include(v => v.lu_VehicleStatus);
             ViewData["Vehicles"] = _context.Vehicles;
             return View(await applicationDbContext.ToListAsync());
         }
@@ -49,6 +50,7 @@ namespace VMNS.Controllers
                 .Include(v => v.lu_Transmission)
                 .Include(v => v.lu_VehicleType)
                 .Include(v => v.lu_WheelDrive)
+                .Include(v => v.lu_VehicleStatus)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (vehicle == null)
             {
@@ -65,6 +67,7 @@ namespace VMNS.Controllers
             ViewData["lu_TransmissionId"] = new SelectList(_context.lu_Transmissions, "Id", "TransmissionName");
             ViewData["lu_VehicleTypeId"] = new SelectList(_context.lu_VehicleTypes, "Id", "VehicleType");
             ViewData["lu_WheelDriveId"] = new SelectList(_context.lu_WheelDrives, "Id", "WheelDrive");
+            ViewData["lu_VehicleStatusId"] = new SelectList(_context.lu_VehicleStatus, "Id", "VehicleStatus");
             ViewData["Vehicles"] = _context.Vehicles;
             return View();
         }
@@ -76,7 +79,7 @@ namespace VMNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Brand,Model,lu_VehicleTypeId,lu_TransmissionId,Color," +
             "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,IssuedDate,AquisitionDate," +
-            "Description,lu_WheelDriveId,Upload")] Vehicle vehicle, IFormFile[] file) //,CreatorId,ModifierId,DateCreated,DateModified,PassengerSeat,Wheels
+            "Description,lu_WheelDriveId,Upload,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost")] Vehicle vehicle, IFormFile[] file) //,CreatorId,ModifierId,DateCreated,DateModified,PassengerSeat,Wheels
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
@@ -126,6 +129,7 @@ namespace VMNS.Controllers
             ViewData["lu_TransmissionId"] = new SelectList(_context.lu_Transmissions, "Id", "TransmissionName", vehicle.lu_TransmissionId);
             ViewData["lu_VehicleTypeId"] = new SelectList(_context.lu_VehicleTypes, "Id", "VehicleType", vehicle.lu_VehicleTypeId);
             ViewData["lu_WheelDriveId"] = new SelectList(_context.lu_WheelDrives, "Id", "VehicleType", vehicle.lu_WheelDriveId);
+            ViewData["lu_VehicleStatusId"] = new SelectList(_context.lu_VehicleStatus, "Id", "VehicleStatus");
             ViewData["Vehicles"] = _context.Vehicles;
             return View(vehicle);
         }
@@ -147,6 +151,7 @@ namespace VMNS.Controllers
             ViewData["lu_TransmissionId"] = new SelectList(_context.lu_Transmissions, "Id", "TransmissionName", vehicle.lu_TransmissionId);
             ViewData["lu_VehicleTypeId"] = new SelectList(_context.lu_VehicleTypes, "Id", "VehicleType", vehicle.lu_VehicleTypeId);
             ViewData["lu_WheelDriveId"] = new SelectList(_context.lu_WheelDrives, "Id", "WheelDrive", vehicle.lu_WheelDriveId);
+            ViewData["lu_VehicleStatusId"] = new SelectList(_context.lu_VehicleStatus, "Id", "VehicleStatus");
             ViewData["Vehicles"] = _context.Vehicles;
             return View(vehicle);
         }
@@ -158,7 +163,7 @@ namespace VMNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Id,Brand,Model,lu_VehicleTypeId,lu_TransmissionId,Color," +
             "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,IssuedDate,AquisitionDate," +
-            "Description,CreatorId,DateCreated,lu_WheelDriveId")] Vehicle vehicle, IFormFile[] file) //,PassengerSeat,Wheels
+            "Description,CreatorId,DateCreated,lu_WheelDriveId,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost")] Vehicle vehicle, IFormFile[] file) //,PassengerSeat,Wheels
         {
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -222,6 +227,7 @@ namespace VMNS.Controllers
             ViewData["lu_FuelTypeId"] = new SelectList(_context.lu_FuelTypes, "Id", "FuelName", vehicle.lu_FuelTypeId);
             ViewData["lu_TransmissionId"] = new SelectList(_context.lu_Transmissions, "Id", "TransmissionName", vehicle.lu_TransmissionId);
             ViewData["lu_VehicleTypeId"] = new SelectList(_context.lu_VehicleTypes, "Id", "VehicleType", vehicle.lu_VehicleTypeId);
+            ViewData["lu_VehicleStatusId"] = new SelectList(_context.lu_VehicleStatus, "Id", "VehicleStatus");
             ViewData["Vehicles"] = _context.Vehicles;
             return View(vehicle);
         }

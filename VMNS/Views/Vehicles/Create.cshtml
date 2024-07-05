@@ -20,6 +20,29 @@
     <div class="row bg-white box-lra-shadow p-4">
         <div class="col-lg-7 col-sm-7 col-12 ">
         <div class="row">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="PlateNo"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="PlateNo"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="PlateNo" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="lu_VehicleStatusId" class="form-control" asp-items="ViewBag.lu_VehicleStatusId"></select>
+                            <div class="input-text"><label>Vehicle Status</label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="lu_FuelTypeId" class="text-danger"></span>
+                </div>
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
@@ -99,20 +122,7 @@
                 </div>
                 <span asp-validation-for="lu_FuelTypeId" class="text-danger"></span>
             </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="PlateNo"
-                               id=""
-                               class="form-control"
-                               required
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="PlateNo"></label></div>
-                    </div>
-                </div>
-                <span asp-validation-for="PlateNo" class="text-danger"></span>
-            </div>
+            
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
@@ -141,6 +151,51 @@
                 </div>
                 <span asp-validation-for="InsuranceType" class="text-danger"></span>
             </div>
+                
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="EasyTripRFID"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="EasyTripRFID"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="EasyTripRFID" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="AutosweepRFID"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="AutosweepRFID"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="AutosweepRFID" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Cost"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Cost"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+
+
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
