@@ -22,6 +22,9 @@
             <thead class="table-primary">
                 <tr>
                     <th>
+                        @Html.DisplayNameFor(model => model.PlateNo)
+                    </th>
+                    <th>
                         @Html.DisplayNameFor(model => model.Brand)
                     </th>
                     <th>
@@ -29,16 +32,7 @@
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Color)
-                    </th>
-                    @* <th>
-                        @Html.DisplayNameFor(model => model.PassengerSeat)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Wheels)
-                    </th> *@
-                    <th>
-                        @Html.DisplayNameFor(model => model.PlateNo)
-                    </th>
+                    </th>                    
                     <th>
                         @Html.DisplayNameFor(model => model.ConductionNo)
                     </th>
@@ -48,6 +42,9 @@
             <tbody>
                 @foreach (var item in Model) {
                 <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PlateNo)
+                        </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Brand)
                     </td>
@@ -56,17 +53,7 @@
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Color)
-                    </td>
-                    @* <td>
-                        @Html.DisplayFor(modelItem => item.PassengerSeat)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Wheels)
-                    </td> *@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PlateNo)
-                    </td>
-                    <td>
+                    </td>                    <td>
                         @Html.DisplayFor(modelItem => item.ConductionNo)
                     </td>
                     <td colspan="2">
