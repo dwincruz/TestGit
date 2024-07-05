@@ -31,11 +31,20 @@ namespace VMNS.Controllers
         // GET: Vehicles
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Vehicles.Include(v => v.lu_FuelType).Include(v => v.lu_Transmission)
-                .Include(v => v.lu_VehicleType).Include(v => v.lu_WheelDrive).Include(v => v.lu_VehicleStatus);
-            ViewData["Vehicles"] = _context.Vehicles;
+            var applicationDbContext = _context.Vehicles
+                .OrderByDescending(v => v.DateCreated)
+                .Include(v => v.lu_FuelType)
+                .Include(v => v.lu_Transmission)
+                .Include(v => v.lu_VehicleType)
+                .Include(v => v.lu_WheelDrive)
+                .Include(v => v.lu_VehicleStatus);
+
+            // Optionally, if you want to set ViewData for all vehicles (not ordered)
+            ViewData["Vehicles"] = await _context.Vehicles.ToListAsync();
+
             return View(await applicationDbContext.ToListAsync());
         }
+
 
         // GET: Vehicles/Details/5
         public async Task<IActionResult> Details(Guid? id)
@@ -285,7 +294,7 @@ namespace VMNS.Controllers
                 return NotFound();
             }
 
-            var vehicle = await _context.Vehicles.FirstOrDefaultAsync(m => m.Id == id);
+            var vehicle = await _context.Vehicles.OrderByDescending(m => m.DateCreated).FirstOrDefaultAsync(m => m.Id == id);
             if (vehicle == null)
             {
                 return NotFound();

@@ -20,7 +20,7 @@ namespace VMNS.Controllers
         // GET: Maintenances
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Maintenances.Include(m => m.Vehicle);
+            var applicationDbContext = _context.Maintenances.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle);
             ViewData["Vehicles"] = _context.Vehicles;
             return View(await applicationDbContext.ToListAsync());
         }
@@ -31,7 +31,7 @@ namespace VMNS.Controllers
             if (selectedValue == Guid.Empty || selectedValue == null)
             {
                 ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo");
-                var applicationDbContext = _context.Maintenances.Include(m => m.Vehicle);
+                var applicationDbContext = _context.Maintenances.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle);
                 ViewData["Vehicles"] = _context.Vehicles;
                 return View(await applicationDbContext.ToListAsync());
             }
