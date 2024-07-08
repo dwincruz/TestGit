@@ -15,7 +15,6 @@
     int countDataC = DataC.Count();
     int countDataD = DataD.Count();
     int countDataE = DataE.Count();
-
 }
 <div class="row">
     <div class="offset-9"></div>
@@ -46,60 +45,65 @@
                     </td>
                 </tr>
                 <tr>
+                    <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Plate Number</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.PlateNo) </td>
+                </tr>
+                <tr>
                     <td colspan="7" align="center" style="border: 1px solid rgba(0,0,0,0.2);  background-color: black; color: white;"><strong>Vehicle Information</strong></td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2);">Brand</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2);">@* @Html.DisplayFor(model => model.Vehicle.Brand) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2);"> @Html.DisplayFor(model => model.Vehicle.Brand) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Model</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.Model)< *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.Model)</td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Transmission</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.lu_Transmission.TransmissionName) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.lu_Transmission.TransmissionName) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Wheel Drive</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.lu_WheelDrive.WheelDrive) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.lu_WheelDrive.WheelDrive) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Color</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.Color) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.Color) </td>
                 </tr>
                 
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Fuel Type</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.lu_FuelType.FuelName) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.lu_FuelType.FuelName) </td>
                 </tr>
-                <tr>
-                    <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Plate Number</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.PlateNo) *@</td>
-                </tr>
+                
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Conduction Sticker Number</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.ConductionNo) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.ConductionNo) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Insurance Type</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.InsuranceType) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.InsuranceType) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Insurance Renewal date</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.InsuranceDate) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.InsuranceDate) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">LTO Registration date</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.LtoRegDate) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.LtoRegDate) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">LTO Due date of Renewal</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.LtoDueDate) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.LtoDueDate) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Assigned Officer</td>
-                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">@* @Html.DisplayFor(model => model.Vehicle.AssignedOfficer) *@</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.AssignedOfficer) </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Assigned Driver</td>
+                    <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)"> @Html.DisplayFor(model => model.Vehicle.AssignedDriver) </td>
                 </tr>
                 <tr>
                     <td colspan="3" style="border: 1px solid rgba(0,0,0,0.2)">Issued date</td>
