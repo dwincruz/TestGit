@@ -795,8 +795,6 @@
         const repairAvg = (Number(totalNeedsRepairData[0]) / total) * 100
         const emptyValueAvg = (Number(totalEmptyValueData[0]) / total) * 100
 
-        console.log('totalEmptyValueData: ', totalEmptyValueData)
-        console.log('total: ', total)
         const data = {
             labels: labels,
             datasets: [
@@ -845,6 +843,14 @@
                 plugins: {
                     legend: {
                         position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (tooltipItem) => {
+                                console.log(tooltipItem)
+                                return `${tooltipItem.dataset.label}: ` + `${tooltipItem.raw}%`;
+                            }
+                        }
                     }
                 },
                 scales: {
