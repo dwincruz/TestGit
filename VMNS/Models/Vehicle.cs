@@ -73,6 +73,9 @@ namespace VMNS.Models
         [Display(Name = "Assigned Officer")]
         public string AssignedOfficer { get; set; }
 
+
+      
+
         [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM dd yyyy}")]
@@ -103,11 +106,17 @@ namespace VMNS.Models
         public string EasyTripRFID { get; set; }
 
         [Display(Name = "Autosweep RFID")]
-        public string AutosweepRFID { get; set; }
+        public string AutoSweepRFID { get; set; }
 
         [Display(Name = "Vehicle Cost")]
         public string Cost { get; set; }
-        
+
+        [Required]
+        [Column(TypeName = "varchar(128)")]
+        [Display(Name = "Assigned Driver")]
+        public string AssignedDriver { get; set; }
+
+
 
 
 
