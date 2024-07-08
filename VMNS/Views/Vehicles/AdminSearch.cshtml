@@ -258,12 +258,21 @@
         const totalGoodForServiceData = await setDatValues.map(entry => entry.Good);
         const totalForMonitoringData = await setDatValues.map(entry => entry.ForMonitoring);
         const totalNeedsRepairData = await setDatValues.map(entry => entry.NeedsRepair);
+        const totalEmptyValueData = await setDatValues.map(entry => entry.EmptyValue);
+
+        const total = Number(totalGoodForServiceData[0]) + Number(totalForMonitoringData[0]) + Number(totalNeedsRepairData[0]) + Number(totalEmptyValueData[0])
+        const goodAvg = (Number(totalGoodForServiceData[0]) / total) * 100
+        const monitoringAvg = (Number(totalForMonitoringData[0]) / total) * 100
+        const repairAvg = (Number(totalNeedsRepairData[0]) / total) * 100
+        const emptyValueAvg = (Number(totalEmptyValueData[0]) / total) * 100
+
+
         const data = {
             labels: labels,
             datasets: [
                 {
                     label: 'Good',
-                    data: totalGoodForServiceData,
+                    data: [goodAvg.toFixed(1)],
                      backgroundColor: 'rgb(30, 50, 92)',
                     //backgroundColor: '#307351',
                     borderColor: 'rgba(191, 205, 224, 1)',
@@ -271,18 +280,26 @@
                 },
                 {
                     label: 'for Monitoring',
-                    data: totalForMonitoringData,
+                    data: [monitoringAvg.toFixed(1)],
                     backgroundColor: 'rgb(255, 179, 25)',
                     borderColor: 'rgba(255, 255, 51, 1)',
                     borderWidth: 1
                 },
                 {
                     label: 'Needs Repair/ Replacements',
-                    data: totalNeedsRepairData,
+                    data: [repairAvg.toFixed(1)],
                     backgroundColor: 'rgb(146, 20, 12)',
                     borderColor: 'rgba(205, 92, 92, 1)',
                     borderWidth: 1
+                },
+                {
+                    label: 'Uninspect',
+                    data: [emptyValueAvg.toFixed(1)],
+                    backgroundColor: 'rgb(128, 128, 128)',
+                    borderColor: 'rgba(0,0,0,0)',
+                    borderWidth: 1
                 }
+
             ]
         };
         if (setContainer.chart) {
@@ -300,6 +317,14 @@
                 plugins: {
                     legend: {
                         position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (tooltipItem) => {
+                                console.log(tooltipItem)
+                                return `${tooltipItem.dataset.label}: ` + `${tooltipItem.raw}%`;
+                            }
+                        }
                     }
                 },
                 scales: {

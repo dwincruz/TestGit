@@ -109,7 +109,7 @@ namespace VMNS.Models
         public string Cost { get; set; }
 
         [Display(Name = "Assigned Driver")]
-        public string AssignedDriver { get; set; }
+        public string? AssignedDriver { get; set; }
 
 
 

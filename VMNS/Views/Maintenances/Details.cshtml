@@ -104,8 +104,12 @@
 
                     <a asp-controller="Sub_BatteryPerformance" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Battery Performance</a>
+
                     <a asp-controller="Monitorings" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Watch List</a>
+
+                    <a asp-controller="Sub_Accessories" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Accessories</a>
                 </div>
             </div>
 
