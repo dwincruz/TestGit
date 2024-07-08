@@ -30,13 +30,13 @@ namespace VMNS.Controllers
             
             if (selectedValue == Guid.Empty || selectedValue == null)
             {
-                ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo");
+                ViewData["VehicleId"] = new SelectList(_context.Vehicles.OrderBy(x => x.PlateNo), "Id", "PlateNo");
                 var applicationDbContext = _context.Maintenances.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle);
                 ViewData["Vehicles"] = _context.Vehicles;
                 return View(await applicationDbContext.ToListAsync());
             }
             else {
-                ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo");
+                ViewData["VehicleId"] = new SelectList(_context.Vehicles.OrderBy(x=>x.PlateNo), "Id", "PlateNo");
                 ViewData["Vehicles"] = _context.Vehicles;
                 var applicationDbContext = _context.Maintenances.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle).Where(x => x.VehicleId == selectedValue);
                 return View(await applicationDbContext.ToListAsync());

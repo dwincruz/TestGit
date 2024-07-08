@@ -14,6 +14,7 @@ using VMNS.Migrations;
 using VMNS.Models;
 using static NuGet.Packaging.PackagingConstants;
 using VMNS.ViewModel;
+using Humanizer;
 
 namespace VMNS.Controllers
 {
@@ -417,16 +418,19 @@ namespace VMNS.Controllers
                 return RedirectToAction("AdminSearch");
             }
 
-            var vehicle = await _context.Vehicles
+            var vehicle = await _context.Vehicles                
                 .Include(v => v.lu_FuelType)
                 .Include(v => v.lu_Transmission)
                 .Include(v => v.lu_VehicleType)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
+            
+
             if (vehicle == null)
             {
                 return RedirectToAction("AdminSearch");
             }
+
             //Pass Id value to View
             //Guid? MaintId = _context.Maintenances.Where(x => x.VehicleId == id).FirstOrDefault().Id;
             Guid? MaintId = _context.Maintenances.OrderByDescending(m => m.DateCreated).Where(x => x.VehicleId == id).FirstOrDefault()?.Id;
@@ -474,21 +478,33 @@ namespace VMNS.Controllers
 
 
             db.Query("exec [dbo].[sp_Show] '" + MaintId + "','Good for Service'");
-            while (db.Reader.Read())
-            { myListA.Add(db.Reader.GetString(0)); }
-
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                { myListA.Add(db.Reader.GetString(0)); }
+            }
+            db.Con.Close();
             db.Query("exec [dbo].[sp_Show] '" + MaintId + "','For Monitoring'");
-            while (db.Reader.Read())
-            { myListB.Add(db.Reader.GetString(0)); }
-
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                { myListB.Add(db.Reader.GetString(0)); }
+            }
+            db.Con.Close();
             db.Query("exec [dbo].[sp_Show] '" + MaintId + "','Needs Repair'");
-            while (db.Reader.Read())
-            { myListC.Add(db.Reader.GetString(0)); }
-
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                { myListC.Add(db.Reader.GetString(0)); }
+            }
+            db.Con.Close();
             db.Query("exec [dbo].[sp_Show] '" + MaintId + "','Not Available'");
-            while (db.Reader.Read())
-            { myListD.Add(db.Reader.GetString(0)); }
-
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                { myListD.Add(db.Reader.GetString(0)); }
+            }
+            db.Con.Close();
             db.Query("exec [dbo].[sp_PMSParts] '" + MaintId + "'");
             if (db.Reader.HasRows)
             {
@@ -504,6 +520,7 @@ namespace VMNS.Controllers
                     myListE.Add(row);
                 }
             }
+            db.Con.Close();
             db.Query("exec [dbo].[sp_PMSTires] '" + MaintId + "'");
             if (db.Reader.HasRows)
             {
@@ -519,7 +536,7 @@ namespace VMNS.Controllers
                     myListF.Add(row);
                 }
             }
-
+            db.Con.Close();
 
             db.Query("exec [dbo].[sp_CurrentVehicleStatus] '" + VehicleId + "'");
             if (db.Reader.HasRows)
@@ -537,7 +554,7 @@ namespace VMNS.Controllers
                     myListG.Add(rowData);
                 }
             }
-
+            db.Con.Close();
 
             ViewData["GoodforService"] = myListA;
             ViewData["ForMonitoring"] = myListB;
