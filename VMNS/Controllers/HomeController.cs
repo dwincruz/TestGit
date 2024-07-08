@@ -55,6 +55,7 @@ namespace VMNS.Controllers
             List<object> resultListB = new List<object>();
             List<object> resultListC = new List<object>();
             List<object> dueDateList = new List<object>();
+            List<object> insuranceDateList = new List<object>();
 
             var typeAcc = "Accidents";
             var typeMain = "Maintenances";
@@ -75,6 +76,7 @@ namespace VMNS.Controllers
                     resultListA.Add(rowData);
                 }
             }
+            db.Con.Close();
 
             db.Query("exec [dbo].[sp_chartsCategory] '" + typeMain + "'");
             if (db.Reader.HasRows)
@@ -92,7 +94,7 @@ namespace VMNS.Controllers
                     resultListB.Add(rowData);
                 }
             }
-
+            db.Con.Close();
             db.Query("exec [dbo].[sp_TopDueDate]");
             if (db.Reader.HasRows)
             {
@@ -109,9 +111,28 @@ namespace VMNS.Controllers
                     dueDateList.Add(rowData);
                 }
             }
+            db.Con.Close();
 
+            db.Query("exec [dbo].[sp_TopInsuranceDue]");
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                {
+                    var rowData = new Dictionary<string, object>();
+
+                    for (int i = 0; i < db.Reader.FieldCount; i++)
+                    {
+                        string fieldName = db.Reader.GetName(i);
+                        object value = db.Reader.GetValue(i);
+                        rowData[fieldName] = value;
+                    }
+                    insuranceDateList.Add(rowData);
+                }
+            }
+            db.Con.Close();
 
             ViewData["LTODueDates"] = Json(dueDateList);
+            ViewData["InsuranceDueDates"] = Json(insuranceDateList);
             ViewData["AccidentsData"] = Json(resultListA);
             ViewData["MaintenancesData"] = Json(resultListB);
             

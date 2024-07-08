@@ -81,31 +81,23 @@
                             <div class="d-flex ">
                                 <div class="me-auto"><p class="fw-bold">LTO Renewal in Days</p></div>
                                 <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#listModal" alt="VIEW ALL"><i class="ri-list-settings-fill"></i></button></div>
-                                
                             </div>
-                            
-                            
                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-
-                              @*   <div class="rounded p-1  box-lra-shadow">
-                                    <div class="d-flex">
-                                        <div class="me-auto col-6">
-                                            
-                                            <div class="" style="font-size:14px"><strong>SFX-332</strong></div>
-                                            <div class="" style="font-size:11px"><span class="badge text-bg-primary ">TOYOTA REVO</span></div>
-                                        </div>
-                                        <div class="d-flex align-items-end flex-column col-6">
-                                            <div class="" style="font-size:14px"><strong>25 DAYS</strong></div>
-                                            <div class="" style="font-size:11px"><span class="badge text-bg-primary ">06/1/2023</span></div>
-                                        </div>
-                                        @*   <div class="align-self-end"><br /></div> 
-
-                                    </div>
-                                </div> *@
-                                
                             </div>
                             <ul class="list-group" id="vehicleLists">
 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-12">
+                        <div class="rounded p-3 bg-white box-lra-shadow">
+                            <div class="d-flex ">
+                                <div class="me-auto"><p class="fw-bold">Insurance Renewal in Days</p></div>
+                                <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#insuranceListModal" alt="VIEW ALL"><i class="ri-list-settings-fill"></i></button></div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            </div>
+                            <ul class="list-group" id="insuranceDueList">
                             </ul>
                         </div>
                     </div>
@@ -130,7 +122,28 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn bg-lra-warning text-lra-primary" data-bs-dismiss="modal">Close</button>
-                @* <button type="button" class="btn btn-primary">Save changes</button> *@
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Insurance Renewal-->
+<div class="modal fade" id="insuranceListModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="listModalLabel">All Vehicle Insurance Renewal in Days</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" id="allInsuranceDueList">
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bg-lra-warning text-lra-primary" data-bs-dismiss="modal">Close</button>
+              
             </div>
         </div>
     </div>
@@ -242,6 +255,53 @@
         setContainer.innerHTML = limitedLists
         setContainer2.innerHTML = lists
         hideByDefault(document.querySelectorAll('.vehicle-due-dates'))
+
+    }
+
+    const generateInsuranceLists = async (container, container2, dataValues) => {
+        const setDataValues = await dataValues
+        const setContainer = await container;
+        const setContainer2 = await container2;
+
+        const limitedLists = Object.entries(setDataValues).map(([key, value]) => {
+
+            if (key < 6) {
+
+                return ` <div class="rounded p-1  box-lra-shadow"><div class="d-flex" >
+                                    <div class="me-auto col-6" >
+                                       <div class="" style="font-size:14px" > <strong>${value.PlateNo} </strong></div>
+                                               <div class="" style = "font-size:11px" > <span class="badge text-bg-primary " > ${value.Brand} ${value.Model} </span></div></div>
+                                                   <div class="d-flex align-items-end flex-column col-6" >
+                                                       <div class="" style = "font-size:14px" ><strong>${value.DueInDays} Days</strong></div >
+                                                                            <div class="" style = "font-size:11px;background:${value.DUE};" > <span class="badge" > ${new Date(value.InsuranceDate).toLocaleDateString()}</span></div></div></div></div>
+                                                    `
+            }
+
+
+        }).join('');
+
+        const lists = Object.entries(setDataValues).map(([key, value]) => {
+
+
+
+
+            return ` <div class="rounded p-1  box-lra-shadow"><div class="d-flex" >
+                                        <div class="me-auto col-6" >
+                                           <div class="" style="font-size:14px" > <strong>${value.PlateNo} </strong></div>
+                                                   <div class="" style = "font-size:11px" > <span class="badge text-bg-primary " > ${value.Brand} ${value.Model} </span></div></div>
+                                                       <div class="d-flex align-items-end flex-column col-6" >
+                                                           <div class="" style = "font-size:14px" ><strong>${value.DueInDays} Days</strong></div >
+                                                                                <div class="" style = "font-size:11px;background:${value.DUE};" > <span class="badge" > ${new Date(value.InsuranceDate).toLocaleDateString()}</span></div></div></div></div>
+                                                        `
+
+
+        }).join('');
+
+
+
+        setContainer.innerHTML = limitedLists
+        setContainer2.innerHTML = lists
+        hideByDefault(document.querySelectorAll('.insurance-due-dates'))
 
     }
 
@@ -378,12 +438,15 @@
     var accidentsData = @Json.Serialize(ViewData["AccidentsData"]);
     var vehiclesData = @Json.Serialize(ViewData["VehiclesData"]);
     var lTODueDates = @Json.Serialize(ViewData["LTODueDates"]);
+    var insuranceDueDates = @Json.Serialize(ViewData["InsuranceDueDates"]);
 
     generateDonutPieChart(document.getElementById('maintenancesChart'), maintenancesData.value);
     generateDonutPieChart(document.getElementById('accidentsChart'), accidentsData.value);
 
     generateBarChart(document.getElementById('vehicleChart'), vehiclesData.value);
+
     generateLists(document.getElementById('vehicleLists'), document.getElementById('vehicleChart2'), lTODueDates.value)
+    generateInsuranceLists(document.getElementById('insuranceDueList'), document.getElementById('allInsuranceDueList'), insuranceDueDates.value)
 
     let vehicleInfos;
     const retrieveData = async (url, httpRequest, dataValues) => {
