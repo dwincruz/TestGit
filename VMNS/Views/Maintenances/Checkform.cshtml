@@ -136,9 +136,8 @@
                 <tr>
                     <td colspan="7" class="header-table-data" align="center" style="border: 1px solid rgba(0,0,0,0.2);  background-color: black; color: white;"><strong>Prior Body Damage</strong></td>
                 </tr>
-                <tr>
-                    <td colspan="7" style="padding: 10px">
-                        <img style="width: 100%" src="https://daks2k3a4ib2z.cloudfront.net/581c73295d7e0501760a4869/589c362503321b01586a750e_tskt-fortuner.jpg" />
+                <tr style="page-break-after: always">
+                    <td colspan="7" style="padding: 10px; height: 400px">
                     </td>
                 </tr>
                 <tr>
@@ -555,7 +554,7 @@
                 }
                 @if (countDataE > 0)
                 {
-                    <tr>
+                    <tr style="page-break-before: always">
                         <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Under Vehicle</strong></td>
                     </tr>
                 }
@@ -808,9 +807,13 @@
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Condtion of Battery</td>
                     </tr>
                 }
-                    <tr>
-                        <td colspan="7"></td>
-                    </tr>
+                <tr>
+                    <td></td>
+                    <td style="border: 1px solid rgba(0,0,0,0.2)">Available</td>
+                    <td style="border: 1px solid rgba(0,0,0,0.2)">Not Available</td>
+                    <td colspan="4"></td>
+                </tr>
+
                 @if (countDataF > 0)
                 {
                     <tr>
@@ -819,27 +822,27 @@
                 }
                 @foreach (var item in DataF){
                    <tr>
-                        <td></td>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
                         @foreach (var currentValue in currentAccessories)
                         {
-                            <td><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Manuals == currentValue ? "checked" : "") /></td>
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Manuals == currentValue ? "checked" : "") /></td>
                         }
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Manuals</td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
                         @foreach (var currentValue in currentAccessories)
                         {
-                            <td><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.SpareTires == currentValue ? "checked" : "") /></td>
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.SpareTires == currentValue ? "checked" : "") /></td>
                         }
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Manuals</td>
                     </tr>
 
                     <tr>
-                        <td></td>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
                         @foreach (var currentValue in currentAccessories)
                         {
-                            <td><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Tools == currentValue ? "checked" : "") /></td>
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Tools == currentValue ? "checked" : "") /></td>
                         }
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Spare Tires</td>
                     </tr>
@@ -850,7 +853,7 @@
                 </tr>
                 <tr>
                     <td colspan="7" style="height: 100px; paddin: 10px">
-                        @Html.DisplayFor(model => model.Vehicle.Brand)
+                        @Html.DisplayFor(model => model.Remarks)
                     </td>
                 </tr>
 
