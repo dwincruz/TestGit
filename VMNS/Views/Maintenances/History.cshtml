@@ -14,8 +14,7 @@
         </div>
     </div>
 </div>
-@if (!User.IsInRole("Administrator"))
-{
+
     <form asp-controller="Maintenances" asp-action="History" method="post">
         <div class="row px-3">
             <div class="col-md-12 bg-white rounded box-lra-shadow mb-4 p-3 border-lra">
@@ -35,7 +34,7 @@
         </div>
         
     </form>
-}
+
 
 
 

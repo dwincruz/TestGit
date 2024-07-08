@@ -25,12 +25,14 @@ namespace VMNS.Controllers
             if (query.Contains("select") || query.Contains("exec"))
             {
                 Reader = Cmd.ExecuteReader();
+                
             }
             else
             {
                 Cmd.ExecuteNonQuery();
                 Con.Close();
             }
+            
         }
 
         public string conString()
