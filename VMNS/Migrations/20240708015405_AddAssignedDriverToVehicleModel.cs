@@ -826,93 +826,92 @@ namespace VMNS.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-        //    migrationBuilder.DropTable(
-        //        name: "Accidents");
+            //migrationBuilder.DropTable(
+            //    name: "Accidents");
 
-        //    migrationBuilder.DropTable(
-        //        name: "AspNetRoleClaims");
+            //migrationBuilder.DropTable(
+            //    name: "AspNetRoleClaims");
 
-        //    migrationBuilder.DropTable(
-        //        name: "AspNetUserClaims");
+            //migrationBuilder.DropTable(
+            //    name: "AspNetUserClaims");
 
-        //    migrationBuilder.DropTable(
-        //        name: "AspNetUserLogins");
+            //migrationBuilder.DropTable(
+            //    name: "AspNetUserLogins");
 
-        //    migrationBuilder.DropTable(
-        //        name: "AspNetUserRoles");
+            //migrationBuilder.DropTable(
+            //    name: "AspNetUserRoles");
 
-        //    migrationBuilder.DropTable(
-        //        name: "AspNetUserTokens");
+            //migrationBuilder.DropTable(
+            //    name: "AspNetUserTokens");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Extras");
+            //migrationBuilder.DropTable(
+            //    name: "Extras");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_EquipmentStatus");
+            //migrationBuilder.DropTable(
+            //    name: "lu_EquipmentStatus");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Monitorings");
+            //migrationBuilder.DropTable(
+            //    name: "Monitorings");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Sub_BatteryPerformances");
+            //migrationBuilder.DropTable(
+            //    name: "Sub_BatteryPerformances");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Sub_BrakeTires");
+            //migrationBuilder.DropTable(
+            //    name: "Sub_BrakeTires");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Sub_InteriorExteriors");
+            //migrationBuilder.DropTable(
+            //    name: "Sub_InteriorExteriors");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Sub_UnderHoods");
+            //migrationBuilder.DropTable(
+            //    name: "Sub_UnderHoods");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Sub_UnderVehicles");
+            //migrationBuilder.DropTable(
+            //    name: "Sub_UnderVehicles");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Uploads");
+            //migrationBuilder.DropTable(
+            //    name: "Uploads");
 
-        //    migrationBuilder.DropTable(
-        //        name: "VehicleHistories");
+            //migrationBuilder.DropTable(
+            //    name: "VehicleHistories");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_DamageScales");
+            //migrationBuilder.DropTable(
+            //    name: "lu_DamageScales");
 
-        //    migrationBuilder.DropTable(
-        //        name: "AspNetRoles");
+            //migrationBuilder.DropTable(
+            //    name: "AspNetRoles");
 
-        //    migrationBuilder.DropTable(
-        //        name: "AspNetUsers");
+            //migrationBuilder.DropTable(
+            //    name: "AspNetUsers");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Replacements");
+            //migrationBuilder.DropTable(
+            //    name: "Replacements");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_Wheels");
+            //migrationBuilder.DropTable(
+            //    name: "lu_Wheels");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Maintenances");
+            //migrationBuilder.DropTable(
+            //    name: "Maintenances");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_Offices");
+            //migrationBuilder.DropTable(
+            //    name: "lu_Offices");
 
-        //    migrationBuilder.DropTable(
-        //        name: "Vehicles");
+            //migrationBuilder.DropTable(
+            //    name: "Vehicles");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_FuelTypes");
+            //migrationBuilder.DropTable(
+            //    name: "lu_FuelTypes");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_Transmissions");
+            //migrationBuilder.DropTable(
+            //    name: "lu_Transmissions");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_VehicleStatus");
+            //migrationBuilder.DropTable(
+            //    name: "lu_VehicleStatus");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_VehicleTypes");
+            //migrationBuilder.DropTable(
+            //    name: "lu_VehicleTypes");
 
-        //    migrationBuilder.DropTable(
-        //        name: "lu_WheelDrives");
-        //
+            //migrationBuilder.DropTable(
+            //    name: "lu_WheelDrives");
         }
     }
 }

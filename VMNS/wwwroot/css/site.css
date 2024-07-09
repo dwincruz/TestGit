@@ -569,8 +569,8 @@ a#myBtn {
 
     .custom-input input:focus,
     .custom-input input:valid {
-        /*border: 1px solid rgba(0, 0, 0, 0.2);*/
-        border: 1px solid rgba(30, 50, 92, 1);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        /*border: 1px solid rgba(30, 50, 92, 1);*/
     }
 
 .input-text {
@@ -580,6 +580,7 @@ a#myBtn {
     .input-text label {
         background-color: white;
         padding: 0px 5px;
+        color: #1e325c;
     }
 
 .custom-input input:read-only + div.input-text,

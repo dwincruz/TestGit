@@ -121,22 +121,22 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-12 col-12">
+                  @*   <div class="col-md-3 col-sm-12 col-12">
                         <div class=" rounded p-3 bg-white box-lra-shadow">
                             <p class="fw-bold">Vehicle Maintenance Occur</p>
                             <canvas class="col-12 rounded p-3" id="maintenancesChart" height="100"></canvas>
                         </div>
-                    </div>
+                    </div> *@
                     <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
-                            <p class="fw-bold">Vehicle Accidents Occur</p>
+                            <p class="fw-bold"><i class="ri-alert-fill text-lra-danger"></i> Vehicle Accidents Occur</p>
                             <canvas class="col-12 rounded p-3" id="accidentsChart" height="100"></canvas>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
                             <div class="d-flex ">
-                                <div class="me-auto"><p class="fw-bold">LTO Renewal in Days</p></div>
+                                <div class="me-auto"><p class="fw-bold"><i class="ri-survey-line  text-lra-primary" style=""></i> LTO Renewal in Days</p></div>
                                 <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#listModal" alt="VIEW ALL"><i class="ri-list-settings-fill"></i></button></div>
 
                             </div>
@@ -153,7 +153,7 @@
                     <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
                             <div class="d-flex ">
-                                <div class="me-auto"><p class="fw-bold">Insurance Renewal in Days</p></div>
+                                <div class="me-auto"><p class="fw-bold"><i class="ri-survey-line  text-lra-primary" style=""></i> Insurance Renewal in Days</p></div>
                                 <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#insuranceListModal" alt="VIEW ALL"><i class="ri-list-settings-fill"></i></button></div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -163,25 +163,17 @@
                         </div>
                     </div>
                     <!-- for change oil tracker -->
-                   @*  <div class="col-md-3 col-sm-12 col-12">
+                    <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
-                            <div class="d-flex ">
-                                <div class="me-auto"><p class="fw-bold">Change Oil Tracker</p></div>
-                                <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#insuranceListModal" alt="VIEW ALL"><i class="ri-list-settings-fill"></i></button></div>
+                            <div class="d-flex ">                               
+                                <div class="me-auto"><p class="fw-bold"><i class="ri-oil-line  text-lra-primary" style=""></i> Change Oil Monitoring</p></div>
+                                <div class=""><button id="showmore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#changeOilListModal" alt="view all"><i class="ri-list-settings-fill"></i></button></div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-                                <small>Plate No.</small>
-                                <div class="progress">                                    
-                                    <div class="progress-bar bg-lra-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">11000/15000 km</div>
-                                </div>
-                            </div>
-                            <ul class="list-group" id="insuranceDueList">
+                            <ul class="list-group" id="changeOilList">
                             </ul>
                         </div>
-                    </div> *@
-
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -193,7 +185,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="listModalLabel">All Vehicle LTO Renewal in Days</h1>
+                <h1 class="modal-title fs-5" id="listModalLabel"><i class="ri-survey-line  text-lra-primary" style=""></i> All Vehicle LTO Renewal in Days</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -213,7 +205,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="listModalLabel">All Vehicle Insurance Renewal in Days</h1>
+                <h1 class="modal-title fs-5" id="listModalLabel"><i class="ri-survey-line  text-lra-primary" style=""></i> All Vehicle Insurance Renewal in Days</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -227,6 +219,27 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="changeOilListModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="listModalLabel"><i class="ri-oil-line  text-lra-primary" style=""></i> Change Oil Monitoring</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" id="allChangeOilList">
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bg-lra-warning text-lra-primary" data-bs-dismiss="modal">Close</button>
+                @* <button type="button" class="btn btn-primary">Save changes</button> *@
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -265,6 +278,7 @@
         const setDataValues = await dataValues
     }
     const generateLists = async (container, container2, dataValues) => {
+   
         const setDataValues = await dataValues
         const setContainer = await container;
         const setContainer2 = await container2;
@@ -347,6 +361,56 @@
                                                                             <div class="" style = "font-size:11px;background:${value.DUE};" > <span class="badge" > ${new Date(value.InsuranceDate).toLocaleDateString()}</span></div></div></div></div>
                                                     `
 
+
+        }).join('');
+
+
+
+        setContainer.innerHTML = limitedLists
+        setContainer2.innerHTML = lists
+        hideByDefault(document.querySelectorAll('.insurance-due-dates'))
+
+    }
+   
+    const generateChangeOilLists = async (container, container2, dataValues) => {
+        const setDataValues = await dataValues
+        const setContainer = await container;
+        const setContainer2 = await container2;
+
+        const limitedLists = Object.entries(setDataValues).map(([key, value]) => {
+
+            if (key < 6) {
+
+                return ` <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-2" >
+                            <div class="d-flex">
+                                    <div class="me-auto" style="font-size:14px" > <strong>${value.PlateNo} </strong></div>
+                                    <div class="" ><small>${value.currentMileage} / ${value.targetMileage} km</small></div>
+                            </div>
+                            <div class="progress" >
+                                    <div class="progress-bar ${value.colorStatus}" role = "progressbar" style = "width: ${value.currPercentage}%" aria-valuenow="${value.currPercentage}" aria-valuemin="0" aria-valuemax="100" ></div>
+                            </div>
+                          </div>`
+
+                
+            }
+
+
+        }).join('');
+
+        const lists = Object.entries(setDataValues).map(([key, value]) => {
+
+            return ` <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-2" >
+                                <div class="d-flex">
+                                        <div class="me-auto" style="font-size:14px" > <strong>${value.PlateNo} </strong></div>
+                                        <div class="" ><small>${value.currentMileage} / ${value.targetMileage} km</small></div>
+                                </div>
+                                <div class="progress" >
+                                        <div class="progress-bar ${value.colorStatus}" role = "progressbar" style = "width: ${value.currPercentage}%" aria-valuenow="${value.currPercentage}" aria-valuemin="0" aria-valuemax="100" ></div>
+                                </div>
+                       </div>`
+
+
+            
 
         }).join('');
 
@@ -466,6 +530,7 @@
     var vehiclesData = @Json.Serialize(ViewData["VehiclesData"]);
     var lTODueDates = @Json.Serialize(ViewData["LTODueDates"]);
     var insuranceDueDates = @Json.Serialize(ViewData["InsuranceDueDates"]);
+    var changeOil = @Json.Serialize(ViewData["ChangeOilList"]);
 
     generateDonutPieChart(document.getElementById('maintenancesChart'), maintenancesData.value);
     generateDonutPieChart(document.getElementById('accidentsChart'), accidentsData.value);
@@ -473,7 +538,8 @@
     
     generateLists(document.getElementById('vehicleLists'), document.getElementById('vehicleChart2'), lTODueDates.value, insuranceDueDates.value)
     generateInsuranceLists(document.getElementById('insuranceDueList'), document.getElementById('allInsuranceDueList'), insuranceDueDates.value)
-
+    generateChangeOilLists(document.getElementById('changeOilList'), document.getElementById('allChangeOilList'), changeOil.value)
+    
     let vehicleInfos;
     const retrieveData = async (url, httpRequest, dataValues) => {
         try {
