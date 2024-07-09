@@ -773,7 +773,7 @@
 
             let x = progressDays[i].getAttribute('aria-valuenow')
             let y = progressDays[i].getAttribute('aria-valuemax')
-            const z = Math.round(x / y * 100)
+            const z = Math.round((x / y) * 100)
             progressBar[i].style.width = `${z}%`
             progressBar[i].innerHTML = `${z}%`
 

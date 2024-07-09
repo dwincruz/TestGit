@@ -68,7 +68,7 @@
                     <div id="" class="custom-input w-100">
                         <input type="date"
                                asp-for="DateAcquired"
-                               id="insuranceDate"
+                               id="dateAcquired"
                                class="form-control"
                                required
                                pattern="\S+.*" />
@@ -84,4 +84,8 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     @*<partial name="_ValidationScriptsPartial" />*@
+    <script>
+        const dateAcquired = document.querySelector('#dateAcquired')
+        dateAcquired.max = new Date().toISOString().split("T")[0]
+    </script>
 }
