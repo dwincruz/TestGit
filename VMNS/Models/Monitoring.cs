@@ -32,5 +32,18 @@ namespace VMNS.Models
         //Foreign Key
         public virtual Replacement? Replacement { get; set; }
         public virtual Maintenance? Maintenance { get; set; }
+
+
+        public DateTime? EndDate
+        {
+            get
+            {
+                if (LifeSpan.HasValue)
+                {
+                    return DateAcquired.AddDays(LifeSpan.Value);
+                }
+                return null; 
+            }
+        }
     }
 }

@@ -798,9 +798,7 @@
                 </div>
             }
         </div>
-        <div class="row">
-            
-        </div>
+        
         <div class="row">
             @foreach (var item in Monitoring)
             {
@@ -823,11 +821,11 @@
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
                             <label>Acquired Date</label>
-                            <span class="badge text-status-color rounded-pill">@item.DateAcquired</span>
+                            <span class="badge text-status-color rounded-pill date-aqcuired">@item.DateAcquired</span>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
                             <label>Replaced Date </label>
-                            <span class="badge text-status-color rounded-pill"></span>
+                            <span class="badge text-status-color rounded-pill date-replacement">@item.EndDate</span>
                         </li>
                     </ul>
                 </div>
@@ -961,6 +959,19 @@
     <partial name="_ValidationScriptsPartial" />
     <script>
 
+        // const calculateReplacementDate = async(dateAqcuired, dateReplacement) => {
+        //     const setDateReplacement = await dateReplacement
+        //     const setDateAqcuired = await dateAqcuired
+        //     setDateAqcuired.map(date => {
+        //         if(!date.innerText == ""){
+        //             let formatValue = new Date(date.innerText).toLocaleString()
+        //             date.innerText = formatValue
+        //         }
+        //     })
+        // }
+        // calculateReplacementDate(document.querySelectorAll('.date-aqcuired'), document.querySelectorAll('.date-replacement'))
+
+
         const itemsStatus = document.querySelectorAll('.text-status-color')
 
         const partsCondition = async (items) => {
@@ -999,27 +1010,6 @@
 
 
 
-        const deleteMaintenanceRecord = () => {
-            try {
-                const targetValue = document.querySelector('#targetValue');
-                const confirmValue = document.querySelector('#confirmValue');
-                const confirmInput = document.querySelector('#confirmInput');
-                const btnTrigger = document.querySelector('#confirmDelete')
-                confirmValue.innerText = `Delete ${targetValue.value}`
-
-                confirmInput.addEventListener('change', e => {
-                    if (e.target.value === confirmValue.innerText) {
-                        btnTrigger.removeAttribute('disabled')
-                    }
-                    else {
-                        btnTrigger.setAttribute('disabled', '')
-                    }
-                })
-
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        deleteMaintenanceRecord()
+      
     </script>
 }
