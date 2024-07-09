@@ -443,6 +443,7 @@ namespace VMNS.Controllers
                 .Include(v => v.lu_FuelType)
                 .Include(v => v.lu_Transmission)
                 .Include(v => v.lu_VehicleType)
+                .Include(v => v.lu_VehicleStatus)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             
