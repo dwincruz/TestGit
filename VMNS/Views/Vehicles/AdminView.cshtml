@@ -102,21 +102,77 @@
                         <h5><i class="ri-file-user-fill text-lra-primary"></i> General Information</h5>
                     </div>
                     <div class="row">
+                        
                         <div class="col-lg-6 col-12 mb-4">
                             <div class="input-group" id="">
                                 <div id="" class="custom-input w-100">
                                     <input type="text"
                                            id=""
                                            class="form-control"
-                                           value="@Html.DisplayFor(model => model.Brand)"
+                                           value="@Html.DisplayFor(model => model.PlateNo)"
                                            readonly
                                            required
                                            pattern="\S+.*" />
-                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Brand)</label></div>
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.PlateNo)</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.lu_VehicleStatus.Id)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.lu_VehicleStatus.Id)</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.AutosweepRFID)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.AutosweepRFID)</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.EasyTripRFID)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.EasyTripRFID)</label></div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                       id=""
+                                       class="form-control"
+                                       value="@Html.DisplayFor(model => model.Brand)"
+                                       readonly
+                                       required
+                                       pattern="\S+.*" />
+                                <div class="input-text"><label>@Html.DisplayNameFor(model => model.Brand)</label></div>
+                            </div>
+                        </div>
+                        
                         <div class="col-lg-6 col-12 mb-4">
                             <div class="input-group" id="">
                                 <div id="" class="custom-input w-100">
@@ -189,21 +245,6 @@
                                            required
                                            pattern="\S+.*" />
                                     <div class="input-text"><label>@Html.DisplayNameFor(model => model.lu_FuelType)</label></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12 mb-4">
-                            <div class="input-group" id="">
-                                <div id="" class="custom-input w-100">
-                                    <input type="text"
-                                           id=""
-                                           class="form-control"
-                                           value="@Html.DisplayFor(model => model.PlateNo)"
-                                           readonly
-                                           required
-                                           pattern="\S+.*" />
-                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.PlateNo)</label></div>
                                 </div>
                             </div>
                         </div>
@@ -297,6 +338,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.AssignedDriver)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.AssignedDriver)</label></div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="col-lg-6 col-12 mb-4">
                             <div class="input-group" id="">
@@ -309,6 +364,20 @@
                                            required
                                            pattern="\S+.*" />
                                     <div class="input-text"><label>@Html.DisplayNameFor(model => model.IssuedDate)</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.Cost)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Cost)</label></div>
                                 </div>
                             </div>
                         </div>
