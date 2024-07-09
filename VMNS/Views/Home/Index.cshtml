@@ -265,6 +265,7 @@
         const setDataValues = await dataValues
     }
     const generateLists = async (container, container2, dataValues) => {
+   
         const setDataValues = await dataValues
         const setContainer = await container;
         const setContainer2 = await container2;
@@ -473,7 +474,7 @@
     
     generateLists(document.getElementById('vehicleLists'), document.getElementById('vehicleChart2'), lTODueDates.value, insuranceDueDates.value)
     generateInsuranceLists(document.getElementById('insuranceDueList'), document.getElementById('allInsuranceDueList'), insuranceDueDates.value)
-
+    generateBarChart('')
     let vehicleInfos;
     const retrieveData = async (url, httpRequest, dataValues) => {
         try {

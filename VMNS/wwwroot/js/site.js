@@ -8,24 +8,24 @@ $(document).ready(function () {
 });
 
 
-$(function () {
-    $('#CategoryOfConcernId').select2();
-    $('#trigger').select2();
-    $('#ConcernedOfficeId').select2();
-    $('#GenderId').select2();
-    $('#ChannelId').select2();
-    $('#NatureOfConcernId').select2();
+//$(function () {
+//    $('#CategoryOfConcernId').select2();
+//    $('#trigger').select2();
+//    $('#ConcernedOfficeId').select2();
+//    $('#GenderId').select2();
+//    $('#ChannelId').select2();
+//    $('#NatureOfConcernId').select2();
 
-    //Show Hide Others
-    $('#trigger').change(function () {
-        var option = $(this).val();
-        /*console.log(option);*/        
-        if (option == 23) {
-            $("#me").show();
-        } else {
-            $("#me").hide();
-        }
-    });
+//    //Show Hide Others
+//    $('#trigger').change(function () {
+//        var option = $(this).val();
+//        /*console.log(option);*/        
+//        if (option == 23) {
+//            $("#me").show();
+//        } else {
+//            $("#me").hide();
+//        }
+//    });
 
     //$("a.file-del").on('click', function (e) {
     //    e.preventDefault();
@@ -68,58 +68,58 @@ $(function () {
     //        }
     //    });
     //});
-});
+//});
 
-document.getElementById("myBtn").onclick = function () {
-    var x = document.getElementById("myDIV1");
-    var y = document.getElementById("myDIV2");
-    var z = document.getElementById("myDIV3");
+//document.getElementById("myBtn").onclick = function () {
+//    var x = document.getElementById("myDIV1");
+//    var y = document.getElementById("myDIV2");
+//    var z = document.getElementById("myDIV3");
 
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        y.style.display = "none";
-        z.style.display = "none";
-    } else {
-        x.style.display = "block";
-        y.style.display = "none";
-        z.style.display = "none";
-    };
-    $('#publicModal').modal('show');
-}
+//    if (x.style.display === "none") {
+//        x.style.display = "block";
+//        y.style.display = "none";
+//        z.style.display = "none";
+//    } else {
+//        x.style.display = "block";
+//        y.style.display = "none";
+//        z.style.display = "none";
+//    };
+//    $('#publicModal').modal('show');
+//}
 
-document.getElementById("myBtn2").onclick = function () {
-    var x = document.getElementById("myDIV1");
-    var y = document.getElementById("myDIV2");
-    var z = document.getElementById("myDIV3");
+//document.getElementById("myBtn2").onclick = function () {
+//    var x = document.getElementById("myDIV1");
+//    var y = document.getElementById("myDIV2");
+//    var z = document.getElementById("myDIV3");
 
-    if (x.style.display === "none") {
-        x.style.display = "none";
-        y.style.display = "block";
-        z.style.display = "none";
-    } else {
-        x.style.display = "none";
-        y.style.display = "block";
-        z.style.display = "none";
-    };
-    $('#publicModal').modal('show');
-}
+//    if (x.style.display === "none") {
+//        x.style.display = "none";
+//        y.style.display = "block";
+//        z.style.display = "none";
+//    } else {
+//        x.style.display = "none";
+//        y.style.display = "block";
+//        z.style.display = "none";
+//    };
+//    $('#publicModal').modal('show');
+//}
 
-document.getElementById("myBtn3").onclick = function () {
-    var x = document.getElementById("myDIV1");
-    var y = document.getElementById("myDIV2");
-    var z = document.getElementById("myDIV3");
+//document.getElementById("myBtn3").onclick = function () {
+//    var x = document.getElementById("myDIV1");
+//    var y = document.getElementById("myDIV2");
+//    var z = document.getElementById("myDIV3");
 
-    if (x.style.display === "none") {
-        x.style.display = "none";
-        y.style.display = "none";
-        z.style.display = "block";
-    } else {
-        x.style.display = "none";
-        y.style.display = "none";
-        z.style.display = "block";
-    };
-    $('#publicModal').modal('show');
-}
+//    if (x.style.display === "none") {
+//        x.style.display = "none";
+//        y.style.display = "none";
+//        z.style.display = "block";
+//    } else {
+//        x.style.display = "none";
+//        y.style.display = "none";
+//        z.style.display = "block";
+//    };
+//    $('#publicModal').modal('show');
+//}
 
 
 
