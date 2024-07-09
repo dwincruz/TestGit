@@ -3,177 +3,365 @@
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var currentValues = new[] { "Existing", "Missing" };
 }
 
-<h1>Edit</h1>
+<form asp-action="Edit">
+    <div class="row mt-3">
+        <input type="hidden" asp-for="Id" />
+        <div class="col-md-6 col-sm-4 col-6 my-auto">
+            <h2><i class="ri-battery-2-charge-fill text-lra-primary"></i> Accessories</h2>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6  my-auto  position-relative">
+            <div class="float-end">
+                <a asp-area="" asp-controller="Maintenances" asp-action="Details" asp-route-Id=@ViewData["MaintenanceId"] class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+                <button type="submit" class="btn btn-sm text-white text-capitalize bg-lra-primary box-lra-shadow rounded "><i class="ri-save-line"></i> Save</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+        <div class="row bg-white box-lra-shadow rounded d-flex justify-content-center pt-4">
+            <div class="col-lg-7 col-sm-7 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text"
+                               asp-for="MaintenanceId"
+                               id=""
+                               class="form-control"
+                               required
+                               readonly
+                               hidden
+                               pattern="\S+.*" />
+                        <table class="table table-bordered table-borderless">
+                            <thead>
+                                <tr>
+                                    <th colspan="4" class="good">
+                                        Existing
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="good"></th>
+                                    <th colspan="3" class="warning">
+                                        Missing
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" class="category-name">
+                                        Accessories
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="Antennae" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Antennae == currentValue ? "checked" : "") />
 
-<h4>Sub_Accessories</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="MaintenanceId" class="control-label"></label>
-                <select asp-for="MaintenanceId" class="form-control" asp-items="ViewBag.MaintenanceId"></select>
-                <span asp-validation-for="MaintenanceId" class="text-danger"></span>
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.Antennae)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="AshTray" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.AshTray == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.AshTray)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="BackupRearLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.BackupRearLights == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.BackupRearLights)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="CigaretteLighter" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.CigaretteLighter == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.CigaretteLighter)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="DoorGlass" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.DoorGlass == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.DoorGlass)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="DoorHandles" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.DoorHandles == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.DoorHandles)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="Emblem" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Emblem == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.Emblem)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="EngineHood" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.EngineHood == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.EngineHood)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="FloorMats" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.FloorMats == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.FloorMats)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="GasTankCap" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.GasTankCap == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.GasTankCap)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="HeadRest" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.HeadRest == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.HeadRest)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="HubCaps" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.HubCaps == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.HubCaps)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="IgnitionSwitch" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.IgnitionSwitch == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.IgnitionSwitch)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="MudGuards" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.MudGuards == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.MudGuards)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="NamePlate" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.NamePlate == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.NamePlate)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="NamePlateLight" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.NamePlateLight == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.NamePlateLight)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="ParkingLights" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.ParkingLights == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.ParkingLights)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="RadiatorCap" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.RadiatorCap == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.RadiatorCap)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="RearViewMirror" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.RearViewMirror == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.RearViewMirror)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="SideMirrors" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.SideMirrors == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.SideMirrors)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="SpareTire" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.SpareTire == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.SpareTire)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="StereoSpeakers" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.StereoSpeakers == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.StereoSpeakers)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="SunVisors" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.SunVisors == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.SunVisors)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="Tools" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Tools == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.Tools)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="TrunkCompartment" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.TrunkCompartment == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.TrunkCompartment)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="Upholstery" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Upholstery == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.Upholstery)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="WindshieldGlass" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WindshieldGlass == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.WindshieldGlass)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="WipeArm" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WipeArm == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.WipeArm)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="WiperKnob" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WiperKnob == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.WiperKnob)</td>
+                                </tr>
+                                <tr class="availability-row">
+                                    @foreach (var currentValue in currentValues)
+                                    {
+                                        <td class="checkbox-container">
+                                            <input type="radio" name="Manuals" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Manuals == currentValue ? "checked" : "") />
+
+                                        </td>
+                                    }
+                                    <td>@Html.DisplayNameFor(model => model.Manuals)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Antennae" class="control-label"></label>
-                <input asp-for="Antennae" class="form-control" />
-                <span asp-validation-for="Antennae" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="AshTray" class="control-label"></label>
-                <input asp-for="AshTray" class="form-control" />
-                <span asp-validation-for="AshTray" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BackupRearLights" class="control-label"></label>
-                <input asp-for="BackupRearLights" class="form-control" />
-                <span asp-validation-for="BackupRearLights" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CigaretteLighter" class="control-label"></label>
-                <input asp-for="CigaretteLighter" class="form-control" />
-                <span asp-validation-for="CigaretteLighter" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DoorGlass" class="control-label"></label>
-                <input asp-for="DoorGlass" class="form-control" />
-                <span asp-validation-for="DoorGlass" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DoorHandles" class="control-label"></label>
-                <input asp-for="DoorHandles" class="form-control" />
-                <span asp-validation-for="DoorHandles" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Emblem" class="control-label"></label>
-                <input asp-for="Emblem" class="form-control" />
-                <span asp-validation-for="Emblem" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EngineHood" class="control-label"></label>
-                <input asp-for="EngineHood" class="form-control" />
-                <span asp-validation-for="EngineHood" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FloorMats" class="control-label"></label>
-                <input asp-for="FloorMats" class="form-control" />
-                <span asp-validation-for="FloorMats" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="GasTankCap" class="control-label"></label>
-                <input asp-for="GasTankCap" class="form-control" />
-                <span asp-validation-for="GasTankCap" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HeadRest" class="control-label"></label>
-                <input asp-for="HeadRest" class="form-control" />
-                <span asp-validation-for="HeadRest" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HubCaps" class="control-label"></label>
-                <input asp-for="HubCaps" class="form-control" />
-                <span asp-validation-for="HubCaps" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IgnitionSwitch" class="control-label"></label>
-                <input asp-for="IgnitionSwitch" class="form-control" />
-                <span asp-validation-for="IgnitionSwitch" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MudGuards" class="control-label"></label>
-                <input asp-for="MudGuards" class="form-control" />
-                <span asp-validation-for="MudGuards" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NamePlate" class="control-label"></label>
-                <input asp-for="NamePlate" class="form-control" />
-                <span asp-validation-for="NamePlate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NamePlateLight" class="control-label"></label>
-                <input asp-for="NamePlateLight" class="form-control" />
-                <span asp-validation-for="NamePlateLight" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ParkingLights" class="control-label"></label>
-                <input asp-for="ParkingLights" class="form-control" />
-                <span asp-validation-for="ParkingLights" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RadiatorCap" class="control-label"></label>
-                <input asp-for="RadiatorCap" class="form-control" />
-                <span asp-validation-for="RadiatorCap" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="RearViewMirror" class="control-label"></label>
-                <input asp-for="RearViewMirror" class="form-control" />
-                <span asp-validation-for="RearViewMirror" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SideMirrors" class="control-label"></label>
-                <input asp-for="SideMirrors" class="form-control" />
-                <span asp-validation-for="SideMirrors" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SpareTire" class="control-label"></label>
-                <input asp-for="SpareTire" class="form-control" />
-                <span asp-validation-for="SpareTire" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StereoSpeakers" class="control-label"></label>
-                <input asp-for="StereoSpeakers" class="form-control" />
-                <span asp-validation-for="StereoSpeakers" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SunVisors" class="control-label"></label>
-                <input asp-for="SunVisors" class="form-control" />
-                <span asp-validation-for="SunVisors" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tools" class="control-label"></label>
-                <input asp-for="Tools" class="form-control" />
-                <span asp-validation-for="Tools" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TrunkCompartment" class="control-label"></label>
-                <input asp-for="TrunkCompartment" class="form-control" />
-                <span asp-validation-for="TrunkCompartment" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Upholstery" class="control-label"></label>
-                <input asp-for="Upholstery" class="form-control" />
-                <span asp-validation-for="Upholstery" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="WindshieldGlass" class="control-label"></label>
-                <input asp-for="WindshieldGlass" class="form-control" />
-                <span asp-validation-for="WindshieldGlass" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="WipeArm" class="control-label"></label>
-                <input asp-for="WipeArm" class="form-control" />
-                <span asp-validation-for="WipeArm" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="WiperKnob" class="control-label"></label>
-                <input asp-for="WiperKnob" class="form-control" />
-                <span asp-validation-for="WiperKnob" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</form>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

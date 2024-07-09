@@ -946,3 +946,15 @@ body {
 .condition-row td:nth-child(3){
     background-color: #EE4E4E !important;
 }
+.availability-row td:nth-child(1) {
+    background-color: #B3E2A7 !important;
+}
+
+.availability-row td:nth-child(2) {
+    background-color: #F6F193 !important;
+}
+
+.condition-row input, .availability-row input {
+    outline: none;
+    border: none;
+}

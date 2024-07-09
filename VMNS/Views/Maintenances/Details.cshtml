@@ -9,6 +9,8 @@
     var DataC = (IEnumerable<Sub_InteriorExterior>)ViewData["Sub_InteriorExterior"];
     var DataD = (IEnumerable<Sub_UnderHood>)ViewData["Sub_UnderHood"];
     var DataE = (IEnumerable<Sub_UnderVehicle>)ViewData["Sub_UnderVehicle"];
+    var DataF = (IEnumerable<Sub_Accessories>)ViewData["Sub_Accessories"];
+
 }
 
 <div class="row mt-3">
@@ -529,7 +531,7 @@
                             <span class="badge text-status-color rounded-pill">@item.BatteryVoltage</span>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <label>Battery Indicators</label>
+                            <label>Indicators (Warnings e.g Battery, Engine Oil, Break System, Seatbelt )</label>
                             <span class="badge text-status-color rounded-pill">@item.Indicators</span>
                         </li>
                         <li class="list-group-item">
@@ -551,7 +553,205 @@
                 </div>
             }
         </div>
-        <div class="row">
+        <div class="row"> 
+            @foreach (var item in DataF)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                    <ul class="list-group p-3 mb-4">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="fw-bold"><i class="ri-battery-2-charge-fill text-lra-primary"></i> Accessories</div>
+                                <div>
+                                    <a asp-controller="Sub_Accessories" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </a>
+                                    <a asp-controller="Sub_Accessories" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                       data-toggle="tooltip" data-placement="top" title="Delete">
+                                        <i class="ri-delete-bin-7-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>Antennae</label>
+                            <span class="badge text-status-color rounded-pill">@item.Antennae</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Ash Tray
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.AshTray</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Backup Rear Lights
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.BackupRearLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Cigarette Lighter
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.CigaretteLighter</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Door Glass
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.DoorGlass</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Door Handles Front & Rear
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.DoorHandles</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Emblem
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.Emblem</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Engine Hood
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.EngineHood</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Floor Mats
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.FloorMats</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Gas Tank Cap
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.GasTankCap</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Head Rest
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.HeadRest</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Hub Caps
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.HubCaps</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Mud Guards
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.MudGuards</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Name Plate
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.NamePlate</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Name Plate Light
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.NamePlateLight</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Parking Lights
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.ParkingLights</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Radiator Cap
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.RadiatorCap</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Rear View Mirror
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.RearViewMirror</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Side Mirrors
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.SideMirrors</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Spare Tire & Rim
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.SpareTire</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Stereo Speakers
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.StereoSpeakers</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Sun Visors
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.SunVisors</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Tools
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.Tools</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Trunk Compartment
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.TrunkCompartment</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Upholstery
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.Upholstery</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Windshield Glass Front & Rear
+                            </label>
+                            <span class="badge text-status-color rounded-pill">
+                                @item.WindshieldGlass
+                            </span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Wipe Arm & Blade
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.WipeArm</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Wiper Knob
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.WiperKnob</span>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                            <label>
+                                Manuals
+                            </label>
+                            <span class="badge text-status-color rounded-pill">@item.Manuals</span>
+                        </li>
+
+
+                    </ul>
+                </div>
+            }
             @foreach (var item in DataA)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
@@ -597,6 +797,9 @@
                     </ul>
                 </div>
             }
+        </div>
+        <div class="row">
+            
         </div>
         <div class="row">
             @foreach (var item in Monitoring)
@@ -777,6 +980,10 @@
                         case "Needs Repair":
                             // item.style.backgroundColor = "#cd5c5c"
                             item.style.backgroundColor = "#92140C"
+                            break;
+                        case "Existing":
+                            // item.style.backgroundColor = "#93c54b"
+                            item.style.backgroundColor = "#1e325c"
                             break;
                         default:
                             item.style.color = "#494949"
