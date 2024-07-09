@@ -526,6 +526,7 @@ namespace VMNS.Controllers
                 { myListA.Add(db.Reader.GetString(0)); }
             }
             db.Con.Close();
+
             db.Query("exec [dbo].[sp_Show] '" + MaintId + "','For Monitoring'");
             if (db.Reader.HasRows)
             {
@@ -533,6 +534,7 @@ namespace VMNS.Controllers
                 { myListB.Add(db.Reader.GetString(0)); }
             }
             db.Con.Close();
+
             db.Query("exec [dbo].[sp_Show] '" + MaintId + "','Needs Repair'");
             if (db.Reader.HasRows)
             {
@@ -540,6 +542,7 @@ namespace VMNS.Controllers
                 { myListC.Add(db.Reader.GetString(0)); }
             }
             db.Con.Close();
+
             db.Query("exec [dbo].[sp_Show] '" + MaintId + "','Not Available'");
             if (db.Reader.HasRows)
             {
@@ -547,6 +550,7 @@ namespace VMNS.Controllers
                 { myListD.Add(db.Reader.GetString(0)); }
             }
             db.Con.Close();
+
             db.Query("exec [dbo].[sp_PMSParts] '" + MaintId + "'");
             if (db.Reader.HasRows)
             {
@@ -563,6 +567,7 @@ namespace VMNS.Controllers
                 }
             }
             db.Con.Close();
+
             db.Query("exec [dbo].[sp_PMSTires] '" + MaintId + "'");
             if (db.Reader.HasRows)
             {

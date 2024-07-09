@@ -32,6 +32,8 @@ namespace VMNS.Models
 
         public int? lu_DamageScaleId { get; set; }
 
+       
+
         //For Tracking
         public Guid CreatorId { get; set; }
         public Guid? ModifierId { get; set; }

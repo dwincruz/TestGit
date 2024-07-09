@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Body.cshtml";
 }
-<form class="row mt-3" asp-action="Create">
+<form class="row mt-3" asp-action="Create" enctype="multipart/form-data" runat="server">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
         <h2><i class="ri-alert-fill text-lra-danger"></i> Create Accident Details</h2>
     </div>
@@ -95,7 +95,27 @@
                     </div>
                     <span asp-validation-for="RepairDate" class="text-danger"></span>
                 </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="file"
+                                   id="file"
+                                   name="file"
+                                   class="form-control"
+                                   accept=".pdf"
+                                   multiple />
+                            <div class="input-text"><label>Upload PDF</label></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="col-lg-5 col-sm-5 col-12">
+            <fieldset class="border-lra rounded mb-3 p-2">
+                <legend class="legend-lra">Preview PDF</legend>
+                <embed src="" type="application/pdf" id="preview" height="700px" width="500">
+            </fieldset>
+            
         </div>
     </div>
 </form>
@@ -104,4 +124,16 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
     @*<partial name="_ValidationScriptsPartial" />*@
+
+
 }
+<script>
+
+    file.onchange = evt => {
+        const [pdf] = file.files
+        if (pdf) {
+            preview.src = URL.createObjectURL(pdf)
+            console.log(file);
+        }
+    }
+</script>

@@ -958,3 +958,23 @@ body {
     outline: none;
     border: none;
 }
+
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+}
+
+.legend-lra {
+    float: none !important;
+    width: auto !important;
+    padding: revert !important;
+    margin-bottom: .5rem !important;
+    font-size: calc(.8rem + .3vw) !important;
+    line-height: inherit !important;
+}

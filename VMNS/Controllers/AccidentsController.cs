@@ -16,6 +16,8 @@ namespace VMNS.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+        private readonly MySqlController db = new MySqlController();
+
         public AccidentsController(ApplicationDbContext context)
         {
             _context = context;
@@ -45,6 +47,7 @@ namespace VMNS.Controllers
             }
             ViewData["lu_VehicleTypeId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
             ViewData["lu_DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
+            ViewData["FilePath"] = _context.Uploads.Where(x=>x.ConcernId == id.ToString()).FirstOrDefault().FilePath;
 
             return View(accident);
         }
@@ -63,7 +66,7 @@ namespace VMNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,VehicleId,AccidentDate,Damage,lu_DamageScaleId,Remarks,RepairDate")] Accident accident)
+        public async Task<IActionResult> Create([Bind("Id,VehicleId,AccidentDate,Damage,lu_DamageScaleId,Remarks,RepairDate")] Accident accident, IFormFile[] file)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (ModelState.IsValid)
@@ -73,7 +76,35 @@ namespace VMNS.Controllers
                 accident.DateCreated = DateTime.Now;
                 accident.DateModified = DateTime.Now;
                 _context.Add(accident);
+
                 await _context.SaveChangesAsync();
+
+                var folderId = accident.Id.ToString().ToUpper();
+                if (file != null)
+                {
+                    foreach (IFormFile docu in file)
+                    {
+                        //Create Directory
+                        var currentMonth = DateTime.Now.Year + DateTime.Now.Month;
+                        var fileDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/" + folderId);
+                        var fileDir2 = Path.Combine("uploads/" + folderId + "/" + docu.FileName);
+                        if (!Directory.Exists(fileDir))
+                        {
+                            Directory.CreateDirectory(fileDir);
+                        }
+
+                        var path = Path.Combine(fileDir, docu.FileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            await docu.CopyToAsync(stream);
+
+                        }
+
+                        db.Query("INSERT INTO [dbo].[Uploads] " +
+                            "VALUES ('" + folderId + "','" + docu.FileName + "','" + fileDir2 + "',CURRENT_TIMESTAMP)");
+                        db.Con.Close();
+                    }
+                }
 
                 Notify("Record added successfully.", notificationType: NotificationType.success);
                 return RedirectToAction(nameof(Index));
@@ -127,7 +158,7 @@ namespace VMNS.Controllers
             }           
             ViewData["lu_VehicleTypeId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
             ViewData["lu_DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
-            
+            ViewData["FilePath"] = _context.Uploads.Where(x => x.ConcernId == id.ToString()).FirstOrDefault().FilePath;
             return View(accident);
         }
         // POST: Accidents/Edit/5
@@ -135,7 +166,7 @@ namespace VMNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,VehicleId,AccidentDate,Damage,lu_DamageScaleId,Remarks,RepairDate,CreatorId,DateCreated")] Accident accident)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,VehicleId,AccidentDate,Damage,lu_DamageScaleId,Remarks,RepairDate,CreatorId,DateCreated")] Accident accident, IFormFile[] file)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             ViewData["Vehicles"] = _context.Vehicles;
@@ -152,6 +183,35 @@ namespace VMNS.Controllers
                     accident.DateModified = DateTime.Now;
                     _context.Update(accident);
                     await _context.SaveChangesAsync();
+
+                    
+                    var folderId = accident.Id.ToString().ToUpper();
+                    if (file != null)
+                    {
+                        foreach (IFormFile docu in file)
+                        {
+                            //Create Directory
+                            var currentMonth = DateTime.Now.Year + DateTime.Now.Month;
+                            var fileDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/" + folderId);
+                            var fileDir2 = Path.Combine("uploads/" + folderId + "/" + docu.FileName);
+                            if (!Directory.Exists(fileDir))
+                            {
+                                Directory.CreateDirectory(fileDir);
+                            }
+
+                            var path = Path.Combine(fileDir, docu.FileName);
+                            using (var stream = new FileStream(path, FileMode.Create))
+                            {
+                                await docu.CopyToAsync(stream);
+
+                            }
+
+                            db.Query("UPDATE [dbo].[Uploads] " +
+                                "SET FilePath = '"+ fileDir2 + "' "+
+                                "WHERE ConcernId = '"+id.ToString()+"'");
+                            db.Con.Close();
+                        }
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
