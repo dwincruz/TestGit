@@ -4,103 +4,112 @@
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Body.cshtml";
 }
-<div class="row">
+<div class="row mt-3">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Accident - Details</h2>
+        <h2><i class="ri-alert-fill icon text-lra-danger"></i> Accident Details</h2>
     </div>
-    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+    <div class="col-md-6 col-sm-6 col-6  my-autoposition-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Accidents" asp-action="Index" class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <a asp-area="" asp-controller="Accidents" asp-action="Index" class="btn btn-sm text-capitalize bg-white rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
             @if (!User.IsInRole("Administrator"))
                 {
-            <button type="button" class="btn btn-sm text-capitalize border rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-delete-bin-7-line"></i> Delete</button>
-            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-edit-box-line"></i> Edit</a>
+            <button type="button" class="btn btn-sm text-capitalize bg-lra-danger rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-delete-bin-7-line"></i> Delete</button>
+            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm  text-dark text-capitalize bg-lra-sub-info rounded "><i class="ri-edit-box-line"></i> Edit</a>
                 }
         </div>
     </div>
     <div class="col-12">
         <div asp-validation-summary="All" class="text-danger"></div>
     </div>
-    <div class="col-lg-7 col-sm-7 col-12">
-        <div class="row">
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <select asp-for="VehicleId" class="form-control" asp-items="ViewBag.lu_VehicleTypeId"></select>
-                        <div class="input-text"><label asp-for="Vehicle.PlateNo"></label></div>
+    <div class="row bg-white box-lra-shadow p-4">
+        <div class="col-lg-7 col-sm-7 col-12">
+            <div class="row">
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="VehicleId" class="form-control" asp-items="ViewBag.lu_VehicleTypeId"></select>
+                            <div class="input-text"><label asp-for="Vehicle.PlateNo"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="Vehicle.PlateNo" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="Vehicle.PlateNo" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="date"
-                               asp-for="AccidentDate"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="AccidentDate"></label></div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="date"
+                                   asp-for="AccidentDate"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="AccidentDate"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="AccidentDate" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="AccidentDate" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Damage"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="Damage"></label></div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Damage"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Damage"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="Damage" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="Damage" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <select asp-for="lu_DamageScaleId" class="form-control" asp-items="ViewBag.lu_DamageScaleId"></select>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <select asp-for="lu_DamageScaleId" class="form-control" asp-items="ViewBag.lu_DamageScaleId"></select>
 
-                        <div class="input-text"><label asp-for="lu_DamageScale.DamageScale"></label></div>
+                            <div class="input-text"><label asp-for="lu_DamageScale.DamageScale"></label></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="text"
-                               asp-for="Remarks"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="Remarks"></label></div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="Remarks"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="Remarks"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="Remarks" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="Remarks" class="text-danger"></span>
-            </div>
-            <div class="col-lg-6 col-12 mb-4">
-                <div class="input-group" id="">
-                    <div id="" class="custom-input w-100">
-                        <input type="date"
-                               asp-for="RepairDate"
-                               id="targetValue"
-                               class="form-control"
-                               required
-                               readonly
-                               pattern="\S+.*" />
-                        <div class="input-text"><label asp-for="RepairDate"></label></div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="date"
+                                   asp-for="RepairDate"
+                                   id="targetValue"
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="RepairDate"></label></div>
+                        </div>
                     </div>
+                    <span asp-validation-for="RepairDate" class="text-danger"></span>
                 </div>
-                <span asp-validation-for="RepairDate" class="text-danger"></span>
             </div>
+        </div>
+        <div class="col-lg-5 col-sm-5 col-12">
+            <fieldset class="border-lra rounded mb-3 p-3">
+                <legend class="legend-lra">Preview PDF</legend>
+                <embed src="/@ViewData["FilePath"]" type="application/pdf" id="preview" height="700px" class="w-100">
+            </fieldset>
+
         </div>
     </div>
 </div>
