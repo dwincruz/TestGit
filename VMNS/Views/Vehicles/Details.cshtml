@@ -179,20 +179,6 @@
                     <div class="input-group" id="">
                         <div id="" class="custom-input w-100">
                             <input type="text"
-                                   asp-for="PlateNo"
-                                   id="targetValue"
-                                   class="form-control"
-                                   required
-                                   readonly
-                                   pattern="\S+.*" />
-                            <div class="input-text"><label asp-for="PlateNo"></label></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-12 mb-4">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <input type="text"
                                    asp-for="ConductionNo"
                                    id=""
                                    class="form-control"
@@ -318,6 +304,21 @@
                         </div>
                     </div>
                     <span asp-validation-for="AssignedOfficer" class="text-danger"></span>
+                </div>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="AssignedDriver"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   readonly
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="AssignedDriver"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="AssignedDriver" class="text-danger"></span>
                 </div>
                 <div class="col-lg-6 col-12 mb-4">
                     <div class="input-group" id="">

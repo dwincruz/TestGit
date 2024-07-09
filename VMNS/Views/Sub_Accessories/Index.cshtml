@@ -1,0 +1,210 @@
+﻿@model IEnumerable<VMNS.Models.Sub_Accessories>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Antennae)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AshTray)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BackupRearLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CigaretteLighter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoorGlass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoorHandles)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emblem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineHood)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FloorMats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GasTankCap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeadRest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HubCaps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IgnitionSwitch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MudGuards)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NamePlate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NamePlateLight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParkingLights)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RadiatorCap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RearViewMirror)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SideMirrors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpareTire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StereoSpeakers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SunVisors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tools)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrunkCompartment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Upholstery)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WindshieldGlass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WipeArm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WiperKnob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maintenance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Antennae)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AshTray)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackupRearLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CigaretteLighter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoorGlass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoorHandles)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emblem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineHood)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FloorMats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GasTankCap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadRest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HubCaps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IgnitionSwitch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MudGuards)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamePlate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NamePlateLight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParkingLights)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RadiatorCap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RearViewMirror)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SideMirrors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpareTire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StereoSpeakers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SunVisors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tools)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrunkCompartment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Upholstery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WindshieldGlass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WipeArm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WiperKnob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maintenance.Remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -88,7 +88,7 @@ namespace VMNS.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Brand,Model,lu_VehicleTypeId,lu_TransmissionId,Color," +
-            "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,IssuedDate,AquisitionDate," +
+            "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,AssignedDriver,IssuedDate,AquisitionDate," +
             "Description,lu_WheelDriveId,Upload,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost")] Vehicle vehicle, IFormFile[] file) //,CreatorId,ModifierId,DateCreated,DateModified,PassengerSeat,Wheels
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -172,7 +172,7 @@ namespace VMNS.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Id,Brand,Model,lu_VehicleTypeId,lu_TransmissionId,Color," +
-            "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,IssuedDate,AquisitionDate," +
+            "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,AssignedDriver,IssuedDate,AquisitionDate," +
             "Description,CreatorId,DateCreated,lu_WheelDriveId,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost")] Vehicle vehicle, IFormFile[] file) //,PassengerSeat,Wheels
         {
 

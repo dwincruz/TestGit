@@ -102,7 +102,6 @@ namespace VMNS.Controllers
 
 
             //Pass Sub tables
-
             ViewData["Sub_BatteryPerformances"] = _context.Sub_BatteryPerformances.Where(x => x.MaintenanceId == id);
             ViewData["Sub_BrakeTires"] = _context.Sub_BrakeTires.Where(x => x.MaintenanceId == id).Include(x => x.lu_Wheel);
             ViewData["Sub_InteriorExterior"] = _context.Sub_InteriorExteriors.Where(x => x.MaintenanceId == id);
@@ -122,7 +121,7 @@ namespace VMNS.Controllers
 
 
 
-        public async Task<IActionResult> SummaryReport(Guid? id)
+        public async Task<IActionResult> Checkform(Guid? id)
         {
             ViewData["Vehicles"] = _context.Vehicles;
             if (id == null || _context.Maintenances == null)
@@ -137,6 +136,7 @@ namespace VMNS.Controllers
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             //Pass Id value to View
+                
             ViewData["MaintenanceId"] = _context.Maintenances.Where(m => m.Id == id).FirstOrDefault().Id;
             ViewData["Monitoring"] = _context.Monitorings.Where(m => m.MaintenanceId == id).Include(m => m.Replacement);
 
@@ -147,6 +147,9 @@ namespace VMNS.Controllers
             var total = xy.Count();
             ViewData["Sub_BatteryPerformances"] = xy;
 
+            
+            
+            ViewData["Sub_Accessories"] = _context.Extras.Where(x => x.VehicleId == maintenance.VehicleId);
             ViewData["Sub_BrakeTires"] = _context.Sub_BrakeTires.Where(x => x.MaintenanceId == id).Include(x => x.lu_Wheel);
             ViewData["Sub_InteriorExterior"] = _context.Sub_InteriorExteriors.Where(x => x.MaintenanceId == id);
             ViewData["Sub_UnderHood"] = _context.Sub_UnderHoods.Where(x => x.MaintenanceId == id);

@@ -38,6 +38,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Sub_InteriorExterior> Sub_InteriorExteriors { get; set; }
     public DbSet<Sub_UnderHood> Sub_UnderHoods { get; set; }
     public DbSet<Sub_UnderVehicle> Sub_UnderVehicles { get; set; }
+    public DbSet<Sub_Accessories> Sub_Accessories { get; set; }
 
     //Lookup Tables
     public DbSet<lu_Office> lu_Offices { get; set; }
