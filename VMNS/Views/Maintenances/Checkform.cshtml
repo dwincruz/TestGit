@@ -9,7 +9,7 @@
     var DataC = (IEnumerable<Sub_InteriorExterior>)ViewData["Sub_InteriorExterior"];
     var DataD = (IEnumerable<Sub_UnderHood>)ViewData["Sub_UnderHood"];
     var DataE = (IEnumerable<Sub_UnderVehicle>)ViewData["Sub_UnderVehicle"];
-    var DataF = (IEnumerable<Extra>)ViewData["Sub_Accessories"];
+    var DataF = (IEnumerable<Extra>)ViewData["Extras"];
     int countDataA = DataA.Count();
     // int countDataB = DataB.Count();
     int countDataC = DataC.Count();
@@ -18,7 +18,7 @@
     int countDataF = DataF.Count();
 
     var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
-    var currentAccessories = new[] { "Yes", "No" };
+    var currentExtras = new[] { "Yes", "No" };
 
 
 
@@ -818,34 +818,17 @@
                         <td colspan="4"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Accessories</strong></td>
+                        <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Extras</strong></td>
                     </tr>                    
                 }
                 @foreach (var item in DataF){
-                   <tr>
-                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
-                        @foreach (var currentValue in currentAccessories)
-                        {
-                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Manuals == currentValue ? "checked" : "") /></td>
-                        }
-                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Manuals</td>
-                    </tr>
                     <tr>
                         <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
-                        @foreach (var currentValue in currentAccessories)
-                        {
-                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.SpareTires == currentValue ? "checked" : "") /></td>
-                        }
-                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Manuals</td>
-                    </tr>
-
-                    <tr>
-                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
-                        @foreach (var currentValue in currentAccessories)
+                        @foreach (var currentValue in currentExtras)
                         {
                             <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Tools == currentValue ? "checked" : "") /></td>
                         }
-                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Spare Tires</td>
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Tools</td>
                     </tr>
                 }
                 

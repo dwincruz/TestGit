@@ -109,7 +109,7 @@ namespace VMNS.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaintenanceId"] = new SelectList(_context.Maintenances, "Id", "Remarks", sub_Accessories.MaintenanceId);
+            ViewData["MaintenanceId"] = _context.Sub_Accessories.Where(m => m.Id == id).FirstOrDefault().MaintenanceId;
             return View(sub_Accessories);
         }
 
@@ -145,7 +145,7 @@ namespace VMNS.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaintenanceId"] = new SelectList(_context.Maintenances, "Id", "Remarks", sub_Accessories.MaintenanceId);
+            ViewData["MaintenanceId"] = _context.Sub_Accessories.Where(m => m.Id == id).FirstOrDefault().MaintenanceId;
             return View(sub_Accessories);
         }
 
@@ -164,7 +164,7 @@ namespace VMNS.Controllers
             {
                 return NotFound();
             }
-
+            ViewData["MaintenanceId"] = _context.Sub_Accessories.Where(m => m.Id == id).FirstOrDefault().MaintenanceId;
             return View(sub_Accessories);
         }
 

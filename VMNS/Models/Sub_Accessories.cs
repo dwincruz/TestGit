@@ -93,6 +93,9 @@ namespace VMNS.Models
         [Display(Name = "Wiper Knob")]
         public string WiperKnob { get; set; }
 
+        [Display(Name = "Manuals")]
+        public string Manuals { get; set; }
+
 
         //look up
         public virtual Maintenance? Maintenance { get; set; }
