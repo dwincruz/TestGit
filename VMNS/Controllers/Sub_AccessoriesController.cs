@@ -79,7 +79,7 @@ namespace VMNS.Controllers
         public async Task<IActionResult> Create([Bind("Id,MaintenanceId,Antennae,AshTray,BackupRearLights,CigaretteLighter,DoorGlass," +
             "DoorHandles,Emblem,EngineHood,FloorMats,GasTankCap,HeadRest,HubCaps,IgnitionSwitch,MudGuards,NamePlate,NamePlateLight,ParkingLights," +
             "RadiatorCap,RearViewMirror,SideMirrors,SpareTire,StereoSpeakers,SunVisors,Tools,TrunkCompartment,Upholstery," +
-            "WindshieldGlass,WipeArm,WiperKnob")] Sub_Accessories sub_Accessories)
+            "WindshieldGlass,WipeArm,WiperKnob,Manuals")] Sub_Accessories sub_Accessories)
         {
             if (ModelState.IsValid)
             {
@@ -118,7 +118,7 @@ namespace VMNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MaintenanceId,Antennae,AshTray,BackupRearLights,CigaretteLighter,DoorGlass,DoorHandles,Emblem,EngineHood,FloorMats,GasTankCap,HeadRest,HubCaps,IgnitionSwitch,MudGuards,NamePlate,NamePlateLight,ParkingLights,RadiatorCap,RearViewMirror,SideMirrors,SpareTire,StereoSpeakers,SunVisors,Tools,TrunkCompartment,Upholstery,WindshieldGlass,WipeArm,WiperKnob")] Sub_Accessories sub_Accessories)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,MaintenanceId,Antennae,AshTray,BackupRearLights,CigaretteLighter,DoorGlass,DoorHandles,Emblem,EngineHood,FloorMats,GasTankCap,HeadRest,HubCaps,IgnitionSwitch,MudGuards,NamePlate,NamePlateLight,ParkingLights,RadiatorCap,RearViewMirror,SideMirrors,SpareTire,StereoSpeakers,SunVisors,Tools,TrunkCompartment,Upholstery,WindshieldGlass,WipeArm,WiperKnob,Manuals")] Sub_Accessories sub_Accessories)
         {
             if (id != sub_Accessories.Id)
             {
