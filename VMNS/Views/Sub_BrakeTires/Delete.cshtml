@@ -5,154 +5,156 @@
     Layout = "~/Views/Shared/_Body.cshtml";
     var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
 }
-<div class="row">
+<div class="row mt-3">
     <div class="col-md-6 col-sm-4 col-6 my-auto">
-        <h2>Brakes and Tires</h2>
+        <h2><i class="ri-car-fill text-lra-primary"></i> Brakes and Tires</h2>
     </div>
-    <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
+    <div class="col-md-6 col-sm-6 col-6  my-auto  position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Maintenances" asp-action="Details" asp-route-Id=@ViewData["MaintenanceId"] class="btn btn-sm text-capitalize border rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-            <button type="button" class="btn btn-sm text-capitalize border rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-delete-bin-7-line"></i> Delete</button>
-            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm bg-dark text-white text-capitalize border rounded "><i class="ri-edit-box-line"></i> Edit</a>
+            <a asp-area="" asp-controller="Maintenances" asp-action="Details" asp-route-Id=@ViewData["MaintenanceId"] class="btn btn-sm text-capitalize bg-white rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <button type="button" class="btn btn-sm text-capitalize bg-lra-danger rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-delete-bin-7-line"></i> Delete</button>
+            <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm  text-dark text-capitalize bg-lra-sub-info rounded "><i class="ri-edit-box-line"></i> Edit</a>
         </div>
     </div>
     <div class="col-12">
         <div asp-validation-summary="All" class="text-danger"></div>
     </div>
-    <div class="col-md-7 col-12">
-        <input type="text"
-               asp-for="MaintenanceId"
-               id=""
-               class="form-control"
-               required
-               readonly
-               hidden
-               pattern="\S+.*" />
-        <table class="table table-bordered table-borderless">
-            <thead>
-                <tr>
-                    <th colspan="4" class="category-name">
-                        Wheel Position
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="4">
-                        <div class="input-group" id="">
-                            <div id="" class="custom-input w-100 py-3">
-                                <input type="text"
-                                       id=""
-                                       class="form-control"
-                                       value="@Html.DisplayFor(model => model.lu_Wheel.WheelPosition)"
-                                       required
-                                       readonly
-                                       pattern="\S+.*" />
-                                <div class="input-text"><label>Wheel Position</label></div>
+    <div class="row bg-white box-lra-shadow rounded d-flex justify-content-center pt-4">
+        <div class="col-md-7 col-12">
+            <input type="text"
+                   asp-for="MaintenanceId"
+                   id=""
+                   class="form-control"
+                   required
+                   readonly
+                   hidden
+                   pattern="\S+.*" />
+            <table class="table table-bordered table-borderless">
+                <thead>
+                    <tr>
+                        <th colspan="4" class="category-name">
+                            Wheel Position
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100 py-3">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.lu_Wheel.WheelPosition)"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Wheel Position</label></div>
+                                </div>
                             </div>
-                        </div>
-                        <span asp-validation-for="lu_WheelId" class="text-danger"></span>
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="4" class="category-name">
-                        Tire Pressure PSI
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="2">
-                        <div class="input-group" id="">
-                            <div id="" class="custom-input w-100 py-3">
-                                <input type="number"
-                                       asp-for="TirePressureBefore"
-                                       id=""
-                                       class="form-control"
-                                       required
-                                       pattern="\S+.*" />
-                                <div class="input-text"><label asp-for="TirePressureBefore"></label></div>
+                            <span asp-validation-for="lu_WheelId" class="text-danger"></span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="category-name">
+                            Tire Pressure PSI
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100 py-3">
+                                    <input type="number"
+                                           asp-for="TirePressureBefore"
+                                           id=""
+                                           class="form-control"
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label asp-for="TirePressureBefore"></label></div>
+                                </div>
                             </div>
-                        </div>
-                    </th>
-                    <th colspan="2">
-                        <div class="input-group" id="">
-                            <div id="" class="custom-input w-100 py-3">
-                                <input type="number"
-                                       asp-for="TirePressureAfter"
-                                       id=""
-                                       class="form-control"
-                                       required
-                                       pattern="\S+.*" />
-                                <div class="input-text"><label asp-for="TirePressureAfter"></label></div>
+                        </th>
+                        <th colspan="2">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100 py-3">
+                                    <input type="number"
+                                           asp-for="TirePressureAfter"
+                                           id=""
+                                           class="form-control"
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label asp-for="TirePressureAfter"></label></div>
+                                </div>
                             </div>
-                        </div>
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="4" class="good">
-                        Good for Service
-                    </th>
-                </tr>
-                <tr>
-                    <th class="good"></th>
-                    <th colspan="3" class="warning">
-                        For Monitoring
-                    </th>
-                </tr>
-                <tr>
-                    <th class="good"></th>
-                    <th class="warning"></th>
-                    <th colspan="2" class="danger">
-                        Needs Repair
-                    </th>
-                </tr>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="good">
+                            Good for Service
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="good"></th>
+                        <th colspan="3" class="warning">
+                            For Monitoring
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="good"></th>
+                        <th class="warning"></th>
+                        <th colspan="2" class="danger">
+                            Needs Repair
+                        </th>
+                    </tr>
 
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="4" class="category-name">
-                        Brakes and Tires
-                    </td>
-                </tr>
-                <tr class="condition-row">
-                    @foreach (var currentValue in currentValues)
-                    {
-                        <td class="checkbox-container">
-                            <input type="radio" name="BreakLining" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.BreakLining == currentValue ? "checked" : "") />
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4" class="category-name">
+                            Brakes and Tires
                         </td>
-                    }
-                    <td>@Html.DisplayNameFor(model => model.BreakLining)</td>
-                </tr>
-                <tr class="condition-row">
-                    @foreach (var currentValue in currentValues)
-                    {
-                        <td class="checkbox-container">
-                            <input type="radio" name="TireTread" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.TireTread == currentValue ? "checked" : "") />
-                        </td>
-                    }
-                    <td>@Html.DisplayNameFor(model => model.TireTread)</td>
-                </tr>
-                <tr class="condition-row">
-                    @foreach (var currentValue in currentValues)
-                    {
-                        <td class="checkbox-container">
-                            <input type="radio" name="WearPattern" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WearPattern == currentValue ? "checked" : "") />
-                        </td>
-                    }
-                    <td>@Html.DisplayNameFor(model => model.WearPattern)</td>
-                </tr>
+                    </tr>
+                    <tr class="condition-row">
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td class="checkbox-container">
+                                <input type="radio" name="BreakLining" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.BreakLining == currentValue ? "checked" : "") />
+                            </td>
+                        }
+                        <td>@Html.DisplayNameFor(model => model.BreakLining)</td>
+                    </tr>
+                    <tr class="condition-row">
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td class="checkbox-container">
+                                <input type="radio" name="TireTread" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.TireTread == currentValue ? "checked" : "") />
+                            </td>
+                        }
+                        <td>@Html.DisplayNameFor(model => model.TireTread)</td>
+                    </tr>
+                    <tr class="condition-row">
+                        @foreach (var currentValue in currentValues)
+                        {
+                            <td class="checkbox-container">
+                                <input type="radio" name="WearPattern" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.WearPattern == currentValue ? "checked" : "") />
+                            </td>
+                        }
+                        <td>@Html.DisplayNameFor(model => model.WearPattern)</td>
+                    </tr>
 
 
-                <tr>
-                    <td colspan="4" class="category-name">
-                        Remarks
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <textarea class="form-control" placeholder="Leave a comment here" asp-for="Remarks">
-                                    </textarea>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    <tr>
+                        <td colspan="4" class="category-name">
+                            Remarks
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <textarea class="form-control" placeholder="Leave a comment here" asp-for="Remarks">
+                                        </textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
