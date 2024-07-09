@@ -152,7 +152,7 @@ namespace VMNS.Controllers
 
             
             
-            ViewData["Sub_Accessories"] = _context.Extras.Where(x => x.VehicleId == maintenance.VehicleId);
+            ViewData["Sub_Accessories"] = _context.Sub_Accessories.Where(x => x.MaintenanceId == id);
             ViewData["Sub_BrakeTires"] = _context.Sub_BrakeTires.Where(x => x.MaintenanceId == id).Include(x => x.lu_Wheel);
             ViewData["Sub_InteriorExterior"] = _context.Sub_InteriorExteriors.Where(x => x.MaintenanceId == id);
             ViewData["Sub_UnderHood"] = _context.Sub_UnderHoods.Where(x => x.MaintenanceId == id);

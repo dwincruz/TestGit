@@ -9,7 +9,7 @@
     var DataC = (IEnumerable<Sub_InteriorExterior>)ViewData["Sub_InteriorExterior"];
     var DataD = (IEnumerable<Sub_UnderHood>)ViewData["Sub_UnderHood"];
     var DataE = (IEnumerable<Sub_UnderVehicle>)ViewData["Sub_UnderVehicle"];
-    var DataF = (IEnumerable<Extra>)ViewData["Extras"];
+    var DataF = (IEnumerable<Sub_Accessories>)ViewData["Sub_Accessories"];
     int countDataA = DataA.Count();
     // int countDataB = DataB.Count();
     int countDataC = DataC.Count();
@@ -18,7 +18,7 @@
     int countDataF = DataF.Count();
 
     var currentValues = new[] { "Good for Service", "For Monitoring", "Needs Repair" };
-    var currentExtras = new[] { "Yes", "No" };
+    var currentAccessories = new[] { "Existing", "Missing" };
 
 
 
@@ -555,7 +555,7 @@
                 @if (countDataE > 0)
                 {
                     <tr style="page-break-before: always">
-                        <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Under Vehicle</strong></td>
+                        <td colspan="7" align="center" class="header-table-data" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Under Vehicle</strong></td>
                     </tr>
                 }
                 
@@ -813,27 +813,259 @@
                 {
                     <tr>
                         <td></td>
-                        <td style="border: 1px solid rgba(0,0,0,0.2)">Available</td>
-                        <td style="border: 1px solid rgba(0,0,0,0.2)">Not Available</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)">Existing</td>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)">Missing</td>
                         <td colspan="4"></td>
                     </tr>
                     <tr>
-                        <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Extras</strong></td>
+                        <td colspan="7" align="center" class="header-table-data" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Extras</strong></td>
                     </tr>                    
                 }
                 @foreach (var item in DataF){
                     <tr>
                         <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
-                        @foreach (var currentValue in currentExtras)
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Antennae== currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Antennae</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.AshTray == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">AshTray</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.BackupRearLights == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Backup Rear Lights</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.CigaretteLighter == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Cigarette Lighter</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.DoorGlass == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Door Glass</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.DoorHandles == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Door Handles Front & Rear</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Emblem == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Emblem</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.EngineHood == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Engine Hood</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.FloorMats == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Floor Mats</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.GasTankCap == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Gas Tank Cap</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.HeadRest == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Head Rest</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.HubCaps == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Hub Caps</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.IgnitionSwitch == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Ignition Switch</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.MudGuards == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Mud Guards</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.NamePlate == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Name Plate</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.NamePlateLight == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Name Plate Light</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.ParkingLights == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Parking Lights</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.RadiatorCap == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Radiator Cap</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.RearViewMirror == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Rear View Mirror</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.SideMirrors == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Side Mirrors</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.SpareTire == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Spare Tire & Rim</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.StereoSpeakers == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Stereo Speakers</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.SunVisors == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Sun Visors</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
                         {
                             <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Tools == currentValue ? "checked" : "") /></td>
                         }
                         <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Tools</td>
                     </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.TrunkCompartment == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Trunk Compartment</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Upholstery == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Upholstery</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.WindshieldGlass == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Windshield Glass Front & Rear</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.WipeArm == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Wipe Arm & Blade</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.WiperKnob== currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Wiper Knob</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid rgba(0,0,0,0.2)"></td>
+                        @foreach (var currentValue in currentAccessories)
+                        {
+                            <td style="border: 1px solid rgba(0,0,0,0.2)"><input type="checkbox" class="checkbox-item" value="@currentValue" onclick="return false" @(item.Manuals == currentValue ? "checked" : "") /></td>
+                        }
+                        <td colspan="4" style="border: 1px solid rgba(0,0,0,0.2)">Manuals</td>
+                    </tr>
                 }
                 
                 <tr>
-                    <td colspan="7" align="center" class="header-table-data" colspan="5" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Additonal Information</strong></td>
+                    <td colspan="7" align="center" class="header-table-data" style="border: 1px solid rgba(0,0,0,0.2); background-color: black; color: white;"><strong>Additonal Information</strong></td>
                 </tr>
                 <tr>
                     <td colspan="7" style="height: 100px; paddin: 10px">
