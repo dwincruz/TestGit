@@ -84,35 +84,38 @@
     </div>
     <div class="col-12 bg-white p-2">
         <div class="row ">
-            <div class="col-12 header-text p-3 mb-4">
+            <div class="col-12 header-text p-3">
                 <h5>Vehicle Parts Condition</h5>
                 <div class="mb-4">
                     <span><i class="ri-circle-fill text-lra-primary px-2"></i><label>Good for service</label></span>
                     <span><i class="ri-circle-fill text-lra-warning px-2"></i><label>For Monitoring</label></span>
                     <span><i class="ri-circle-fill text-lra-danger px-2"></i><label>For Repair</label></span>
                 </div>
-                <div>
-                    <a asp-controller="Sub_UnderVehicle" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Vehicle</a>
+                @if (!User.IsInRole("Administrator"))
+                {
+                    <div>
+                        <a asp-controller="Sub_UnderVehicle" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Vehicle</a>
 
-                    <a asp-controller="Sub_UnderHood" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Hood</a>
+                        <a asp-controller="Sub_UnderHood" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Under Hood</a>
 
-                    <a asp-controller="Sub_BrakeTires" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Brake and Tires</a>
+                        <a asp-controller="Sub_BrakeTires" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Brake and Tires</a>
 
-                    <a asp-controller="Sub_InteriorExterior" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Interior / Exterior</a>
+                        <a asp-controller="Sub_InteriorExterior" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Interior / Exterior</a>
 
-                    <a asp-controller="Sub_BatteryPerformance" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Battery Performance</a>
+                        <a asp-controller="Sub_BatteryPerformance" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Battery Performance</a>
 
-                    <a asp-controller="Monitorings" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Watch List</a>
+                        <a asp-controller="Monitorings" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Watch List</a>
 
-                    <a asp-controller="Sub_Accessories" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
-                       type="button" class="btn btn-light"><i class="ri-add-line"></i> Accessories</a>
-                </div>
+                        <a asp-controller="Sub_Accessories" asp-action="Create" asp-route-MaintenanceId=@ViewData["MaintenanceId"]
+                        type="button" class="btn btn-light"><i class="ri-add-line"></i> Accessories</a>
+                    </div>
+                }
             </div>
 
         </div>
@@ -124,15 +127,19 @@
                         <li class="list-group-item">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i> @item.lu_Wheel.WheelPosition</div>
+
                                 <div>
-                                    <a asp-controller="Sub_BrakeTires" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                    <a asp-controller="Sub_BrakeTires" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="ri-delete-bin-7-line"></i>
-                                    </a>
+                                    @if (!User.IsInRole("Administrator"))
+                                    {
+                                        <a asp-controller="Sub_BrakeTires" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-controller="Sub_BrakeTires" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="ri-delete-bin-7-line"></i>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </li>
@@ -184,14 +191,17 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold"><i class="ri-steering-2-line text-lra-primary"></i> Under Hood</div>
                                 <div>
-                                    <a asp-controller="Sub_UnderHood" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                    <a asp-controller="Sub_UnderHood" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="ri-delete-bin-7-line"></i>
-                                    </a>
+                                    @if (!User.IsInRole("Administrator"))
+                                    {
+                                        <a asp-controller="Sub_UnderHood" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-controller="Sub_UnderHood" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="ri-delete-bin-7-line"></i>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </li>
@@ -294,14 +304,17 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i> Under Vehicle</div>
                                 <div>
-                                    <a asp-controller="Sub_UnderVehicle" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                    <a asp-controller="Sub_UnderVehicle" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="ri-delete-bin-7-line"></i>
-                                    </a>
+                                    @if (!User.IsInRole("Administrator"))
+                                    {
+                                        <a asp-controller="Sub_UnderVehicle" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-controller="Sub_UnderVehicle" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="ri-delete-bin-7-line"></i>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </li>
@@ -427,14 +440,17 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold"><i class="ri-car-fill text-lra-primary"></i>  Interior / Exterior</div>
                                 <div>
-                                    <a asp-controller="Sub_InteriorExterior" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                    <a asp-controller="Sub_InteriorExterior" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="ri-delete-bin-7-line"></i>
-                                    </a>
+                                    @if (!User.IsInRole("Administrator"))
+                                    {
+                                        <a asp-controller="Sub_InteriorExterior" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-controller="Sub_InteriorExterior" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="ri-delete-bin-7-line"></i>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </li>
@@ -558,14 +574,17 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold"><i class="ri-battery-2-charge-fill text-lra-primary"></i> Accessories</div>
                                 <div>
-                                    <a asp-controller="Sub_Accessories" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                    <a asp-controller="Sub_Accessories" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="ri-delete-bin-7-line"></i>
-                                    </a>
+                                    @if (!User.IsInRole("Administrator"))
+                                    {
+                                        <a asp-controller="Sub_Accessories" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-controller="Sub_Accessories" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="ri-delete-bin-7-line"></i>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </li>
@@ -756,14 +775,17 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold"><i class="ri-battery-2-charge-fill text-lra-primary"></i> Battery Performance</div>
                                 <div>
-                                    <a asp-controller="Sub_BatteryPerformance" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                    <a asp-controller="Sub_BatteryPerformance" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="ri-delete-bin-7-line"></i>
-                                    </a>
+                                    @if (!User.IsInRole("Administrator"))
+                                    {
+                                        <a asp-controller="Sub_BatteryPerformance" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-controller="Sub_BatteryPerformance" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="ri-delete-bin-7-line"></i>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </li>
@@ -793,9 +815,9 @@
                     </ul>
                 </div>
             }
-        </div>
+     @*    </div>
         
-        <div class="row">
+        <div class="row"> *@
             @foreach (var item in Monitoring)
             {
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
@@ -804,24 +826,27 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="fw-bold">@item.Replacement.Parts</div>
                                 <div>
-                                    <a asp-controller="Monitorings" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Edit">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                    <a asp-controller="Monitorings" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
-                                       data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="ri-delete-bin-7-line"></i>
-                                    </a>
+                                    @if (!User.IsInRole("Administrator"))
+                                    {
+                                        <a asp-controller="Monitorings" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a asp-controller="Monitorings" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-default btn-sm"
+                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="ri-delete-bin-7-line"></i>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
                             <label>Acquired Date</label>
-                            <span class="badge text-status-color rounded-pill date-aqcuired">@item.DateAcquired</span>
+                            <span class="badge text-status-color rounded-pill date-aqcuired">@item.DateAcquired.ToShortDateString()</span>
                         </li>
                         <li class="list-group-item d-flex align-items-center justify-content-between">
                             <label>Replaced Date </label>
-                            <span class="badge text-status-color rounded-pill date-replacement">@item.EndDate</span>
+                            <span class="badge text-status-color rounded-pill date-replacement">@item.EndDate.Value.ToShortDateString()</span>
                         </li>
                     </ul>
                 </div>
