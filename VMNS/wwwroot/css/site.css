@@ -888,6 +888,10 @@ body {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.box-lra-shadow2 {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 2.6px 2.6px;
+}
+
 .border-lra {
     border: var(--bs-border-width) var(--bs-border-style) #1e325c !important;
 }
@@ -921,15 +925,16 @@ body {
  
 }
 .good {
-    background-color: #B3E2A7 !important;
+    background-color: #1e325c !important;
+    color: #fff;
 }
 
 .warning {
-    background-color: #F6F193 !important;
+    background-color: #FFB41B !important;
 }
 
 .danger {
-    background-color: #EE4E4E !important;
+    background-color: #92140C !important;
 }
 
 .category-name {
@@ -938,20 +943,21 @@ body {
     color: white !important
 }
 .condition-row td:nth-child(1) {
-    background-color: #B3E2A7 !important;
+    background-color: #1e325c !important;
+    color: #fff !important;
 }
 .condition-row td:nth-child(2) {
-    background-color: #F6F193 !important;
+    background-color: #FFB41B !important;
 }
-.condition-row td:nth-child(3){
-    background-color: #EE4E4E !important;
+.condition-row td:nth-child(3) {
+    background-color: #92140C !important;
 }
 .availability-row td:nth-child(1) {
-    background-color: #B3E2A7 !important;
+    background-color: #1e325c !important;
 }
 
 .availability-row td:nth-child(2) {
-    background-color: #F6F193 !important;
+    background-color: #FFB41B !important;
 }
 
 .condition-row input, .availability-row input {

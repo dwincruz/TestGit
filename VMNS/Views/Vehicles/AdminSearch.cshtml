@@ -14,7 +14,7 @@
                     <div class="col-12 my-auto">
                         <h2><i class="ri-dashboard-horizontal-fill text-lra-primary"></i> MAIN DASHBOARD</h2>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mb-4">
                         <div class="rounded p-3 bg-lra-warning box-lra-shadow">
                             <div class="d-flex">
                                 <div class="me-auto">
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </div> *@
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mb-4">
                         <div class="rounded p-3 bg-white box-lra-shadow">
                             <div class="d-flex">
                                 <div class="me-auto">
@@ -47,7 +47,7 @@
                             </div>     
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mb-4">
                         <div class="rounded p-3 bg-lra-danger box-lra-shadow">
                             <div class="d-flex">
                                 <div class="me-auto">
@@ -72,14 +72,14 @@
                     </div> *@
                     <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
-                            <p class="fw-bold">Vehicle Accidents Occur</p>
+                            <p class="fw-bold"><i class="ri-alert-fill text-lra-danger"></i> Vehicle Accidents Occur</p>
                             <canvas class="col-12 rounded p-3" id="accidentsChart" height="100"></canvas>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
                             <div class="d-flex ">
-                                <div class="me-auto"><p class="fw-bold">LTO Renewal in Days</p></div>
+                                <div class="me-auto"><p class="fw-bold"><i class="ri-survey-line  text-lra-primary" style=""></i> LTO Renewal in Days</p></div>
                                 <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#listModal" alt="VIEW ALL"><i class="ri-list-settings-fill"></i></button></div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -92,7 +92,7 @@
                     <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
                             <div class="d-flex ">
-                                <div class="me-auto"><p class="fw-bold">Insurance Renewal in Days</p></div>
+                                <div class="me-auto"><p class="fw-bold"><i class="ri-survey-line  text-lra-primary" style=""></i> Insurance Renewal in Days</p></div>
                                 <div class=""><button id="showMore" class="btn btn-sm bg-lra-warning" data-bs-toggle="modal" data-bs-target="#insuranceListModal" alt="VIEW ALL"><i class="ri-list-settings-fill"></i></button></div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -124,7 +124,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="listModalLabel">All Vehicle LTO Renewal in Days</h1>
+                <h1 class="modal-title fs-5" id="listModalLabel"><i class="ri-survey-line  text-lra-primary" style=""></i> All Vehicle LTO Renewal in Days</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -145,7 +145,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="listModalLabel">All Vehicle Insurance Renewal in Days</h1>
+                <h1 class="modal-title fs-5" id="listModalLabel"><i class="ri-survey-line  text-lra-primary" style=""></i> All Vehicle Insurance Renewal in Days</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -386,27 +386,31 @@
             let total = Number(entry.Good) + Number(entry.ForMonitoring) + Number(entry.NeedsRepair) + Number(entry.EmptyValue);
             console.log(total)
             let value = (entry.Good / total) * 100;
-            return value.toFixed(2)
+            return value == 0 ? null : value.toFixed(2)
         });
         const totalForMonitoringData = await setDatValues.map(entry => {
             let total = Number(entry.Good) + Number(entry.ForMonitoring) + Number(entry.NeedsRepair) + Number(entry.EmptyValue);
             let value = (Number(entry.ForMonitoring) / total) * 100;
-            return value.toFixed(2)
+            return value == 0 ? null : value.toFixed(2)
+
         });
         const totalNeedsRepairData = await setDatValues.map(entry => {
             let total = Number(entry.Good) + Number(entry.ForMonitoring) + Number(entry.NeedsRepair) + Number(entry.EmptyValue);
             let value = (Number(entry.NeedsRepair) / total) * 100;
-            return value.toFixed(2)
+            return value == 0 ? null : value.toFixed(2)
+
         });
         const totalEmptyData = await setDatValues.map(entry => {
             let total = Number(entry.Good) + Number(entry.ForMonitoring) + Number(entry.NeedsRepair) + Number(entry.EmptyValue);
             let value = (Number(entry.EmptyValue) / total) * 100;
-            return value.toFixed(2)
+            return value == 0 ? null : value.toFixed(2)
+
         });
         
 
         const data = {
-            labels: labels,
+            labels: labels, 
+            skipNull: true,
             datasets: [
                 {
                     label: 'Good',
@@ -414,6 +418,8 @@
                     backgroundColor: 'rgb(30, 50, 92)',
                     borderColor: 'rgba(191, 205, 224, 1)',
                     borderWidth: 1
+                    
+                   
                 },
                 {
                     label: 'for Monitoring',
@@ -421,6 +427,10 @@
                     backgroundColor: 'rgb(255, 179, 25)',
                     borderColor: 'rgba(255, 255, 51, 1)',
                     borderWidth: 1
+                    
+
+                   
+                    
                 },
                 {
                     label: 'Needs Repair/ Replacements',
@@ -428,6 +438,8 @@
                     backgroundColor: 'rgb(146, 20, 12)',
                     borderColor: 'rgba(205, 92, 92, 1)',
                     borderWidth: 1
+
+                    
                 },
                 {
                     label: 'Not Inpected',
@@ -435,6 +447,8 @@
                     backgroundColor: 'rgb(128, 128, 128)',
                     borderColor: 'rgba(0,0,0,0)',
                     borderWidth: 1
+
+                    
                 }
 
             ]
@@ -447,6 +461,9 @@
             type: 'bar',
             data: data,
             options: {
+                //barPercentage: 0.5,
+                barThickness: 20,
+                maintainAspectRatio: true,
                 responsive: true,
                 layout: {
                     padding: 10
@@ -464,6 +481,7 @@
                             }
                         }
                     }
+                    
                 },
                 scales: {
                     x: {
@@ -482,7 +500,12 @@
                             beginAtZero: true
                         }
                     }
-                }
+                     
+                },
+                skipNull: true
+
+                
+
             }
         };
 

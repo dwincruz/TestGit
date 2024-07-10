@@ -186,7 +186,7 @@ namespace VMNS.Controllers
 
                     
                     var folderId = accident.Id.ToString().ToUpper();
-                    if (file != null)
+                    if (file.Length > 0)
                     {
                         foreach (IFormFile docu in file)
                         {
@@ -224,9 +224,11 @@ namespace VMNS.Controllers
                         throw;
                     }
                 }
+                Notify("Record updated.", notificationType: NotificationType.success);
                 return RedirectToAction(nameof(Index));
             }
             ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "AssignedOfficer", accident.VehicleId);
+           
             return View(accident);
         }
 

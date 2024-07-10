@@ -173,7 +173,7 @@ namespace VMNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Id,Brand,Model,lu_VehicleTypeId,lu_TransmissionId,Color," +
             "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,AssignedDriver,IssuedDate,AquisitionDate," +
-            "Description,CreatorId,DateCreated,lu_WheelDriveId,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost")] Vehicle vehicle, IFormFile[] file) //,PassengerSeat,Wheels
+            "Description,CreatorId,DateCreated,lu_WheelDriveId,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost,ImagePath")] Vehicle vehicle, IFormFile[] file) //,PassengerSeat,Wheels
         {
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -191,7 +191,7 @@ namespace VMNS.Controllers
                     vehicle.DateModified = DateTime.Now;
                     var folderId = vehicle.Id.ToString().ToUpper();
 
-                    if (file != null)
+                    if (file.Length > 0)
                     {
                         foreach (IFormFile docu in file)
                         {

@@ -308,6 +308,11 @@
                 </div>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+           
+
+        </div>
+    </div>
+        <div class="col-lg-5 col-sm-5 col-12">
             <div class="col-lg-6 col-12 mb-4">
                 <div class="input-group" id="">
                     <div id="" class="custom-input w-100">
@@ -321,9 +326,15 @@
                     </div>
                 </div>
             </div>
+            <fieldset class="border-lra rounded mb-3 p-2">
+                <legend class="legend-lra">Preview Image</legend>
+                <figure class="figure border p-3 rounded box-lra-shadow w-100">
+                    <img src="/images/upload_img.jpg" id="preview" class="figure-img img-fluid rounded w-100" alt="...">
 
+                </figure>
+            </fieldset>
+           
         </div>
-    </div>
     </div>
 </form>
 @*  accept="image/*,.png" *@
@@ -348,6 +359,14 @@
             currentDate(aquisitionDate)
 
 
+        }
+
+        file.onchange = evt => {
+            const [pdf] = file.files
+            if (pdf) {
+                preview.src = URL.createObjectURL(pdf)
+                console.log(file);
+            }
         }
     </script>
 }

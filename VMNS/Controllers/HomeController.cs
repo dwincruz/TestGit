@@ -96,6 +96,25 @@ namespace VMNS.Controllers
                 }
             }
             db.Con.Close();
+
+            db.Query("exec [dbo].[sp_VehicleStatus]");
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                {
+                    var rowData = new Dictionary<string, object>();
+
+                    for (int i = 0; i < db.Reader.FieldCount; i++)
+                    {
+                        string fieldName = db.Reader.GetName(i);
+                        object value = db.Reader.GetValue(i);
+                        rowData[fieldName] = value;
+                    }
+                    resultListC.Add(rowData);
+                }
+            }
+            db.Con.Close();
+
             db.Query("exec [dbo].[sp_TopDueDate]");
             if (db.Reader.HasRows)
             {
@@ -155,7 +174,8 @@ namespace VMNS.Controllers
             ViewData["ChangeOilList"] = Json(changeOilList);
             ViewData["AccidentsData"] = Json(resultListA);
             ViewData["MaintenancesData"] = Json(resultListB);
-            
+            ViewData["VehiclesData"] = Json(resultListC);
+
 
 
             return View();

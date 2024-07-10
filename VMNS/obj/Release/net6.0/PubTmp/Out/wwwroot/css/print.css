@@ -1,0 +1,16 @@
+﻿@media print {
+    /* Styles for printing */
+    * {
+        font-family: Arial !important;
+        font-size: 14px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .header-table-data {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: black !important;
+        color: white !important;
+    }
+}

@@ -53,7 +53,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
                     <div class="rounded p-3 bg-white box-lra-shadow">
                         <div class="d-flex justify-content-between align-items-center">
-                            <strong>Date</strong>
+                            <strong>Last Maintenance</strong>
                             <span><i class="ri-calendar-check-line dashboard-icon"></i></span>
                         </div>
                         <div>
@@ -66,7 +66,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
                     <div class="rounded p-3 bg-lra-sub-info box-lra-shadow">
                         <div class="d-flex justify-content-between">
-                            <strong>Mileage</strong>
+                            <strong>Current Mileage</strong>
                             <span><i class="ri-speed-up-line dashboard-icon"></i></span>
                         </div>
                         <div>
@@ -78,7 +78,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12  mb-4">
                     <div class="rounded p-3 bg-lra-warning box-lra-shadow" style="height:100%">
                         <div class="d-flex justify-content-between align-items-center">
-                            <strong>Accountable personnel</strong>
+                            <strong>Assigned Officer</strong>
                             <span><i class="ri-account-box-line"></i></span>
                         </div>
                         <div>
@@ -232,7 +232,20 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-lg-6 col-12 mb-4">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@Html.DisplayFor(model => model.Cost)"
+                                           readonly
+                                           required
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Cost)</label></div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="col-lg-6 col-12 mb-4">
                             <div class="input-group" id="">
@@ -367,20 +380,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-12 mb-4">
-                            <div class="input-group" id="">
-                                <div id="" class="custom-input w-100">
-                                    <input type="text"
-                                           id=""
-                                           class="form-control"
-                                           value="@Html.DisplayFor(model => model.Cost)"
-                                           readonly
-                                           required
-                                           pattern="\S+.*" />
-                                    <div class="input-text"><label>@Html.DisplayNameFor(model => model.Cost)</label></div>
-                                </div>
-                            </div>
-                        </div>
+                       
 
                         <div class="col-lg-12 col-12 mb-4">
                             <div class="input-group" id="">
@@ -420,7 +420,7 @@
                             <div class="header-text mb-3">
                                 <h5><i class="ri-menu-search-fill text-lra-primary"></i> Parts for Monitoring</h5>
                             </div>
-                            <div style="height:210px;overflow-x:auto">
+                            <div style="height:390px;overflow-x:auto">
                                 <ul>
                                     @* @foreach (var item in ViewData["ForMonitoring"] as List<string>)
                                     {
@@ -446,7 +446,7 @@
                             <div class="header-text mb-3">
                                 <h5><i class="ri-spam-2-fill text-lra-danger"></i> Parts for Repair</h5>
                             </div>
-                            <div style="height:210px;overflow-x:auto">
+                            <div style="height:390px;overflow-x:auto">
                                 <ul>
                                     @if (ViewData["NeedsRepair"] != null && (ViewData["NeedsRepair"] as List<string>).Count > 0)
                                     {

@@ -336,8 +336,11 @@
                         </div>
                     </div>
                     <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
-                <div class="col-lg-6 col-12 ">
+                </div>         
+            </div>
+        </div>
+            <div class="col-lg-5 col-sm-5 col-12">
+                <div class="col-lg-6 col-12 mb-4">
                     <div class="input-group" id="">
                         <div id="" class="custom-input w-100">
                             <input type="file"
@@ -345,13 +348,19 @@
                                    name="file"
                                    class="form-control"
                                    accept="image/*"
-                                   multiple />
+                                    />
                             <div class="input-text"><label>Upload Image</label></div>
                         </div>
                     </div>
                 </div>
+                <fieldset class="border-lra rounded mb-3 p-2">
+                    <legend class="legend-lra">Preview Image</legend>
+                    <figure class="figure border p-3 rounded box-lra-shadow w-100">
+                        <img src="~/@Html.DisplayFor(model => model.ImagePath)" id="preview" class="figure-img img-fluid rounded w-100" alt="...">
+                        <input type="hidden" asp-for="ImagePath" />
+                    </figure>
+                </fieldset>
             </div>
-        </div>
         </div>
     </div>
 </form>
@@ -359,4 +368,12 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-
+<script>
+    file.onchange = evt => {
+        const [pdf] = file.files
+        if (pdf) {
+            preview.src = URL.createObjectURL(pdf)
+            console.log(file);
+        }
+    }
+</script>
