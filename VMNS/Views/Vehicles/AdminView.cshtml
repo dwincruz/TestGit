@@ -806,9 +806,9 @@
     progressBar()
 
     const dateFormatter = async (val) => {
-        const formatDate = new Date(val);
-        const formattedDate = new Intl.DateTimeFormat('en-US').format(formatDate);
-        return formattedDate;
+        const formatDate = new Date(val).toLocaleDateString()
+        console.log('formatDate', formatDate)
+        return formatDate;
     }
 
     const dateInputs = document.querySelectorAll('.date-fields')

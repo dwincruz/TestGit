@@ -39,7 +39,7 @@
                     <tr>
                         <th colspan="4">
                             <div class="input-group" id="">
-                                <div id="" class="custom-input w-100 py-3">
+                                <div id="" class="custom-input w-100 pt-3">
                                     <input type="text"
                                            id=""
                                            class="form-control"
@@ -51,6 +51,35 @@
                                 </div>
                             </div>
                             <span asp-validation-for="lu_WheelId" class="text-danger"></span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100 pb-3">
+                                    <input type="date"
+                                           asp-for="AcquisitionDate"
+                                           id="dateAcquired"
+                                           class="form-control"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label asp-for="AcquisitionDate"></label></div>
+                                </div>
+                            </div>
+                        </th>
+                        <th colspan="2">
+                            <div class="input-group" id="">
+                                <div id="" class="custom-input w-100 pb-3">
+                                    <input type="number"
+                                           asp-for="LifeSpan"
+                                           class="form-control"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label asp-for="LifeSpan"></label></div>
+                                </div>
+                            </div>
                         </th>
                     </tr>
                     <tr>
@@ -67,6 +96,7 @@
                                            id=""
                                            class="form-control"
                                            required
+                                           readonly
                                            pattern="\S+.*" />
                                     <div class="input-text"><label asp-for="TirePressureBefore"></label></div>
                                 </div>
@@ -80,6 +110,7 @@
                                            id=""
                                            class="form-control"
                                            required
+                                           readonly
                                            pattern="\S+.*" />
                                     <div class="input-text"><label asp-for="TirePressureAfter"></label></div>
                                 </div>
@@ -148,8 +179,8 @@
                     </tr>
                     <tr>
                         <td colspan="4">
-                            <textarea class="form-control" placeholder="Leave a comment here" asp-for="Remarks">
-                                        </textarea>
+                            <textarea class="form-control" placeholder="Leave a comment here" readonly asp-for="Remarks">
+                            </textarea>
                         </td>
                     </tr>
                 </tbody>
@@ -210,5 +241,8 @@
                 btnTrigger.setAttribute('disabled', '')
             }
         })
+
+        const dateAcquired = document.querySelector('#dateAcquired')
+        dateAcquired.max = new Date().toISOString().split("T")[0]
     </script>
 }
