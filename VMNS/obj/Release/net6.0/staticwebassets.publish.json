@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zePByLG/0Ix2lZf5ktY3VYxgAP572ibr+D01DRhDzv4=",
+  "Hash": "WWnFO54bQLXbvsI3iRNvO59YiscVwQtdSICb7F1V6WE=",
   "Source": "VMNS",
   "BasePath": "_content/VMNS",
   "Mode": "Default",
@@ -2449,6 +2449,25 @@
       "OriginalItemSpec": "wwwroot\\images\\lra-logo1.png"
     },
     {
+      "Identity": "E:\\ASP APPLICATIONS\\TestGit\\VMNS\\wwwroot\\images\\upload_img.jpg",
+      "SourceId": "VMNS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP APPLICATIONS\\TestGit\\VMNS\\wwwroot\\",
+      "BasePath": "_content/VMNS",
+      "RelativePath": "images/upload_img.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\upload_img.jpg"
+    },
+    {
       "Identity": "E:\\ASP APPLICATIONS\\TestGit\\VMNS\\wwwroot\\images\\upload_pdf.jpg",
       "SourceId": "VMNS",
       "SourceType": "Discovered",
@@ -2599,6 +2618,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\vmms-logo.png"
+    },
+    {
+      "Identity": "E:\\ASP APPLICATIONS\\TestGit\\VMNS\\wwwroot\\js\\chart.js",
+      "SourceId": "VMNS",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP APPLICATIONS\\TestGit\\VMNS\\wwwroot\\",
+      "BasePath": "_content/VMNS",
+      "RelativePath": "js/chart.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chart.js"
     },
     {
       "Identity": "E:\\ASP APPLICATIONS\\TestGit\\VMNS\\wwwroot\\js\\site.js",
