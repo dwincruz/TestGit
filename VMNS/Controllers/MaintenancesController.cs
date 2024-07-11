@@ -32,6 +32,8 @@ namespace VMNS.Controllers
             {
                 ViewData["VehicleId"] = new SelectList(_context.Vehicles.OrderBy(x => x.PlateNo), "Id", "PlateNo");
                 var applicationDbContext = _context.Maintenances.Include(m => m.Vehicle).GroupBy(m => m.Vehicle.PlateNo).Select(group => group.OrderByDescending(m => m.DateCreated).First());
+
+
                 ViewData["Vehicles"] = _context.Vehicles;
                 return View(await applicationDbContext.ToListAsync());
             }
