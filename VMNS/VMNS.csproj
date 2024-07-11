@@ -22,4 +22,14 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\css\Font-Awesome-6.x\Font-Awesome-6.x\.github\ISSUE_TEMPLATE\000_icon_request.yml" />
+    <None Include="wwwroot\css\Font-Awesome-6.x\Font-Awesome-6.x\.github\ISSUE_TEMPLATE\001_brand_request.yml" />
+    <None Include="wwwroot\css\Font-Awesome-6.x\Font-Awesome-6.x\.github\ISSUE_TEMPLATE\100_web_bug_report.yml" />
+    <None Include="wwwroot\css\Font-Awesome-6.x\Font-Awesome-6.x\.github\ISSUE_TEMPLATE\101_other_bug_report.yml" />
+    <None Include="wwwroot\css\Font-Awesome-6.x\Font-Awesome-6.x\.github\ISSUE_TEMPLATE\200_feature_request.yml" />
+    <None Include="wwwroot\css\Font-Awesome-6.x\Font-Awesome-6.x\.github\ISSUE_TEMPLATE\config.yml" />
+    <None Include="wwwroot\css\Font-Awesome-6.x\Font-Awesome-6.x\.github\PULL_REQUEST_TEMPLATE.md" />
+  </ItemGroup>
+
 </Project>
