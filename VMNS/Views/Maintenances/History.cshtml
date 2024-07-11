@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-controller="Vehicles" asp-action="AdminView" asp-route-selectedValue=@ViewData["VehicleId"] class="btn btn-sm text-capitalize bg-white fw-bold rounded box-lra-shadow"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            <a  id="previousBtn" class="btn btn-sm text-capitalize bg-white fw-bold rounded box-lra-shadow"><i class="ri-arrow-go-back-line"></i> Go Back</a>
         </div>
     </div>
 </div>
@@ -113,6 +113,19 @@
                 hideIcons.map(e => e.classList.add('visually-hidden'))
             }
         }
+        const redirectPreviousPage = () => {
+            const icons = document.querySelectorAll('#previousBtn')
+            previousBtn.addEventListener('click', e => {
+                if (window.location.search !== '') {
+                window.location = window.location.origin + `/Vehicles/AdminView/${window.location.search.slice(15,)}`
+                }
+                else {
+                window.location = window.location.origin + '/Vehicles/AdminSearch/'
+                }
+            })
+            
+        }
         checkPathName()
+        redirectPreviousPage()
     
 </script>
