@@ -36,7 +36,7 @@
                             </div>
                         </div>
                     </div> *@
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mb-4">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12  mb-4" >
                         <div class="rounded p-3 bg-white box-lra-shadow">
                             <div class="d-flex">
                                 <div class="me-auto">
@@ -58,9 +58,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mb-3 bg-white box-lra-shadow">
+                    <div class="col-9 mb-3 bg-white box-lra-shadow">
                         <div class="rounded p-3">
-                            <p class="fw-bold">Vehicle Maintenance Status</p>
+                            <p class="fw-bold">Vehicle Inspection Status</p>
                             <canvas class="col-12" id="vehicleChart" height="200"></canvas>
                         </div>
                     </div>
@@ -70,10 +70,16 @@
                             <canvas class="col-12 rounded p-3" id="maintenancesChart" height="100"></canvas>
                         </div>
                     </div> *@
+                    <div class="col-md-3 col-sm-12 col-12" >
+                        <div class="rounded p-3 bg-white box-lra-shadow" style="height: 272px;">
+                            <p class="fw-bold"><i class="ri-alert-fill text-lra-danger"></i> Vehicle Accidents</p>
+                            <canvas class="col-12 rounded p-3" id="accidentsChart" height="200"></canvas>
+                        </div>
+                    </div>
                     <div class="col-md-3 col-sm-12 col-12">
                         <div class="rounded p-3 bg-white box-lra-shadow">
-                            <p class="fw-bold"><i class="ri-alert-fill text-lra-danger"></i> Vehicle Accidents Occur</p>
-                            <canvas class="col-12 rounded p-3" id="accidentsChart" height="100"></canvas>
+                            <p class="fw-bold"><i class="ri-alert-fill text-lra-danger"></i> Count of Vehicle per Status</p>
+                            <canvas class="col-12 rounded p-3" id="statusChart" height="100"></canvas>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-12 col-12">
@@ -529,21 +535,56 @@
 
         const config = {
             type: 'doughnut',
+            data: data
+           
+
+        };
+       
+        setContainer.chart = new Chart(setContainer, config);
+       
+    }
+
+    const generateDonutPieChartAccidents = async (container, dataValues) => {
+        const setContainer = await container;
+        const setDataValues = await dataValues;
+        const labels = setDataValues.map(entry => entry.itemName);
+
+        const total = setDataValues.map(entry => entry.total);
+        const data = {
+            labels: labels,
+            datasets: [{
+                data: total,
+                backgroundColor: ['rgb(30, 50, 92)', 'rgb(255, 179, 25)', 'rgb(146, 20, 12)', 'rgb(190, 204, 224)', '#8D99AE', 'rgb(55, 70, 109)', 'rgb(255, 187, 63)', 'rgb(162, 54, 36)', 'rgb(197, 210, 227)', 'rgb(30, 29, 29)'],
+                hoverOffset: 4
+            }]
+        };
+
+        const config = {
+            type: 'doughnut',
             data: data,
+            options: {
+                responsive: true,
+                // maintainAspectRatio: false,
+                aspectRatio: 1.3
+            }
+
         };
 
         setContainer.chart = new Chart(setContainer, config);
-    }
 
+    }
+ 
     var maintenancesData = @Json.Serialize(ViewData["MaintenancesData"]);
     var accidentsData = @Json.Serialize(ViewData["AccidentsData"]);
     var vehiclesData = @Json.Serialize(ViewData["VehiclesData"]);
     var lTODueDates = @Json.Serialize(ViewData["LTODueDates"]);
     var insuranceDueDates = @Json.Serialize(ViewData["InsuranceDueDates"]);
     var changeOil = @Json.Serialize(ViewData["ChangeOilList"]);
+    var vehicleStat = @Json.Serialize(ViewData["CountOfVehiclePerStat"]);
     
     generateDonutPieChart(document.getElementById('maintenancesChart'), maintenancesData.value);
-    generateDonutPieChart(document.getElementById('accidentsChart'), accidentsData.value);
+    generateDonutPieChartAccidents(document.getElementById('accidentsChart'), accidentsData.value);
+    generateDonutPieChart(document.getElementById('statusChart'), vehicleStat.value);
 
     generateBarChart(document.getElementById('vehicleChart'), vehiclesData.value);
 

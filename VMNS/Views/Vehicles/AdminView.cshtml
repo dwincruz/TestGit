@@ -472,9 +472,9 @@
                     <div class="row">
                         <div class="header-text mb-5">
                             <h5>Preventive Maintenance</h5>
-                            <span><i class="ri-circle-fill text-success px-2"></i><label>Good</label></span>
-                            <span><i class="ri-circle-fill text-warning px-2"></i><label>For Monitoring</label></span>
-                            <span><i class="ri-circle-fill text-danger px-2"></i><label>Urgent Attention</label></span>
+                            <span><i class="ri-circle-fill text-lra-primary px-2"></i><label>Good</label></span>
+                            <span><i class="ri-circle-fill text-lra-warning px-2"></i><label>For Monitoring</label></span>
+                            <span><i class="ri-circle-fill text-lra-danger px-2"></i><label>Urgent Attention</label></span>
                         </div>
 
                     </div>
@@ -788,16 +788,17 @@
 
 
             if (z >= 75) {
-                iconStatus[i].classList.add('text-success')
-                progressBar[i].classList.add('bg-success')
+                iconStatus[i].classList.add('text-lra-primary')
+                progressBar[i].classList.add('bg-lra-primary')
             }
             else if (z >= 25) {
-                iconStatus[i].classList.add('text-warning')
-                progressBar[i].classList.add('bg-warning')
+                iconStatus[i].classList.add('text-lra-warning')
+                progressBar[i].classList.add('bg-lra-warning')
+                
             }
             if (z < 25) {
-                iconStatus[i].classList.add('text-danger')
-                progressBar[i].classList.add('bg-danger')
+                iconStatus[i].classList.add('text-lra-danger')
+                progressBar[i].classList.add('bg-lra-danger')
             }
         }
     }

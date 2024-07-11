@@ -984,3 +984,8 @@ fieldset {
     font-size: calc(.8rem + .3vw) !important;
     line-height: inherit !important;
 }
+
+canvas.accidentsChart {
+   
+    height: 300px !important;
+}

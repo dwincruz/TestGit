@@ -57,6 +57,7 @@ namespace VMNS.Controllers
             List<object> dueDateList = new List<object>();
             List<object> insuranceDateList = new List<object>();
             List<object> changeOilList = new List<object>();
+            List<object> vehicleStat = new List<object>();
 
             var typeAcc = "Accidents";
             var typeMain = "Maintenances";
@@ -169,12 +170,31 @@ namespace VMNS.Controllers
             }
             db.Con.Close();
 
+            db.Query("exec [dbo].[sp_CountPerStatus]");
+            if (db.Reader.HasRows)
+            {
+                while (db.Reader.Read())
+                {
+                    var rowData = new Dictionary<string, object>();
+
+                    for (int i = 0; i < db.Reader.FieldCount; i++)
+                    {
+                        string fieldName = db.Reader.GetName(i);
+                        object value = db.Reader.GetValue(i);
+                        rowData[fieldName] = value;
+                    }
+                    vehicleStat.Add(rowData);
+                }
+            }
+            db.Con.Close();
+
             ViewData["LTODueDates"] = Json(dueDateList);
             ViewData["InsuranceDueDates"] = Json(insuranceDateList);
             ViewData["ChangeOilList"] = Json(changeOilList);
             ViewData["AccidentsData"] = Json(resultListA);
             ViewData["MaintenancesData"] = Json(resultListB);
             ViewData["VehiclesData"] = Json(resultListC);
+            ViewData["CountOfVehiclePerStat"] = Json(vehicleStat);
 
 
 

@@ -191,11 +191,22 @@
                                             <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Vehicles" asp-action="AdminView"><i class="ri-settings-3-line icon"></i><span class="theme-text link-text">Administrator View</span></a></li>
 
                                         }
-                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Vehicles" asp-action="Index"><i class="ri-information-2-line icon"></i><span class="theme-text link-text">Vehicle Information</span></a></li>
-                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Maintenances" asp-action="Index"><i class="ri-tools-fill icon"></i><span class="theme-text link-text">Vehicle Maintenance</span></a></li>
-                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Maintenances" asp-action="History"><i class="ri-tools-fill icon"></i><span class="theme-text link-text">Vehicle Maintenance History</span></a></li>
-                                        <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Accidents" asp-action="Index"><i class="ri-alert-fill icon text-dark"></i><span class="theme-text link-text">Accident Logs</span></a></li>
-                                        
+                                        @if (User.IsInRole("SysAd") || User.IsInRole("Property"))
+                                        {
+                                            <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Vehicles" asp-action="Index"><i class="ri-information-2-line icon"></i><span class="theme-text link-text">Vehicle Information</span></a></li>
+                                        }
+                                        @if (User.IsInRole("SysAd") || User.IsInRole("Motorpool"))
+                                        {
+                                            <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Maintenances" asp-action="Index"><i class="ri-tools-fill icon"></i><span class="theme-text link-text">Vehicle Maintenance</span></a></li>
+                                        }
+                                        @if (User.IsInRole("SysAd") || User.IsInRole("Property"))
+                                        {
+                                            <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Maintenances" asp-action="History"><i class="ri-tools-fill icon"></i><span class="theme-text link-text">Vehicle Maintenance History</span></a></li>
+                                        }
+                                        @if (User.IsInRole("SysAd") || User.IsInRole("Motorpool"))
+                                        {
+                                            <li class="list-group-item p-0"><a class="" asp-area="" asp-controller="Accidents" asp-action="Index"><i class="ri-alert-fill icon text-dark"></i><span class="theme-text link-text">Accident Logs</span></a></li>
+                                        }
                                     </ul>
                                 </div>
                             </div>
