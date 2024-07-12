@@ -45,7 +45,29 @@ namespace VMNS.Controllers
 
             return View(await applicationDbContext.AsNoTracking().ToListAsync());
         }
+        public async Task<IActionResult> MotorpoolCheckform(Guid? selectedValue)
+        {
+            ViewData["Vehicles"] = _context.Vehicles;
+            ViewData["VehicleId"] = new SelectList(_context.Vehicles.OrderBy(x => x.PlateNo), "Id", "PlateNo");
+            if (selectedValue != null)
+            {
+                var vehicle = await _context.Vehicles
+                .Include(v => v.lu_FuelType)
+                .Include(v => v.lu_Transmission)
+                .Include(v => v.lu_VehicleType)
+                .Include(v => v.lu_VehicleStatus)
+                .FirstOrDefaultAsync(m => m.Id == selectedValue);
 
+                return View(vehicle);
+            }
+            else
+            {
+                return View();
+
+            }
+
+            return View();
+        }
 
         // GET: Vehicles/Details/5
         public async Task<IActionResult> Details(Guid? id)

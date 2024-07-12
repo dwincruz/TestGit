@@ -11,14 +11,32 @@
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded fw-bold"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-            @if (!User.IsInRole("Administrator"))
+            <a id="previousBtn" class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded fw-bold"><i class="ri-arrow-go-back-line"></i> Go Back</a>
+            @* @if (!User.IsInRole("Administrator"))
             {
                 <a asp-action="Create" type="button" class="btn btn-sm bg-dark text-white text-capitalize bg-lra-warning box-lra-shadow rounded  "><i class="ri-add-line"></i> Create New</a>
-            }
+            } *@
         </div>
     </div>
 </div>
+
+<form asp-controller="Accidents" asp-action="History" method="post">
+    <div class="row px-3">
+        <div class="col-md-12 bg-white rounded box-lra-shadow mb-4 p-3 border-lra">
+            <div class="col-lg-6 col-12 ">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select name="selectedValue" asp-items="@(ViewData["VehicleId"] as SelectList)">
+                            <option value="">Select Plate Number</option>
+                        </select>
+                        <div class="input-text"><label>Plate Number</label></div>
+                        <button type="submit" class="btn btn-sm text-capitalize text-white bg-lra-primary mx-4 rounded">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
 
 <div class="row box-lra-shadow">
     <div class="col-12 bg-white border-lra-shadow rounded p-3">
@@ -79,6 +97,9 @@
                             <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-default btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Details">
                                 <i class="fa-regular fa-eye"></i>
                             </a>
+                            <a asp-action="History" asp-route-selectedValue="@item.VehicleId" class="btn btn-default btn-circle btn-sm redirect-icon" data-toggle="tooltip" data-placement="top" title="Redirect">
+                                <i class="fa-regular fa-share-from-square"></i>
+                            </a>
                         </td>
                     </tr>
                 }
@@ -86,3 +107,33 @@
         </table>
     </div>
 </div>
+
+
+
+
+<script>
+
+    const checkPathName = () => {
+        const icons = document.querySelectorAll('.redirect-icon')
+        let hideIcons = [...icons]
+
+        if (window.location.search !== '') {
+            hideIcons.map(e => e.classList.add('visually-hidden'))
+        }
+    }
+    const redirectPreviousPage = () => {
+        const icons = document.querySelectorAll('#previousBtn')
+        previousBtn.addEventListener('click', e => {
+            if (window.location.search !== '') {
+                window.location = window.location.origin + `/Vehicles/AdminView/${window.location.search.slice(15,)}`
+            }
+            else {
+                window.location = window.location.origin + '/Vehicles/AdminSearch/'
+            }
+        })
+
+    }
+    checkPathName()
+    redirectPreviousPage()
+
+</script>   

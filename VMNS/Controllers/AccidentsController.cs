@@ -117,9 +117,19 @@ namespace VMNS.Controllers
         public async Task<IActionResult> History(Guid? selectedValue)
         {
             ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo");
-            var applicationDbContext = _context.Accidents.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle).Where(x => x.VehicleId == selectedValue);
             ViewData["Vehicles"] = _context.Vehicles;
-            return View(await applicationDbContext.ToListAsync());
+            if (selectedValue == Guid.Empty || selectedValue == null)
+            {
+                var applicationDbContext = _context.Accidents.Include(m => m.Vehicle).GroupBy(m => m.Vehicle.PlateNo).Select(group => group.OrderByDescending(m => m.DateCreated).First());
+                return View(await applicationDbContext.ToListAsync());
+            }
+            else
+            {
+                var applicationDbContext = _context.Accidents.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle).Where(x => x.VehicleId == selectedValue);
+                return View(await applicationDbContext.ToListAsync());
+            }
+            return View();
+
         }
         public async Task<IActionResult> AccidentRecord(int? id)
         {

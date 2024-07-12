@@ -24,7 +24,7 @@ namespace VMNS.Controllers
             ViewData["Vehicles"] = _context.Vehicles;
             return View(await applicationDbContext.AsNoTracking().ToListAsync());
         }
-
+        
         public async Task<IActionResult> History(Guid? selectedValue)
         {
             
