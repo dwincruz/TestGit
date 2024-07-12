@@ -60,6 +60,8 @@ namespace VMNS.Controllers
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             //Pass Id value to View
+            ViewData["VehicleId"] = _context.Maintenances.Where(m => m.Id == id).FirstOrDefault().VehicleId;
+
             ViewData["MaintenanceId"] = _context.Maintenances.Where(m => m.Id == id).FirstOrDefault().Id;
             ViewData["Monitoring"] = _context.Monitorings.Where(m => m.MaintenanceId == id).Include(m => m.Replacement);
             

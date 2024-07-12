@@ -45,6 +45,8 @@ namespace VMNS.Controllers
             {
                 return NotFound();
             }
+            ViewData["VehicleId"] = _context.Accidents.Where(m => m.Id == id).FirstOrDefault().VehicleId;
+
             ViewData["lu_VehicleTypeId"] = new SelectList(_context.Vehicles, "Id", "PlateNo", accident.VehicleId);
             ViewData["lu_DamageScaleId"] = new SelectList(_context.lu_DamageScales, "Id", "DamageScale");
             ViewData["FilePath"] = _context.Uploads.Where(x=>x.ConcernId == id.ToString()).FirstOrDefault().FilePath;

@@ -10,12 +10,18 @@
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-autoposition-relative">
         <div class="float-end">
-            <a asp-area="" asp-controller="Accidents" asp-action="Index" class="btn btn-sm text-capitalize bg-white rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
             @if (!User.IsInRole("Administrator"))
-                {
+            {
+            <a asp-area="" asp-controller="Accidents" asp-action="Index" class="btn btn-sm text-capitalize bg-white rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
             <button type="button" class="btn btn-sm text-capitalize bg-lra-danger rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="ri-delete-bin-7-line"></i> Delete</button>
             <a asp-area="" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm  text-dark text-capitalize bg-lra-sub-info rounded "><i class="ri-edit-box-line"></i> Edit</a>
-                }
+            }
+            else
+            {
+                <a asp-area="" asp-controller="Accidents" asp-action="History" asp-route-selectedValue=@ViewData["VehicleId"] class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-arrow-go-back-line"></i> Back to lists</a>
+                <a asp-area="" asp-controller="Vehicles" asp-action="AdminView" asp-route-id=@ViewData["VehicleId"] class="btn btn-sm text-capitalize bg-white box-lra-shadow rounded"><i class="ri-roadster-line"></i> View Vehicle</a>
+
+            }
         </div>
     </div>
     <div class="col-12">
