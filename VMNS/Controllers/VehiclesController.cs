@@ -43,7 +43,7 @@ namespace VMNS.Controllers
             // Optionally, if you want to set ViewData for all vehicles (not ordered)
             ViewData["Vehicles"] = await _context.Vehicles.ToListAsync();
 
-            return View(await applicationDbContext.ToListAsync());
+            return View(await applicationDbContext.AsNoTracking().ToListAsync());
         }
 
 
