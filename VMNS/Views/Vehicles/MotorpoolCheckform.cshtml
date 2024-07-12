@@ -19,7 +19,6 @@
         <div class="d-flex justify-content-end">
             <button class="btn btn-sm text-capitalize bg-lra-primary rounded mx-2" id="printBtn"><i class="ri-printer-line"></i> Print Data</button>
             <a asp-controller="Vehicles" asp-action="AdminView" asp-route-id="@ViewData["MaintenanceId"]" class="btn btn-sm text-capitalize bg-white rounded"><i class="ri-arrow-go-back-line"></i> Go Back</a>
-            
         </div>
     </div>
 </div>
@@ -1082,4 +1081,7 @@
         windowPrintPreview.print();
         windowPrintPreview.close();
     })
+
+    
+
 </script>
