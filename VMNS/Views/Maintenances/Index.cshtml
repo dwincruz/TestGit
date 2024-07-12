@@ -10,6 +10,7 @@
     </div>
     <div class="col-md-6 col-sm-6 col-6  my-auto py-3 position-relative">
         <div class="float-end">
+            <a asp-area="" asp-controller="Vehicles" asp-action="MotorpoolCheckform" class="btn btn-sm text-capitalize bg-white fw-bold rounded box-lra-shadow"><i class="ri-printer-line"></i> Checkform</a>
             <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-sm text-capitalize bg-white fw-bold rounded box-lra-shadow"><i class="ri-arrow-go-back-line"></i> Go Back</a>
             @if (!User.IsInRole("Administrator"))
             {

@@ -15,25 +15,23 @@
     </div>
 </div>
 
-    <form asp-controller="Maintenances" asp-action="History" method="post">
-        <div class="row px-3">
-            <div class="col-md-12 bg-white rounded box-lra-shadow mb-4 p-3 border-lra">
-                <div class="col-lg-6 col-12 ">
-                    <div class="input-group" id="">
-                        <div id="" class="custom-input w-100">
-                            <select name="selectedValue" asp-items="@(ViewData["VehicleId"] as SelectList)">
-                                <option value="">Select Plate Number</option>
-                            </select>
-                            <div class="input-text"><label>Plate Number</label></div>
-                            <button type="submit" class="btn btn-sm text-capitalize text-white bg-lra-primary mx-4 rounded">Submit</button>
-                        </div>
+<form asp-controller="Maintenances" asp-action="History" method="post">
+    <div class="row px-3">
+        <div class="col-md-12 bg-white rounded box-lra-shadow mb-4 p-3 border-lra">
+            <div class="col-lg-6 col-12 ">
+                <div class="input-group" id="">
+                    <div id="" class="custom-input w-100">
+                        <select name="selectedValue" asp-items="@(ViewData["VehicleId"] as SelectList)">
+                            <option value="">Select Plate Number</option>
+                        </select>
+                        <div class="input-text"><label>Plate Number</label></div>
+                        <button type="submit" class="btn btn-sm text-capitalize text-white bg-lra-primary mx-4 rounded">Submit</button>
                     </div>
                 </div>
             </div>
-           
         </div>
-        
-    </form>
+    </div> 
+</form>
 
 
 
