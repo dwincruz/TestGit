@@ -22,7 +22,7 @@ namespace VMNS.Controllers
         {
             var applicationDbContext = _context.Maintenances.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle);
             ViewData["Vehicles"] = _context.Vehicles;
-            return View(await applicationDbContext.ToListAsync());
+            return View(await applicationDbContext.AsNoTracking().ToListAsync());
         }
         
         public async Task<IActionResult> History(Guid? selectedValue)
