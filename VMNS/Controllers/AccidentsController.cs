@@ -122,12 +122,12 @@ namespace VMNS.Controllers
             ViewData["Vehicles"] = _context.Vehicles;
             if (selectedValue == Guid.Empty || selectedValue == null)
             {
-                var applicationDbContext = _context.Accidents.Include(m => m.Vehicle).GroupBy(m => m.Vehicle.PlateNo).Select(group => group.OrderByDescending(m => m.DateCreated).First());
+                var applicationDbContext = _context.Accidents.Include(x => x.lu_DamageScale).Include(m => m.Vehicle).GroupBy(m => m.Vehicle.PlateNo).Select(group => group.OrderByDescending(m => m.DateCreated).First());
                 return View(await applicationDbContext.ToListAsync());
             }
             else
             {
-                var applicationDbContext = _context.Accidents.OrderByDescending(m => m.DateCreated).Include(m => m.Vehicle).Where(x => x.VehicleId == selectedValue);
+                var applicationDbContext = _context.Accidents.Include(x => x.lu_DamageScale).Include(m => m.Vehicle).Where(x => x.VehicleId == selectedValue).OrderByDescending(m => m.DateCreated);
                 return View(await applicationDbContext.ToListAsync());
             }
             return View();
