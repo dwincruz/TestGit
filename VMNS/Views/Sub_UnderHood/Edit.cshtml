@@ -68,7 +68,10 @@
                                     
                                     </td>
                                 }
-                                    <td>@Html.DisplayNameFor(model => model.FluidLevels)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.FluidLevels)
+                                        <input type="radio" name="FluidLevels" id="" class="checkbox-item d-none" value="Not Inspected" @(Model.FluidLevels == "Not Inspected" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="condition-row">
                                     @foreach (var currentValue in currentValues)

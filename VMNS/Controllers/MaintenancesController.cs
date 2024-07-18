@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using VMNS.Models;
 
 namespace VMNS.Controllers
 {
+    [Authorize]
     public class MaintenancesController : BaseController
     {
         private readonly ApplicationDbContext _context;
@@ -177,7 +179,7 @@ namespace VMNS.Controllers
         public IActionResult Create()
         {
             ViewData["Vehicles"] = _context.Vehicles;
-            ViewData["VehicleId"] = new SelectList(_context.Vehicles, "Id", "PlateNo");
+            ViewData["VehicleId"] = new SelectList(_context.Vehicles.OrderBy(x=>x.PlateNo), "Id", "PlateNo");
             return View();
         }
 
@@ -305,6 +307,7 @@ namespace VMNS.Controllers
             var maintenance = await _context.Maintenances
                 .Include(m => m.Vehicle)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (maintenance == null)
             {
                 return NotFound();
@@ -324,11 +327,13 @@ namespace VMNS.Controllers
                 return Problem("Entity set 'ApplicationDbContext.Maintenances'  is null.");
             }
             var maintenance = await _context.Maintenances.FindAsync(id);
+           
             if (maintenance != null)
             {
                 _context.Maintenances.Remove(maintenance);
             }
-            
+
+            Notify("Record successfully deleted.", notificationType: NotificationType.success);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

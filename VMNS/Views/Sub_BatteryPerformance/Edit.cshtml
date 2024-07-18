@@ -63,7 +63,7 @@
                                 <tr class="condition-row">
                                     @foreach (var currentValue in currentValues)
                                     {
-                                        <td class="checkbox-container">
+                                        <td class="checkbox-container  text-center">
                                             <input type="radio" name="BatteryTerminal" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.BatteryTerminal == currentValue ? "checked" : "") />
 
                                         </td>
@@ -73,7 +73,7 @@
                                 <tr class="condition-row">
                                     @foreach (var currentValue in currentValues)
                                     {
-                                        <td class="checkbox-container">
+                                        <td class="checkbox-container  text-center">
                                             <input type="radio" name="ConditionOfBattery" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.ConditionOfBattery == currentValue ? "checked" : "") />
 
                                         </td>
