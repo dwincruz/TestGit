@@ -66,7 +66,10 @@
                                         <input type="radio" name="TransmissionFluid" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.TransmissionFluid == currentValue ? "checked" : "") />
                                     </td>
                                 }
-                                <td>@Html.DisplayNameFor(model => model.TransmissionFluid)</td>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.TransmissionFluid)
+                                    <input type="radio" name="TransmissionFluid" id="" class="checkbox-item d-none" value="Not Inspected" @(Model.TransmissionFluid == "Not Inspected" ? "checked" : "") />
+                                </td>
                             </tr>
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
@@ -75,7 +78,10 @@
                                         <input type="radio" name="Coolant" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Coolant == currentValue ? "checked" : "") />
                                     </td>
                                 }
-                                <td>@Html.DisplayNameFor(model => model.Coolant)</td>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.Coolant)
+                                    <input type="radio" name="Coolant" id="" class="checkbox-item d-none" value="Not Inspected" @(Model.Coolant == "Not Inspected" ? "checked" : "") />
+                                </td>
                             </tr>
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
@@ -84,7 +90,10 @@
                                         <input type="radio" name="ExhaustPipes" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.ExhaustPipes == currentValue ? "checked" : "") />
                                     </td>
                                 }
-                                <td>@Html.DisplayNameFor(model => model.ExhaustPipes)</td>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.ExhaustPipes)
+                                    <input type="radio" name="ExhaustPipes" id="" class="checkbox-item d-none" value="Not Inspected" @(Model.ExhaustPipes == "Not Inspected" ? "checked" : "") />
+                                </td>
                             </tr>
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
@@ -93,7 +102,10 @@
                                         <input type="radio" name="TransferCase" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.TransferCase == currentValue ? "checked" : "") />
                                     </td>
                                 }
-                                <td>@Html.DisplayNameFor(model => model.TransferCase)</td>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.TransferCase)
+                                    <input type="radio" name="TransferCase" id="" class="checkbox-item d-none" value="Not Inspected" @(Model.TransferCase == "Not Inspected" ? "checked" : "") />
+                                </td>
                             </tr>
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
@@ -102,7 +114,10 @@
                                         <input type="radio" name="FluidLinesConnections" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.FluidLinesConnections == currentValue ? "checked" : "") />
                                     </td>
                                 }
-                                <td>@Html.DisplayNameFor(model => model.FluidLinesConnections)</td>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.FluidLinesConnections)
+                                    <input type="radio" name="FluidLinesConnections" id="" class="checkbox-item d-none" value="Not Inspected" @(Model.FluidLinesConnections == "Not Inspected" ? "checked" : "") />
+                                </td>
                             </tr>
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
@@ -111,7 +126,10 @@
                                         <input type="radio" name="Wiring" id="@currentValue" class="checkbox-item" value="@currentValue" @(Model.Wiring == currentValue ? "checked" : "") />
                                     </td>
                                 }
-                                <td>@Html.DisplayNameFor(model => model.Wiring)</td>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.Wiring)
+                                        <input type="radio" name="Wiring" id="" class="checkbox-item d-none" value="Not Inspected" @(Model.Wiring == "Not Inspected" ? "checked" : "") />
+                                </td>
                             </tr>
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
