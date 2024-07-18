@@ -10,7 +10,7 @@ using VMNS.Models;
 
 namespace VMNS.Controllers
 {
-    //[Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "SysAd")]
     public class UsersAdminController : BaseController
     {
         //private readonly ApplicationDbContext _context;

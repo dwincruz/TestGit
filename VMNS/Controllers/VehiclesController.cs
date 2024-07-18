@@ -15,9 +15,11 @@ using VMNS.Models;
 using static NuGet.Packaging.PackagingConstants;
 using VMNS.ViewModel;
 using Humanizer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace VMNS.Controllers
 {
+    [Authorize]
     public class VehiclesController : BaseController
     {
         private readonly ApplicationDbContext _context;
@@ -111,7 +113,7 @@ namespace VMNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Brand,Model,lu_VehicleTypeId,lu_TransmissionId,Color," +
             "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,AssignedDriver,IssuedDate,AquisitionDate," +
-            "Description,lu_WheelDriveId,Upload,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost")] Vehicle vehicle, IFormFile[] file) //,CreatorId,ModifierId,DateCreated,DateModified,PassengerSeat,Wheels
+            "Description,lu_WheelDriveId,Upload,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost,EngineNo,ChasisNo")] Vehicle vehicle, IFormFile[] file) //,CreatorId,ModifierId,DateCreated,DateModified,PassengerSeat,Wheels
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
@@ -195,7 +197,7 @@ namespace VMNS.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Id,Brand,Model,lu_VehicleTypeId,lu_TransmissionId,Color," +
             "lu_FuelTypeId,PlateNo,ConductionNo,InsuranceType,InsuranceDate,LtoRegDate,LtoDueDate,AssignedOfficer,AssignedDriver,IssuedDate,AquisitionDate," +
-            "Description,CreatorId,DateCreated,lu_WheelDriveId,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost,ImagePath")] Vehicle vehicle, IFormFile[] file) //,PassengerSeat,Wheels
+            "Description,CreatorId,DateCreated,lu_WheelDriveId,lu_VehicleStatusId,EasyTripRFID,AutosweepRFID,Cost,ImagePath,EngineNo,ChasisNo")] Vehicle vehicle, IFormFile[] file) //,PassengerSeat,Wheels
         {
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -508,7 +510,8 @@ namespace VMNS.Controllers
                 .Include(v => v.lu_VehicleStatus)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
-            
+            ViewData["VehicleImage"] = _context.Vehicles.Where(m => m.Id == id).FirstOrDefault().ImagePath;
+
 
             if (vehicle == null)
             {
@@ -545,7 +548,7 @@ namespace VMNS.Controllers
             {
                 ViewData["VehicleId"] = null; // or some default value
             }
-            ViewData["VehicleImage"] = _context.Vehicles.Where(m => m.Id == id).FirstOrDefault().ImagePath;
+           
             ViewData["Vehicles"] = _context.Vehicles;
 
             var VehicleId = _context.Maintenances.Where(m => m.Id == MaintId).OrderByDescending(m => m.DateCreated).FirstOrDefault().VehicleId;
@@ -585,7 +588,7 @@ namespace VMNS.Controllers
             }
             db.Con.Close();
 
-            db.Query("exec [dbo].[sp_Show] '" + MaintId + "','Not Available'");
+            db.Query("exec [dbo].[sp_Show] '" + MaintId + "','Not Inspected'");
             if (db.Reader.HasRows)
             {
                 while (db.Reader.Read())

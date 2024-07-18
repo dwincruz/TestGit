@@ -30,10 +30,10 @@
                            readonly
                            hidden
                            pattern="\S+.*" />
-                    <table class="table table-bordered table-borderless">
+                    <table class="table table-borderless">
                         <thead>
                             <tr>
-                                <th colspan="4" class="good">
+                                <th colspan="4" class="good text-white">
                                     Good for Service
                                 </th>
                             </tr>
@@ -46,7 +46,7 @@
                             <tr>
                                 <th class="good"></th>
                                 <th class="warning"></th>
-                                <th colspan="2" class="danger">
+                                <th colspan="2" class="danger text-white">
                                     Needs Repair
                                 </th>
                             </tr>
@@ -60,7 +60,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="BatteryTerminal" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.BatteryTerminal == currentValue ? "checked" : "") />
 
                                     </td>
@@ -70,7 +70,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="ConditionOfBattery" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.ConditionOfBattery == currentValue ? "checked" : "") />
 
                                     </td>

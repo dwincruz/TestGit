@@ -15,9 +15,11 @@ using VMNS.Models;
 using static NuGet.Packaging.PackagingConstants;
 using VMNS.ViewModel;
 using Humanizer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace VMNS.Controllers
 {
+    [Authorize(Roles = "SysAd")]
     public class lu_VehicleStatus1Controller : BaseController
     {
         private readonly ApplicationDbContext _context;

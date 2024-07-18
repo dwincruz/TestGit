@@ -323,21 +323,50 @@
                     </div>
                     <span asp-validation-for="AquisitionDate" class="text-danger"></span>
                 </div>
-                <div class="col-lg-6 col-12 mb-4">
+               
+                 <div class="col-lg-6 col-12 mb-4">
                     <div class="input-group" id="">
                         <div id="" class="custom-input w-100">
                             <input type="text"
-                                   asp-for="Description"
+                                   asp-for="EngineNo"
                                    id=""
                                    class="form-control"
                                    required
                                    pattern="\S+.*" />
-                            <div class="input-text"><label asp-for="Description"></label></div>
+                            <div class="input-text"><label asp-for="EngineNo"></label></div>
                         </div>
                     </div>
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>         
-            </div>
+                    <span asp-validation-for="EngineNo" class="text-danger"></span>
+                </div>   
+                 <div class="col-lg-6 col-12 mb-4">
+                    <div class="input-group" id="">
+                        <div id="" class="custom-input w-100">
+                            <input type="text"
+                                   asp-for="ChasisNo"
+                                   id=""
+                                   class="form-control"
+                                   required
+                                   pattern="\S+.*" />
+                            <div class="input-text"><label asp-for="ChasisNo"></label></div>
+                        </div>
+                    </div>
+                    <span asp-validation-for="ChasisNo" class="text-danger"></span>
+                </div>
+                    <div class="col-lg-6 col-12 mb-4">
+                        <div class="input-group" id="">
+                            <div id="" class="custom-input w-100">
+                                <input type="text"
+                                       asp-for="Description"
+                                       id=""
+                                       class="form-control"
+                                       required
+                                       pattern="\S+.*" />
+                                <div class="input-text"><label asp-for="Description"></label></div>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
         </div>
             <div class="col-lg-5 col-sm-5 col-12">
                 <div class="col-lg-6 col-12 mb-4">

@@ -111,6 +111,11 @@ namespace VMNS.Models
         [Display(Name = "Assigned Driver")]
         public string? AssignedDriver { get; set; }
 
+        [Display(Name = "Engine No.")]
+        public string? EngineNo { get; set; }
+
+        [Display(Name = "Chasis No.")]
+        public string? ChasisNo { get; set; }
 
 
 

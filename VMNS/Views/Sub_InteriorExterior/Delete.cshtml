@@ -33,10 +33,10 @@
                            readonly
                            hidden
                            pattern="\S+.*" />
-                    <table class="table table-bordered table-borderless">
+                    <table class="table table-borderless">
                         <thead>
                             <tr>
-                                <th colspan="4" class="good">
+                                <th colspan="4" class="good text-white">
                                     Good for Service
                                 </th>
                             </tr>
@@ -49,7 +49,7 @@
                             <tr>
                                 <th class="good"></th>
                                 <th class="warning"></th>
-                                <th colspan="2" class="danger">
+                                <th colspan="2" class="danger text-white">
                                     Needs Repair
                                 </th>
                             </tr>
@@ -63,7 +63,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="HeadLights" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.HeadLights == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -72,7 +72,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="TailLights" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.TailLights == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -81,7 +81,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="TurnSignals" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.TurnSignals == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -90,7 +90,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="BrakeLights" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.BrakeLights == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -99,7 +99,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="HazardLights" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.HazardLights == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -108,7 +108,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="ExteriorLamps" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.ExteriorLamps == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -117,7 +117,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="LicensePlatesLights" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.LicensePlatesLights == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -126,7 +126,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="WindshieldWiper" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.WindshieldWiper == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -135,7 +135,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="WiperBlades" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.WiperBlades == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -144,7 +144,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="WindshieldCondition" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.WindshieldCondition == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -153,7 +153,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="EmergencyBrakeAdjustment" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.EmergencyBrakeAdjustment == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -162,7 +162,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="HornOperation" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.HornOperation == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -171,7 +171,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="FuelTankCapBasket" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.FuelTankCapBasket == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -180,7 +180,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="AirConGasket" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.AirConGasket == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -189,7 +189,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="AirConFilter" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.AirConFilter == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -198,7 +198,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="ClutchOperation" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.ClutchOperation == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -208,7 +208,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="BackupLights" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.BackupLights == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -217,7 +217,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="DashWarningLights" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.DashWarningLights == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -226,7 +226,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="Carpet" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.Carpet == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -235,7 +235,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="GlassAndMirrors" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.Carpet == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -244,7 +244,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="Wiring" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.Wiring == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -253,7 +253,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="Odometer" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.Odometer == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -262,7 +262,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="FuelGuage" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.FuelGuage == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -271,7 +271,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="BatteryVoltage" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.BatteryVoltage == currentValue ? "checked" : "") />
                                     </td>
                                 }
@@ -280,7 +280,7 @@
                             <tr class="condition-row">
                                 @foreach (var currentValue in currentValues)
                                 {
-                                    <td class="checkbox-container">
+                                    <td class="checkbox-container  text-center">
                                         <input type="radio" name="Indicators" id="@currentValue" class="checkbox-item" value="@currentValue" onclick="return false" @(Model.Indicators == currentValue ? "checked" : "") />
                                     </td>
                                 }

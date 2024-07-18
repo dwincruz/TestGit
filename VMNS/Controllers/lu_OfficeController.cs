@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace VMNS.Controllers
 {
-    //[Authorize(Roles = "SuperAdmin")]
+    
+    [Authorize(Roles = "SysAd")]
     public class lu_OfficeController : Controller
     {
         private readonly ApplicationDbContext _context;

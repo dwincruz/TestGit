@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
@@ -12,48 +13,49 @@ namespace VMNS.Models
 
         public Guid? MaintenanceId { get; set; }
         [Display(Name = "Shock Absorber")]
-        public string ShockAbsorber { get; set; }
-        public string Coolant { get; set; }
-        public string Differential { get; set; }
+        [DefaultValue("Not Inspected")]
+        public string? ShockAbsorber { get; set; }
+        public string? Coolant { get; set; }
+        public string? Differential { get; set; }
         [Display(Name = "U-Joints")]
-        public string UJoints { get; set; }
+        public string? UJoints { get; set; }
         [Display(Name = "Ball Joints")]
-        public string BallJoints { get; set; }
+        public string? BallJoints { get; set; }
         [Display(Name = "Dust Cover")]
-        public string DustCover { get; set; }
+        public string? DustCover { get; set; }
         [Display(Name = "Brake Lines")]
-        public string BrakeLines { get; set; }
-        public string Hoses{ get; set; }
+        public string? BrakeLines { get; set; }
+        public string? Hoses { get; set; }
         [Display(Name = "Parking Brake Cable")]
-        public string ParkingBrakeCable { get; set; }
+        public string? ParkingBrakeCable { get; set; }
         [Display(Name = "Drive Shaft Boots")]
-        public string DriveShaftBoots { get; set; }
+        public string? DriveShaftBoots { get; set; }
         [Display(Name = "Constant Velocity Boots")]
-        public string ConstantVelocityBoots { get; set; }
-        public string Muffler { get; set; }
+        public string? ConstantVelocityBoots { get; set; }
+        public string? Muffler { get; set; }
         [Display(Name = "Exhaust Pipes")]
-        public string ExhaustPipes { get; set; }
+        public string? ExhaustPipes { get; set; }
         [Display(Name = "Catalytic Converter")]
-        public string CatalyticConverter { get; set; }
+        public string? CatalyticConverter { get; set; }
         [Display(Name = "Transfer Case")]
-        public string TransferCase { get; set; }
+        public string? TransferCase { get; set; }
         [Display(Name = "Automatic Transmission Fluid")]
-        public string AutomaticTransmissionFluid { get; set;}
+        public string? AutomaticTransmissionFluid { get; set;}
         [Display(Name = "Engine Oil")]
-        public string EngineOil {  get; set; }
+        public string? EngineOil {  get; set; }
         [Display(Name = "Transmission Fluid")]
-        public string TransmissionFluid{ get; set; }
+        public string? TransmissionFluid { get; set; }
         [Display(Name = "Transmission Assembly")]
-        public string TransmissionAssembly { get; set; }
+        public string? TransmissionAssembly { get; set; }
         [Display(Name = "Fluid Lines Connections")]
-        public string FluidLinesConnections { get; set; }
+        public string? FluidLinesConnections { get; set; }
         [Display(Name = "Fluid Tank Band")]
-        public string FluidTankBand { get; set; }
+        public string? FluidTankBand { get; set; }
         [Display(Name = "Fuel Tank Vapor Vent System Hoses")]
-        public string FuelTankVaporVentSystemsHoses { get; set;}
+        public string? FuelTankVaporVentSystemsHoses { get; set;}
         [Display(Name = "Nuts and Bolts")]
-        public string NutsAndBolts {  get; set; }
-        public string Wiring {  get; set; }
+        public string? NutsAndBolts {  get; set; }
+        public string? Wiring {  get; set; }
 
 
 

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Reflection.Emit;
 
 namespace VMNS.Areas.Identity.Data;
 
@@ -16,9 +17,235 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+
         // Customize the ASP.NET Identity model and override the defaults if needed.
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
+
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.FluidLevels)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.HeaterHoses)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.AirCondition)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.DriveBelt)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.ComputerBox)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.ElectricFuses)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.Alternator)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.CoolantRecoveryReservoirFluidLevel)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.AirConditionerCondenser)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.CoolingSystemHoses)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.EngineAirFilter)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.ClutchReservoirFluid)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.AuxiliaryBelt)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.Washer)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.RadiatorCore)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.PowerSteering)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.BrakeFluid)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderHood>()
+               .Property(b => b.HosesandConnections)
+               .HasDefaultValue("Not Inspected");
+
+        //----
+
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.AutomaticTransmissionFluid)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.BallJoints)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.BrakeLines)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.CatalyticConverter)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.ConstantVelocityBoots)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.Coolant)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.Differential)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.DriveShaftBoots)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.DustCover)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.EngineOil)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.ExhaustPipes)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.FluidLinesConnections)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.FluidTankBand)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.FuelTankVaporVentSystemsHoses)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.Hoses)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.Muffler)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.NutsAndBolts)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.ParkingBrakeCable)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.ShockAbsorber)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.TransferCase)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.TransmissionAssembly)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.TransmissionFluid)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.UJoints)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_UnderVehicle>()
+               .Property(b => b.Wiring)
+               .HasDefaultValue("Not Inspected");
+
+        //-----
+
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.Carpet)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.AirConGasket)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.AirConFilter)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.BackupLights)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.BatteryVoltage)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.BrakeLights)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.ClutchOperation)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.DashWarningLights)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.EmergencyBrakeAdjustment)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.ExteriorLamps)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.FuelGuage)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.FuelTankCapBasket)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.GlassAndMirrors)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.HazardLights)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.HeadLights)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.HornOperation)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.Indicators)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.LicensePlatesLights)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.Odometer)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.TailLights)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.TurnSignals)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.WindshieldCondition)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.WindshieldWiper)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.WiperBlades)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_InteriorExterior>()
+               .Property(b => b.Wiring)
+               .HasDefaultValue("Not Inspected");
+
+        //-----
+
+        builder.Entity<Sub_BatteryPerformance>()
+               .Property(b => b.BatteryTerminal)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_BatteryPerformance>()
+               .Property(b => b.ConditionOfBattery)
+               .HasDefaultValue("Not Inspected");
+
+        builder.Entity<Sub_BatteryPerformance>()
+               .Property(b => b.BatteryTerminal)
+               .HasDefaultValue("Not Inspected");
+        builder.Entity<Sub_BatteryPerformance>()
+               .Property(b => b.ConditionOfBattery)
+               .HasDefaultValue("Not Inspected");
+
     }
 
     //Main Tables
