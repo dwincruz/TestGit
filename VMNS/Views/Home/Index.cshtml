@@ -426,6 +426,20 @@
         });
 
 
+        let barWidth;
+
+        switch (true) {
+            case setDatValues.length < 25:
+                barWidth = 15;
+                break;
+            case setDatValues.length < 50:
+                barWidth = 7;
+                break;
+            default:
+                barWidth = 0;
+        }
+
+
         const data = {
             labels: labels,
             skipNull: true,
@@ -480,7 +494,7 @@
             data: data,
             options: {
                 //barPercentage: 0.5,
-                barThickness: 20,
+                barThickness: barWidth,
                 maintainAspectRatio: true,
                 responsive: true,
                 layout: {
