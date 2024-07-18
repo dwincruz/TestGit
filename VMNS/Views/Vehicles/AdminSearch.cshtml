@@ -381,7 +381,6 @@
     const generateBarChart = async (container, dataValues) => {
         const setDatValues = await dataValues
         const setContainer = await container;
-        console.log(setDatValues)
 
         let labels = setDatValues.map(({ Vehicle, MaintenanceDate, ...entry }) => {
             return `${Vehicle}`
@@ -413,7 +412,20 @@
             return value == 0 ? null : value.toFixed(2)
 
         });
-        
+
+
+        let barWidth;
+
+        switch (true) {
+            case setDatValues.length < 25:
+                barWidth = 15;
+                break;
+            case setDatValues.length < 50:
+                barWidth = 7;
+                break;
+            default:
+                barWidth = 0;
+        }
 
         const data = {
             labels: labels, 
@@ -469,7 +481,7 @@
             data: data,
             options: {
                 //barPercentage: 0.5,
-                barThickness: 20,
+                barThickness: barWidth,
                 maintainAspectRatio: true,
                 responsive: true,
                 layout: {
