@@ -61,7 +61,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.Antennae)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.Antennae)
+                                        <input type="radio" name="Antennae" id="" class="checkbox-item d-none" value="None" @(Model.Antennae == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -71,7 +74,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.AshTray)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.AshTray)
+                                        <input type="radio" name="AshTray" id="" class="checkbox-item d-none" value="None" @(Model.AshTray == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -81,7 +87,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.BackupRearLights)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.BackupRearLights)
+                                        <input type="radio" name="BackupRearLights" id="" class="checkbox-item d-none" value="None" @(Model.BackupRearLights == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -91,7 +100,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.CigaretteLighter)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.CigaretteLighter)
+                                        <input type="radio" name="CigaretteLighter" id="" class="checkbox-item d-none" value="None" @(Model.CigaretteLighter == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -101,7 +113,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.DoorGlass)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.DoorGlass)
+                                        <input type="radio" name="DoorGlass" id="" class="checkbox-item d-none" value="None" @(Model.DoorGlass == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -111,7 +126,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.DoorHandles)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.DoorHandles)
+                                        <input type="radio" name="DoorHandles" id="" class="checkbox-item d-none" value="None" @(Model.DoorHandles == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -121,7 +139,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.Emblem)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.Emblem)
+                                        <input type="radio" name="Emblem" id="" class="checkbox-item d-none" value="None" @(Model.Emblem == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -131,7 +152,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.EngineHood)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.EngineHood)
+                                        <input type="radio" name="EngineHood" id="" class="checkbox-item d-none" value="None" @(Model.EngineHood == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -141,7 +165,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.FloorMats)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.FloorMats)
+                                        <input type="radio" name="FloorMats" id="" class="checkbox-item d-none" value="None" @(Model.FloorMats == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -151,7 +178,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.GasTankCap)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.GasTankCap)
+                                        <input type="radio" name="GasTankCap" id="" class="checkbox-item d-none" value="None" @(Model.GasTankCap == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -161,7 +191,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.HeadRest)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.HeadRest)
+                                        <input type="radio" name="HeadRest" id="" class="checkbox-item d-none" value="None" @(Model.HeadRest == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -171,7 +204,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.HubCaps)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.HubCaps)
+                                        <input type="radio" name="HubCaps" id="" class="checkbox-item d-none" value="None" @(Model.HubCaps == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -181,7 +217,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.IgnitionSwitch)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.IgnitionSwitch)
+                                        <input type="radio" name="IgnitionSwitch" id="" class="checkbox-item d-none" value="None" @(Model.IgnitionSwitch == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -191,7 +230,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.MudGuards)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.MudGuards)
+                                        <input type="radio" name="MudGuards" id="" class="checkbox-item d-none" value="None" @(Model.MudGuards == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -201,7 +243,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.NamePlate)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.NamePlate)
+                                        <input type="radio" name="NamePlate" id="" class="checkbox-item d-none" value="None" @(Model.NamePlate == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -211,7 +256,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.NamePlateLight)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.NamePlateLight)
+                                        <input type="radio" name="NamePlateLight" id="" class="checkbox-item d-none" value="None" @(Model.NamePlateLight == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -221,7 +269,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.ParkingLights)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.ParkingLights)
+                                        <input type="radio" name="ParkingLights" id="" class="checkbox-item d-none" value="None" @(Model.ParkingLights == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -231,7 +282,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.RadiatorCap)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.RadiatorCap)
+                                        <input type="radio" name="RadiatorCap" id="" class="checkbox-item d-none" value="None" @(Model.RadiatorCap == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -241,7 +295,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.RearViewMirror)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.RearViewMirror)
+                                        <input type="radio" name="RearViewMirror" id="" class="checkbox-item d-none" value="None" @(Model.RearViewMirror == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -251,7 +308,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.SideMirrors)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.SideMirrors)
+                                        <input type="radio" name="SideMirrors" id="" class="checkbox-item d-none" value="None" @(Model.SideMirrors == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -261,7 +321,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.SpareTire)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.SpareTire)
+                                        <input type="radio" name="SpareTire" id="" class="checkbox-item d-none" value="None" @(Model.SpareTire == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -271,7 +334,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.StereoSpeakers)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.StereoSpeakers)
+                                        <input type="radio" name="StereoSpeakers" id="" class="checkbox-item d-none" value="None" @(Model.StereoSpeakers == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -281,7 +347,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.SunVisors)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.SunVisors)
+                                        <input type="radio" name="SunVisors" id="" class="checkbox-item d-none" value="None" @(Model.SunVisors == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -291,7 +360,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.Tools)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.Tools)
+                                        <input type="radio" name="Tools" id="" class="checkbox-item d-none" value="None" @(Model.Tools == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -301,7 +373,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.TrunkCompartment)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.TrunkCompartment)
+                                        <input type="radio" name="TrunkCompartment" id="" class="checkbox-item d-none" value="None" @(Model.TrunkCompartment == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -311,7 +386,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.Upholstery)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.Upholstery)
+                                        <input type="radio" name="Upholstery" id="" class="checkbox-item d-none" value="None" @(Model.Upholstery == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -321,7 +399,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.WindshieldGlass)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.WindshieldGlass)
+                                        <input type="radio" name="WindshieldGlass" id="" class="checkbox-item d-none" value="None" @(Model.WindshieldGlass == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -331,7 +412,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.WipeArm)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.WipeArm)
+                                        <input type="radio" name="WipeArm" id="" class="checkbox-item d-none" value="None" @(Model.WipeArm == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -341,7 +425,10 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.WiperKnob)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.WiperKnob)
+                                        <input type="radio" name="WiperKnob" id="" class="checkbox-item d-none" value="None" @(Model.WiperKnob == "None" ? "checked" : "") />
+                                    </td>
                                 </tr>
                                 <tr class="availability-row">
                                     @foreach (var currentValue in currentValues)
@@ -351,7 +438,21 @@
 
                                         </td>
                                     }
-                                    <td>@Html.DisplayNameFor(model => model.Manuals)</td>
+                                    <td>
+                                        @Html.DisplayNameFor(model => model.Manuals)
+                                        <input type="radio" name="Manuals" id="" class="checkbox-item d-none" value="None" @(Model.Manuals == "None" ? "checked" : "") />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="category-name">
+                                        Remarks
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <textarea class="form-control" placeholder="Leave a comment here" asp-for="Remarks">
+                                    </textarea>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

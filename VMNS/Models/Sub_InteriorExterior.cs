@@ -9,24 +9,24 @@ namespace VMNS.Models
 
         public Guid? MaintenanceId { get; set; }
 
-        [Display(Name = "Head Lights*")]
-        public string HeadLights { get; set; }
-        [Display(Name = "Tail Lights*")]
-        public string TailLights { get; set; }
+        [Display(Name = "Head Lights")]
+        public string? HeadLights { get; set; }
+        [Display(Name = "Tail Lights")]
+        public string? TailLights { get; set; }
         [Display(Name = "Turn Signals")]
         public string? TurnSignals { get; set; }
-        [Display(Name = "Brake Lights*")]
-        public string BrakeLights { get; set; }
+        [Display(Name = "Brake Lights")]
+        public string? BrakeLights { get; set; }
         [Display(Name = "Hazard Lights")]
         public string? HazardLights { get; set; }
         [Display(Name = "Exterior Lmaps")]
         public string? ExteriorLamps { get; set; }
         [Display(Name = "License Plates Lights")]
         public string? LicensePlatesLights { get; set; }
-        [Display(Name = "Windshield Wiper*")]
-        public string WindshieldWiper { get; set; }
-        [Display(Name = "Wiper Blades*")]
-        public string WiperBlades { get; set; }
+        [Display(Name = "Windshield Wiper")]
+        public string? WindshieldWiper { get; set; }
+        [Display(Name = "Wiper Blades")]
+        public string? WiperBlades { get; set; }
         [Display(Name = "Windshield Condition")]
         public string? WindshieldCondition { get; set; }
         [Display(Name = "Emergency Brake Adjustmnet")]

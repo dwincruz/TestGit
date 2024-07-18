@@ -778,7 +778,21 @@
                             </label>
                             <span class="badge text-status-color rounded-pill">@item.Manuals</span>
                         </li>
-
+                        <li class="list-group-item">
+                            <div class="input-group py-4" id="">
+                                <div id="" class="custom-input w-100">
+                                    <input type="text"
+                                           id=""
+                                           class="form-control"
+                                           value="@item.Remarks"
+                                           required
+                                           readonly
+                                           pattern="\S+.*" />
+                                    <div class="input-text"><label>Remarks</label></div>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Remarks" class="text-danger"></span>
+                        </li>
 
                     </ul>
                 </div>

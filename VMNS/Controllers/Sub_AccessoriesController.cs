@@ -81,7 +81,7 @@ namespace VMNS.Controllers
         public async Task<IActionResult> Create([Bind("Id,MaintenanceId,Antennae,AshTray,BackupRearLights,CigaretteLighter,DoorGlass," +
             "DoorHandles,Emblem,EngineHood,FloorMats,GasTankCap,HeadRest,HubCaps,IgnitionSwitch,MudGuards,NamePlate,NamePlateLight,ParkingLights," +
             "RadiatorCap,RearViewMirror,SideMirrors,SpareTire,StereoSpeakers,SunVisors,Tools,TrunkCompartment,Upholstery," +
-            "WindshieldGlass,WipeArm,WiperKnob,Manuals")] Sub_Accessories sub_Accessories)
+            "WindshieldGlass,WipeArm,WiperKnob,Manuals,Remarks")] Sub_Accessories sub_Accessories)
         {
             if (ModelState.IsValid)
             {
@@ -120,7 +120,7 @@ namespace VMNS.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MaintenanceId,Antennae,AshTray,BackupRearLights,CigaretteLighter,DoorGlass,DoorHandles,Emblem,EngineHood,FloorMats,GasTankCap,HeadRest,HubCaps,IgnitionSwitch,MudGuards,NamePlate,NamePlateLight,ParkingLights,RadiatorCap,RearViewMirror,SideMirrors,SpareTire,StereoSpeakers,SunVisors,Tools,TrunkCompartment,Upholstery,WindshieldGlass,WipeArm,WiperKnob,Manuals")] Sub_Accessories sub_Accessories)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,MaintenanceId,Antennae,AshTray,BackupRearLights,CigaretteLighter,DoorGlass,DoorHandles,Emblem,EngineHood,FloorMats,GasTankCap,HeadRest,HubCaps,IgnitionSwitch,MudGuards,NamePlate,NamePlateLight,ParkingLights,RadiatorCap,RearViewMirror,SideMirrors,SpareTire,StereoSpeakers,SunVisors,Tools,TrunkCompartment,Upholstery,WindshieldGlass,WipeArm,WiperKnob,Manuals,Remarks")] Sub_Accessories sub_Accessories)
         {
             if (id != sub_Accessories.Id)
             {
@@ -145,7 +145,7 @@ namespace VMNS.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Maintenances", new { id = sub_Accessories.MaintenanceId });
             }
             ViewData["MaintenanceId"] = _context.Sub_Accessories.Where(m => m.Id == id).FirstOrDefault().MaintenanceId;
             return View(sub_Accessories);
@@ -186,7 +186,7 @@ namespace VMNS.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "Maintenances", new { id = sub_Accessories.MaintenanceId });
         }
 
         private bool Sub_AccessoriesExists(int id)

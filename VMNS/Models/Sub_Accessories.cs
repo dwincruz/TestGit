@@ -96,6 +96,8 @@ namespace VMNS.Models
         [Display(Name = "Manuals")]
         public string? Manuals { get; set; }
 
+        public string? Remarks { get; set; }
+
 
         //look up
         public virtual Maintenance? Maintenance { get; set; }

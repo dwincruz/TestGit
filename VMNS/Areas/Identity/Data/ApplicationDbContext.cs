@@ -246,6 +246,99 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                .Property(b => b.ConditionOfBattery)
                .HasDefaultValue("Not Inspected");
 
+        //-----
+
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.Antennae)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.AshTray)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.BackupRearLights)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.CigaretteLighter)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.DoorGlass)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.DoorHandles)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.Emblem)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.EngineHood)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.FloorMats)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.GasTankCap)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.HeadRest)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.HubCaps)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.IgnitionSwitch)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.Manuals)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.MudGuards)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.NamePlate)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.NamePlateLight)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.ParkingLights)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.RadiatorCap)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.RearViewMirror)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.SideMirrors)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.SpareTire)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.StereoSpeakers)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.SunVisors)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.Tools)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.TrunkCompartment)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.Upholstery)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.WindshieldGlass)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.WipeArm)
+              .HasDefaultValue("None");
+        builder.Entity<Sub_Accessories>()
+              .Property(b => b.WiperKnob)
+              .HasDefaultValue("None");
+
     }
 
     //Main Tables

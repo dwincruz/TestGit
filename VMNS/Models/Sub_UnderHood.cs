@@ -32,13 +32,13 @@ namespace VMNS.Models
         [Display(Name = "Heater Hoses")]
         public string? HeaterHoses { get; set; }
         [Display(Name = "Air Condition")]
-        public string AirCondition { get; set; }
+        public string? AirCondition { get; set; }
         [Display(Name = "Air Conditioner Condenser")]
         public string? AirConditionerCondenser { get; set; }
         [Display(Name = "Hoses and Connections")]
         public string? HosesandConnections { get; set; }
         [Display(Name = "Radiator Core")]
-        public string RadiatorCore { get; set; }
+        public string? RadiatorCore { get; set; }
         [Display(Name = "Coolant Recovery Reservoir Fluid Level")]
         public string? CoolantRecoveryReservoirFluidLevel { get; set; }
         [Display(Name = "Clutch Reservour Fluid")]
